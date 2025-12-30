@@ -1,78 +1,134 @@
-# OmniAgent 📊
+# 🤖 OmniAgent v2 - AI Data Analysis Assistant
 
-**AI-Powered Data Analyst** - Chat with your data using natural language.
+A Streamlit application for interactive data analysis with optional LLM support.
 
-## Features
+## ✨ Features
 
-- 💬 **Natural Language Interface** - Ask questions in plain English
-- 📊 **6 Specialized Agents** - Schema, SQL, EDA, Statistics, Regression, Plot
-- 📈 **Visualizations** - Histograms, scatter plots, bar charts, heatmaps
-- 🔍 **Data Profiling** - Missing values, outliers, correlations
-- 🤖 **Powered by Groq** - Fast, free LLM inference
+- **Works with OR without API key!**
+  - With API key: Natural language understanding via Groq LLM
+  - Without API key: Smart keyword matching (still very capable!)
+- **6 Types of Visualizations**: Histogram, Scatter, Bar, Box, Heatmap, Pie
+- **Statistical Analysis**: Describe, Correlation, Outliers, Missing values
+- **ML Predictions**: Linear, Random Forest, Gradient Boosting
+- **3 Sample Datasets**: Fitness, Airbnb, E-commerce
 
-## Quick Start
+## 🚀 Quick Start
 
-### 1. Setup
+### 1. Install Dependencies
 
 ```bash
+# Option A: Conda (recommended)
 conda env create -f environment.yml
 conda activate omniagent
+
+# Option B: Pip
+pip install -r requirements.txt
+pip install python-dotenv  # For .env file support
 ```
 
-### 2. Get API Key
-
-Go to [console.groq.com/keys](https://console.groq.com/keys) and create a free key.
-
-### 3. Configure
+### 2. Configure (Optional but Recommended)
 
 ```bash
+# Copy example .env file
 cp .env.example .env
-# Edit .env and add: GROQ_API_KEY=your-key
+
+# Edit .env and add your Groq API key
+# Get free key at: https://console.groq.com
 ```
 
-### 4. Run
+### 3. Run Tests
 
 ```bash
-python tests/test_api.py    # Test API
-python tests/test_all.py    # Full tests
-streamlit run app.py        # Launch app
+python tests/test_all.py
 ```
 
-## Project Structure
+### 4. Start the App
+
+```bash
+streamlit run app_with_llm.py
+```
+
+## 📁 Project Structure
 
 ```
 omniagent/
-├── app.py                  # Streamlit UI
-├── omniagent/
-│   ├── agents/             # 6 specialized agents
-│   ├── master/             # Orchestrator agent
-│   ├── mcp/                # MCP protocol
-│   ├── data/               # DuckDB layer
-│   └── models/             # Pydantic models
-├── tests/                  # Test suite
-├── data/samples/           # Sample CSVs
-└── .env.example            # Config template
+├── app_with_llm.py          # Main app (with LLM support)
+├── app.py                   # Simple version (no LLM)
+├── requirements.txt         # Pip dependencies
+├── environment.yml          # Conda environment
+├── .env.example             # Environment template
+├── README.md                # This file
+├── data/
+│   └── samples/
+│       ├── fitness_tracker.csv
+│       ├── nyc_airbnb.csv
+│       └── ecommerce_sales.csv
+└── tests/
+    └── test_all.py          # Comprehensive tests
 ```
 
-## Agents
+## 🔑 Environment Variables (.env file)
+
+| Variable | Required | Default | Description |
+|----------|----------|---------|-------------|
+| GROQ_API_KEY | No | None | Your Groq API key |
+| LLM_MODEL | No | llama-3.3-70b-versatile | Model to use |
+
+Example `.env` file:
+```
+GROQ_API_KEY=gsk_your_key_here
+LLM_MODEL=llama-3.3-70b-versatile
+```
+
+## 💬 Example Queries
+
+**Statistics:**
+- Show descriptive statistics
+- Check for missing values
+- Find outliers in price
+
+**Visualizations:**
+- Show histogram of age
+- Create correlation heatmap
+- Bar chart of category
+- Scatter plot of price vs quantity
+
+**Predictions:**
+- Predict price using other columns
+- Train model for target
+
+## 🤖 Agent System
 
 | Agent | Purpose |
 |-------|---------|
-| SchemaAgent | Dataset structure, columns, samples |
-| SQLAgent | Safe SQL queries |
-| EDAAgent | Profiling, missing values, outliers |
-| StatsAgent | Statistics, correlations, groupby |
-| RegressionAgent | Linear regression modeling |
-| PlotAgent | Visualizations |
+| 📋 Schema Agent | Data structure & info |
+| 📊 Stats Agent | Statistics, correlation, outliers |
+| 📈 Plot Agent | All visualizations |
+| 🔮 Prediction Agent | ML models |
+| 🎯 Master Agent | Orchestrates everything |
 
-## Sample Queries
+## ⚠️ Rate Limits
 
-- "Summarize this dataset"
-- "Are there any missing values?"
-- "Show statistics for the price column"
-- "Create a histogram of ages"
-- "What columns are correlated?"
+Groq free tier has limits (30 requests/minute). If you hit rate limits:
+- Wait a moment and retry
+- The app automatically falls back to keyword matching
+- Consider upgrading your Groq plan
 
-## License
+## 🧪 Testing
+
+Run all tests:
+```bash
+python tests/test_all.py
+```
+
+This tests:
+- Sample datasets loading
+- All agent functions
+- Keyword matching
+- Edge cases
+- File structure
+- Python syntax
+
+## 📝 License
 
 MIT

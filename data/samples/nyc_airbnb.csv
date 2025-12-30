@@ -1,0 +1,261 @@
+neighbourhood_group,neighbourhood,room_type,price,minimum_nights,number_of_reviews,calculated_host_listings_count,availability_365,reviews_per_month
+Manhattan,Harlem,Private room,125,2,45,3,180,1.25
+Brooklyn,Williamsburg,Entire home/apt,185,3,89,1,220,2.45
+Manhattan,East Village,Entire home/apt,225,2,156,2,165,3.85
+Queens,Astoria,Private room,75,1,23,1,300,0.65
+Brooklyn,Bedford-Stuyvesant,Private room,65,2,67,4,250,1.85
+Manhattan,Midtown,Entire home/apt,299,4,34,8,120,0.95
+Brooklyn,Bushwick,Private room,55,1,112,1,340,3.15
+Manhattan,Upper West Side,Entire home/apt,195,3,78,2,200,2.15
+Queens,Long Island City,Entire home/apt,145,2,45,1,280,1.25
+Brooklyn,Park Slope,Entire home/apt,210,2,92,1,175,2.55
+Manhattan,Chelsea,Entire home/apt,275,5,28,5,95,0.78
+Bronx,Mott Haven,Private room,45,1,34,2,320,0.95
+Brooklyn,Crown Heights,Private room,70,2,156,1,290,4.35
+Manhattan,Lower East Side,Entire home/apt,189,2,67,3,185,1.85
+Staten Island,St. George,Entire home/apt,95,2,12,1,350,0.35
+Manhattan,Hell's Kitchen,Entire home/apt,245,3,89,4,145,2.45
+Brooklyn,Greenpoint,Private room,85,1,134,1,265,3.75
+Queens,Flushing,Private room,55,1,23,2,310,0.65
+Manhattan,Upper East Side,Entire home/apt,265,4,56,6,130,1.55
+Brooklyn,Sunset Park,Private room,48,2,78,1,295,2.15
+Manhattan,SoHo,Entire home/apt,350,5,45,3,85,1.25
+Bronx,South Bronx,Shared room,35,1,12,1,355,0.35
+Brooklyn,DUMBO,Entire home/apt,295,3,67,2,155,1.85
+Manhattan,Greenwich Village,Entire home/apt,285,3,98,2,170,2.72
+Queens,Jamaica,Private room,50,1,34,1,325,0.95
+Manhattan,Tribeca,Entire home/apt,395,4,23,4,75,0.65
+Brooklyn,Cobble Hill,Entire home/apt,225,2,112,1,195,3.12
+Manhattan,Financial District,Entire home/apt,215,3,45,7,140,1.25
+Queens,Ridgewood,Private room,60,1,89,2,285,2.48
+Brooklyn,Fort Greene,Entire home/apt,195,2,156,1,205,4.35
+Manhattan,Chinatown,Private room,95,2,34,3,230,0.95
+Staten Island,Tompkinsville,Private room,55,1,8,1,340,0.22
+Brooklyn,Clinton Hill,Entire home/apt,175,2,78,1,215,2.17
+Manhattan,Murray Hill,Entire home/apt,185,3,67,5,160,1.86
+Queens,Sunnyside,Private room,65,1,45,1,295,1.25
+Manhattan,Gramercy,Entire home/apt,235,3,23,2,125,0.65
+Brooklyn,Prospect Heights,Entire home/apt,205,2,134,1,185,3.72
+Bronx,Fordham,Shared room,30,1,15,1,360,0.42
+Manhattan,Kips Bay,Entire home/apt,175,2,56,4,175,1.56
+Brooklyn,Red Hook,Entire home/apt,165,2,89,1,225,2.48
+Manhattan,NoHo,Entire home/apt,325,4,34,2,90,0.95
+Queens,Forest Hills,Private room,70,1,67,1,280,1.86
+Brooklyn,Bay Ridge,Private room,58,2,45,1,305,1.25
+Manhattan,Two Bridges,Private room,85,1,23,3,245,0.65
+Brooklyn,Flatbush,Private room,52,1,112,2,315,3.12
+Manhattan,Nolita,Entire home/apt,275,3,78,2,115,2.17
+Bronx,Riverdale,Private room,65,2,18,1,330,0.5
+Brooklyn,Boerum Hill,Entire home/apt,215,2,98,1,175,2.72
+Manhattan,Stuyvesant Town,Private room,95,2,34,1,210,0.95
+Queens,Woodside,Private room,55,1,56,1,300,1.56
+Manhattan,East Harlem,Private room,75,1,145,4,265,4.03
+Brooklyn,Gowanus,Entire home/apt,185,2,67,1,195,1.86
+Staten Island,New Brighton,Entire home/apt,110,2,22,1,315,0.61
+Manhattan,Inwood,Private room,65,1,89,2,275,2.48
+Brooklyn,Kensington,Private room,60,2,134,1,285,3.72
+Queens,Bayside,Private room,72,1,28,1,310,0.78
+Manhattan,Morningside Heights,Private room,85,2,45,1,230,1.25
+Brooklyn,Windsor Terrace,Entire home/apt,175,2,78,1,210,2.17
+Bronx,Concourse,Shared room,32,1,12,1,350,0.33
+Manhattan,Battery Park City,Entire home/apt,245,4,23,3,105,0.65
+Brooklyn,Carroll Gardens,Entire home/apt,235,3,112,1,165,3.12
+Queens,Elmhurst,Private room,48,1,67,2,320,1.86
+Manhattan,Flatiron,Entire home/apt,295,3,56,4,95,1.56
+Brooklyn,Greenwood,Private room,55,1,89,1,295,2.48
+Staten Island,Port Richmond,Private room,42,1,6,1,355,0.17
+Manhattan,West Village,Entire home/apt,315,4,134,2,80,3.72
+Brooklyn,Prospect Lefferts Gardens,Private room,58,2,45,1,290,1.25
+Queens,Corona,Private room,45,1,34,1,335,0.95
+Manhattan,NoMad,Entire home/apt,265,3,78,5,120,2.17
+Brooklyn,East Williamsburg,Entire home/apt,165,2,156,1,225,4.35
+Bronx,Kingsbridge,Private room,50,1,23,1,325,0.65
+Manhattan,Theater District,Entire home/apt,285,5,28,6,85,0.78
+Brooklyn,Vinegar Hill,Entire home/apt,195,2,67,1,200,1.86
+Queens,Jackson Heights,Private room,52,1,98,2,305,2.72
+Manhattan,Rose Hill,Private room,105,2,45,2,195,1.25
+Brooklyn,Ditmas Park,Private room,62,1,112,1,280,3.12
+Staten Island,Stapleton,Private room,48,2,15,1,340,0.42
+Manhattan,Turtle Bay,Entire home/apt,225,3,34,3,145,0.95
+Brooklyn,East New York,Private room,42,1,78,1,330,2.17
+Queens,Rego Park,Private room,58,1,56,1,295,1.56
+Manhattan,Lincoln Square,Entire home/apt,255,4,89,4,115,2.48
+Brooklyn,Brighton Beach,Private room,55,2,45,1,305,1.25
+Bronx,Belmont,Shared room,28,1,8,1,365,0.22
+Manhattan,Hudson Yards,Entire home/apt,345,5,23,2,70,0.65
+Brooklyn,Brownsville,Private room,38,1,134,2,340,3.72
+Queens,Kew Gardens,Private room,65,1,67,1,285,1.86
+Manhattan,Lenox Hill,Entire home/apt,275,4,45,5,105,1.25
+Brooklyn,Midwood,Private room,50,2,89,1,310,2.48
+Staten Island,Great Kills,Entire home/apt,125,2,11,1,325,0.31
+Manhattan,Yorkville,Private room,95,2,78,3,185,2.17
+Brooklyn,Sheepshead Bay,Private room,52,1,112,1,300,3.12
+Queens,Howard Beach,Private room,60,1,34,1,315,0.95
+Manhattan,Carnegie Hill,Entire home/apt,285,4,56,2,95,1.56
+Brooklyn,Marine Park,Private room,55,2,45,1,320,1.25
+Bronx,Morris Heights,Private room,40,1,28,1,345,0.78
+Manhattan,Beekman,Entire home/apt,195,3,67,4,160,1.86
+Brooklyn,Canarsie,Private room,45,1,98,1,335,2.72
+Queens,Ozone Park,Private room,48,1,23,2,325,0.65
+Manhattan,Sutton Place,Entire home/apt,265,4,34,2,110,0.95
+Brooklyn,Gravesend,Private room,52,2,78,1,305,2.17
+Staten Island,Eltingville,Private room,55,1,9,1,350,0.25
+Manhattan,Hamilton Heights,Private room,75,1,145,2,250,4.03
+Brooklyn,Gerritsen Beach,Entire home/apt,135,2,56,1,280,1.56
+Queens,South Ozone Park,Private room,42,1,89,1,340,2.48
+Manhattan,Washington Heights,Private room,68,1,112,3,265,3.12
+Brooklyn,Manhattan Beach,Entire home/apt,185,3,45,1,195,1.25
+Bronx,Norwood,Shared room,35,1,18,1,355,0.5
+Manhattan,Randalls Island,Entire home/apt,155,2,23,1,230,0.65
+Brooklyn,Bergen Beach,Private room,58,2,67,1,295,1.86
+Queens,Whitestone,Private room,70,1,34,1,305,0.95
+Manhattan,Marble Hill,Private room,72,1,78,2,275,2.17
+Brooklyn,Mill Basin,Private room,62,2,98,1,285,2.72
+Staten Island,Todt Hill,Entire home/apt,145,2,12,1,320,0.33
+Manhattan,Roosevelt Island,Entire home/apt,175,2,45,1,210,1.25
+Brooklyn,Cypress Hills,Private room,40,1,56,1,340,1.56
+Queens,Fresh Meadows,Private room,65,1,89,1,290,2.48
+Manhattan,Civic Center,Entire home/apt,205,3,134,3,155,3.72
+Brooklyn,Coney Island,Private room,55,1,67,1,305,1.86
+Bronx,University Heights,Shared room,32,1,23,1,350,0.65
+Manhattan,Little Italy,Entire home/apt,255,3,45,2,125,1.25
+Brooklyn,Bensonhurst,Private room,48,2,112,2,315,3.12
+Queens,Auburndale,Private room,68,1,28,1,300,0.78
+Manhattan,Alphabet City,Entire home/apt,185,2,78,1,185,2.17
+Brooklyn,Bath Beach,Private room,52,1,56,1,310,1.56
+Staten Island,Mariners Harbor,Private room,45,1,8,1,355,0.22
+Manhattan,Bowery,Entire home/apt,225,3,98,2,145,2.72
+Brooklyn,Dyker Heights,Private room,58,2,45,1,295,1.25
+Queens,Glendale,Private room,55,1,134,1,305,3.72
+Manhattan,Meatpacking District,Entire home/apt,295,4,34,4,85,0.95
+Brooklyn,Borough Park,Private room,45,1,89,1,325,2.48
+Bronx,Hunts Point,Shared room,30,1,12,1,360,0.33
+Manhattan,Tudor City,Entire home/apt,215,3,67,3,150,1.86
+Brooklyn,Flatlands,Private room,50,2,78,1,310,2.17
+Queens,Middle Village,Private room,60,1,45,1,295,1.25
+Manhattan,Koreatown,Entire home/apt,235,3,112,5,120,3.12
+Brooklyn,Remsen Village,Private room,42,1,56,1,335,1.56
+Staten Island,Richmond Valley,Entire home/apt,115,2,6,1,340,0.17
+Manhattan,Peter Cooper Village,Private room,105,2,23,1,200,0.65
+Brooklyn,Starrett City,Private room,38,1,98,1,345,2.72
+Queens,East Elmhurst,Private room,52,1,67,2,315,1.86
+Manhattan,Seaport,Entire home/apt,275,4,45,2,95,1.25
+Brooklyn,Ocean Hill,Private room,45,1,134,1,330,3.72
+Bronx,Eastchester,Private room,55,2,18,1,330,0.5
+Manhattan,Flatiron District,Entire home/apt,285,3,78,4,105,2.17
+Brooklyn,Rugby,Private room,48,1,89,1,320,2.48
+Queens,Maspeth,Private room,58,1,34,1,305,0.95
+Manhattan,Herald Square,Entire home/apt,245,4,56,6,115,1.56
+Brooklyn,Ocean Parkway,Private room,52,2,112,1,300,3.12
+Staten Island,Castleton Corners,Private room,50,1,9,1,345,0.25
+Manhattan,Times Square,Entire home/apt,325,5,23,8,65,0.65
+Brooklyn,Prospect Park South,Entire home/apt,175,2,67,1,205,1.86
+Queens,Briarwood,Private room,48,1,78,1,320,2.17
+Manhattan,Union Square,Entire home/apt,265,3,98,3,125,2.72
+Brooklyn,Weeksville,Private room,40,1,45,1,340,1.25
+Bronx,Claremont,Shared room,28,1,15,1,365,0.42
+Manhattan,Madison Square,Entire home/apt,255,4,134,4,100,3.72
+Brooklyn,East Flatbush,Private room,45,2,89,2,325,2.48
+Queens,Hollis,Private room,55,1,56,1,310,1.56
+Manhattan,Empire State,Entire home/apt,295,5,45,5,85,1.25
+Brooklyn,Georgetown,Private room,42,1,112,1,335,3.12
+Staten Island,Grasmere,Private room,52,2,11,1,340,0.31
+Manhattan,Grand Central,Entire home/apt,235,3,67,3,140,1.86
+Brooklyn,Spring Creek,Private room,38,1,78,1,345,2.17
+Queens,Bellerose,Private room,62,1,34,1,300,0.95
+Manhattan,Garment District,Entire home/apt,215,3,98,4,150,2.72
+Brooklyn,Bushwick,Entire home/apt,145,2,145,1,235,4.03
+Bronx,Melrose,Private room,42,1,23,1,340,0.65
+Manhattan,Penn Station,Entire home/apt,225,4,56,6,130,1.56
+Brooklyn,Williamsburg,Private room,75,1,156,2,265,4.35
+Queens,Woodhaven,Private room,50,1,89,1,315,2.48
+Manhattan,Harlem,Entire home/apt,165,2,112,2,195,3.12
+Brooklyn,Crown Heights,Entire home/apt,175,2,134,1,205,3.72
+Staten Island,West Brighton,Private room,48,1,8,1,350,0.22
+Manhattan,East Village,Private room,105,1,78,3,210,2.17
+Brooklyn,Bedford-Stuyvesant,Entire home/apt,155,2,167,1,225,4.64
+Queens,Astoria,Entire home/apt,125,2,67,1,255,1.86
+Manhattan,Upper West Side,Private room,115,2,45,2,185,1.25
+Brooklyn,Greenpoint,Entire home/apt,165,2,98,1,215,2.72
+Bronx,Longwood,Shared room,32,1,12,1,355,0.33
+Manhattan,Chelsea,Private room,125,2,34,4,175,0.95
+Brooklyn,Park Slope,Private room,95,1,112,1,245,3.12
+Queens,Long Island City,Private room,65,1,56,1,285,1.56
+Manhattan,Midtown,Private room,135,3,23,5,165,0.65
+Brooklyn,Bushwick,Shared room,35,1,78,1,340,2.17
+Staten Island,Dongan Hills,Entire home/apt,130,2,14,1,325,0.39
+Manhattan,Lower East Side,Private room,95,1,89,2,230,2.48
+Brooklyn,Fort Greene,Private room,85,2,67,1,255,1.86
+Queens,Flushing,Entire home/apt,135,2,45,2,265,1.25
+Manhattan,Hell's Kitchen,Private room,115,2,134,3,195,3.72
+Brooklyn,DUMBO,Private room,105,2,56,1,220,1.56
+Bronx,Tremont,Private room,45,1,18,1,335,0.5
+Manhattan,SoHo,Private room,145,3,78,2,155,2.17
+Brooklyn,Prospect Heights,Private room,78,1,98,1,265,2.72
+Queens,Jamaica,Entire home/apt,95,2,34,1,295,0.95
+Manhattan,Greenwich Village,Private room,125,2,112,2,180,3.12
+Brooklyn,Cobble Hill,Private room,88,2,45,1,240,1.25
+Staten Island,Oakwood,Private room,55,1,7,1,350,0.19
+Manhattan,Financial District,Private room,105,2,67,4,200,1.86
+Brooklyn,Clinton Hill,Private room,72,1,134,1,270,3.72
+Queens,Ridgewood,Entire home/apt,115,2,89,1,255,2.48
+Manhattan,Tribeca,Private room,155,3,23,3,145,0.65
+Brooklyn,Carroll Gardens,Private room,92,2,78,1,235,2.17
+Bronx,High Bridge,Shared room,30,1,15,1,360,0.42
+Manhattan,Chinatown,Entire home/apt,175,2,56,2,185,1.56
+Brooklyn,Red Hook,Private room,68,1,112,1,275,3.12
+Queens,Sunnyside,Entire home/apt,125,2,45,1,265,1.25
+Manhattan,Murray Hill,Private room,95,2,98,3,195,2.72
+Brooklyn,Bay Ridge,Entire home/apt,145,2,67,1,245,1.86
+Staten Island,Rosebank,Private room,50,1,10,1,345,0.28
+Manhattan,NoHo,Private room,135,2,34,2,165,0.95
+Brooklyn,Flatbush,Entire home/apt,125,2,145,2,240,4.03
+Queens,Forest Hills,Entire home/apt,155,2,78,1,225,2.17
+Manhattan,West Village,Private room,145,3,112,2,155,3.12
+Brooklyn,Boerum Hill,Private room,85,2,56,1,245,1.56
+Bronx,Parkchester,Private room,48,1,23,1,330,0.65
+Manhattan,Gramercy,Private room,105,2,89,3,185,2.48
+Brooklyn,Gowanus,Private room,72,1,67,1,265,1.86
+Queens,Woodside,Entire home/apt,115,2,98,1,255,2.72
+Manhattan,Kips Bay,Private room,88,2,45,2,205,1.25
+Brooklyn,Windsor Terrace,Private room,78,1,134,1,255,3.72
+Staten Island,Randall Manor,Entire home/apt,120,2,12,1,320,0.33
+Manhattan,Battery Park City,Private room,115,3,34,2,175,0.95
+Brooklyn,East Williamsburg,Private room,65,1,78,1,280,2.17
+Queens,Corona,Entire home/apt,95,2,56,1,285,1.56
+Manhattan,NoMad,Private room,125,2,112,4,165,3.12
+Brooklyn,Vinegar Hill,Private room,88,2,45,1,240,1.25
+Bronx,Van Nest,Private room,42,1,18,1,345,0.5
+Manhattan,Theater District,Private room,145,3,23,5,135,0.65
+Brooklyn,Ditmas Park,Entire home/apt,155,2,98,1,215,2.72
+Queens,Jackson Heights,Entire home/apt,105,2,67,2,270,1.86
+Manhattan,Rose Hill,Entire home/apt,185,3,78,3,155,2.17
+Brooklyn,East New York,Entire home/apt,85,2,89,1,295,2.48
+Staten Island,Silver Lake,Private room,52,1,8,1,350,0.22
+Manhattan,Lincoln Square,Private room,115,3,56,3,185,1.56
+Brooklyn,Brighton Beach,Entire home/apt,125,2,112,1,245,3.12
+Queens,Rego Park,Entire home/apt,135,2,45,1,260,1.25
+Manhattan,Hudson Yards,Private room,155,4,34,2,125,0.95
+Brooklyn,Brownsville,Entire home/apt,75,2,67,1,305,1.86
+Bronx,Soundview,Shared room,28,1,12,1,365,0.33
+Manhattan,Lenox Hill,Private room,125,3,98,4,165,2.72
+Brooklyn,Midwood,Entire home/apt,115,2,78,1,255,2.17
+Queens,Kew Gardens,Entire home/apt,145,2,89,1,240,2.48
+Manhattan,Yorkville,Entire home/apt,195,3,56,2,145,1.56
+Brooklyn,Sheepshead Bay,Entire home/apt,125,2,45,1,265,1.25
+Staten Island,Bulls Head,Private room,48,1,6,1,355,0.17
+Manhattan,Carnegie Hill,Private room,135,3,112,2,155,3.12
+Brooklyn,Canarsie,Entire home/apt,95,2,67,1,285,1.86
+Queens,Howard Beach,Entire home/apt,115,2,34,1,275,0.95
+Manhattan,Sutton Place,Private room,125,3,78,2,170,2.17
+Brooklyn,Gravesend,Entire home/apt,105,2,98,1,260,2.72
+Bronx,Morris Park,Private room,45,1,23,1,340,0.65
+Manhattan,Washington Heights,Entire home/apt,125,2,134,2,215,3.72
+Brooklyn,Manhattan Beach,Private room,95,2,56,1,245,1.56
+Queens,Whitestone,Entire home/apt,145,2,45,1,255,1.25
+Manhattan,Hamilton Heights,Entire home/apt,145,2,89,2,205,2.48
+Brooklyn,Mill Basin,Entire home/apt,135,2,112,1,235,3.12
+Staten Island,Charleston,Entire home/apt,105,2,9,1,335,0.25
+Manhattan,Roosevelt Island,Private room,85,2,67,1,225,1.86
+Brooklyn,Cypress Hills,Entire home/apt,85,2,78,1,290,2.17
+Queens,Fresh Meadows,Entire home/apt,125,2,98,1,250,2.72
