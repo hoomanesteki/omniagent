@@ -1,140 +1,78 @@
-# OmniAgent
+# OmniAgent 📊
 
-OmniAgent is an agentic AI system for interactive analysis of arbitrary CSV datasets.
-It acts like a ChatGPT-style data analyst: you upload a dataset, then ask natural-language
-questions to explore, analyze, visualize, and model the data.
+**AI-Powered Data Analyst** - Chat with your data using natural language.
 
-The system is built around a Master Agent that orchestrates specialized agents
-(SQL, EDA, Regression, Plotting) via MCP (Model Context Protocol).
+## Features
 
-----------------------------------------------------------------
-## WHAT OMNIAGENT DOES
-----------------------------------------------------------------
+- 💬 **Natural Language Interface** - Ask questions in plain English
+- 📊 **6 Specialized Agents** - Schema, SQL, EDA, Statistics, Regression, Plot
+- 📈 **Visualizations** - Histograms, scatter plots, bar charts, heatmaps
+- 🔍 **Data Profiling** - Missing values, outliers, correlations
+- 🤖 **Powered by Groq** - Fast, free LLM inference
 
-- Accepts any CSV dataset (numeric, categorical, mixed)
-- Infers schema, types, and basic statistics automatically
-- Supports natural-language questions about the data
-- Runs safe, read-only SQL queries
-- Performs aggregations and exploratory data analysis
-- Fits regression models and explains results
-- Generates plots and visual summaries
-- Explains all outputs in plain English
+## Quick Start
 
-----------------------------------------------------------------
-## VISION
-----------------------------------------------------------------
+### 1. Setup
 
-Build a best-in-class, general-purpose AI data analyst that:
-- Feels like ChatGPT for tabular data
-- Uses explicit, auditable tool calls (no hidden code execution)
-- Scales from a local MVP to a production system
-- Serves as a reference architecture for modern agentic systems
+```bash
+conda env create -f environment.yml
+conda activate omniagent
+```
 
-----------------------------------------------------------------
-## SYSTEM FLOW (HIGH LEVEL)
-----------------------------------------------------------------
+### 2. Get API Key
 
-User uploads CSV
-        |
-        v
-Dataset stored and loaded into DuckDB
-        |
-        v
-Schema + stats inferred
-        |
-        v
-User asks question in chat
-        |
-        v
-Master Agent plans and selects tools
-        |
-        v
-MCP agents run analysis on the dataset
-        |
-        v
-Results + explanations returned to user
+Go to [console.groq.com/keys](https://console.groq.com/keys) and create a free key.
 
-----------------------------------------------------------------
-## ARCHITECTURE (ASCII DIAGRAM)
-----------------------------------------------------------------
+### 3. Configure
 
-            +----------------------+
-            |      Frontend        |
-            |  (Web UI / Chat)     |
-            +----------+-----------+
-                       |
-                       v
-            +----------------------+
-            |   Backend API        |
-            |   (FastAPI)          |
-            |----------------------|
-            | - Session handling   |
-            | - Dataset registry   |
-            | - Master Agent LLM   |
-            | - MCP Client         |
-            +----------+-----------+
-                       |
-      ------------------------------------------------
-      |                |               |            |
-      v                v               v            v
-+-----------+    +-----------+   +-------------+  +-----------+
-| SQL Agent |    | EDA Agent |   | Regression  |  | Plot Agent|
-| (MCP)     |    | (MCP)     |   | Agent (MCP) |  | (MCP)     |
-| SELECT    |    | Stats     |   | Models      |  | Charts    |
-+-----+-----+    +-----+-----+   +------+------+  +-----+-----+
-      \               |               |                  /
-       \              |               |                 /
-        -------------------------------------------------
-                         |
-                   +-----------+
-                   | Data Layer|
-                   |-----------|
-                   | DuckDB    |
-                   | CSV/Parq  |
-                   +-----------+
+```bash
+cp .env.example .env
+# Edit .env and add: GROQ_API_KEY=your-key
+```
 
-----------------------------------------------------------------
-## REPOSITORY STRUCTURE
-----------------------------------------------------------------
+### 4. Run
 
+```bash
+python tests/test_api.py    # Test API
+python tests/test_all.py    # Full tests
+streamlit run app.py        # Launch app
+```
+
+## Project Structure
+
+```
 omniagent/
-│
-├── backend/
-│   ├── main.py              # FastAPI entry point
-│   ├── api/                 # HTTP endpoints
-│   ├── core/                # Config, logging, sessions
-│   ├── data/                # CSV loading, schema, sampling
-│   ├── agents/              # Master agent & planning logic
-│   └── mcp/                 # MCP tool servers
-│       ├── sql_server.py
-│       ├── eda_server.py
-│       ├── regression_server.py
-│       └── plot_server.py
-│
-├── frontend/                # Web UI (optional / later)
-├── tests/
-├── environment.yml
-├── conda-lock.yml
-├── .env
-└── README.md
+├── app.py                  # Streamlit UI
+├── omniagent/
+│   ├── agents/             # 6 specialized agents
+│   ├── master/             # Orchestrator agent
+│   ├── mcp/                # MCP protocol
+│   ├── data/               # DuckDB layer
+│   └── models/             # Pydantic models
+├── tests/                  # Test suite
+├── data/samples/           # Sample CSVs
+└── .env.example            # Config template
+```
 
-----------------------------------------------------------------
-## DESIGN PRINCIPLES
-----------------------------------------------------------------
+## Agents
 
-- One Master Agent orchestrates all actions
-- Specialized agents do one task each
-- No arbitrary code execution
-- SQL is read-only (SELECT-only)
-- Ambiguity triggers clarifying questions
-- All results are explainable and transparent
+| Agent | Purpose |
+|-------|---------|
+| SchemaAgent | Dataset structure, columns, samples |
+| SQLAgent | Safe SQL queries |
+| EDAAgent | Profiling, missing values, outliers |
+| StatsAgent | Statistics, correlations, groupby |
+| RegressionAgent | Linear regression modeling |
+| PlotAgent | Visualizations |
 
-----------------------------------------------------------------
-## STATUS
-----------------------------------------------------------------
+## Sample Queries
 
-Current focus:
-- MVP with CSV upload, chat, SQL, EDA, plots, and regression
-- Designed for future extension (time series, clustering, NLP)
+- "Summarize this dataset"
+- "Are there any missing values?"
+- "Show statistics for the price column"
+- "Create a histogram of ages"
+- "What columns are correlated?"
 
-----------------------------------------------------------------
+## License
+
+MIT

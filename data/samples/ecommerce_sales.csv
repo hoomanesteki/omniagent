@@ -1,0 +1,1001 @@
+order_id,customer_id,product_category,product_name,quantity,unit_price,total_amount,order_date,payment_method,country,customer_age,gender,is_returned
+1,C0001,Beauty,Shampoo,1,225.04,225.04,2024-05-05,PayPal,UK,65,Male,0
+2,C0002,Books,Data Science,5,132.35,661.75,2024-01-16,Credit Card,Germany,32,Male,0
+3,C0003,Beauty,Hair Oil,2,140.26,280.52,2024-05-22,Credit Card,UK,62,Female,0
+4,C0004,Clothing,Sneakers,3,39.63,118.89,2024-07-13,Credit Card,Australia,40,Female,0
+5,C0005,Beauty,Body Lotion,5,46.19,230.95,2024-07-12,Credit Card,France,58,Female,0
+6,C0006,Beauty,Shampoo,1,201.76,201.76,2024-05-28,Credit Card,Germany,24,Female,0
+7,C0007,Beauty,Sunscreen,2,117.34,234.68,2024-04-17,Debit Card,Canada,56,Male,0
+8,C0008,Clothing,Jacket,4,120.03,480.12,2024-10-12,PayPal,Australia,21,Male,0
+9,C0009,Home & Garden,Rug,3,29.18,87.54,2024-10-17,Debit Card,Germany,59,Female,0
+10,C0010,Beauty,Body Lotion,2,86.81,173.62,2024-05-06,Debit Card,Japan,55,Female,0
+11,C0011,Clothing,Shorts,1,229.17,229.17,2024-02-26,PayPal,UK,61,Female,0
+12,C0012,Sports,Gym Bag,5,298.87,1494.35,2024-09-27,Debit Card,USA,61,Male,0
+13,C0013,Books,SQL Basics,3,42.34,127.02,2024-08-10,PayPal,Brazil,18,Female,0
+14,C0014,Clothing,Jeans,3,254.07,762.21,2024-09-16,PayPal,UK,41,Male,0
+15,C0015,Books,Python Guide,5,104.0,520.0,2024-01-10,Credit Card,Australia,37,Male,0
+16,C0016,Books,Data Science,1,222.24,222.24,2024-02-05,PayPal,UK,60,Female,0
+17,C0017,Clothing,Dress,5,263.0,1315.0,2024-08-04,PayPal,Germany,63,Female,0
+18,C0018,Beauty,Sunscreen,4,270.88,1083.52,2024-08-19,Credit Card,Germany,32,Male,0
+19,C0019,Books,Web Development,5,73.85,369.25,2024-02-06,Credit Card,Germany,22,Male,0
+20,C0020,Electronics,Bluetooth Speaker,3,203.99,611.97,2024-04-19,PayPal,Brazil,33,Female,0
+21,C0021,Clothing,Jeans,1,201.09,201.09,2024-06-30,Apple Pay,Japan,47,Male,0
+22,C0022,Beauty,Shampoo,1,126.75,126.75,2024-06-22,Credit Card,Germany,30,Male,0
+23,C0023,Clothing,Sweater,2,90.77,181.54,2024-05-07,Credit Card,Brazil,53,Male,0
+24,C0024,Books,Python Guide,1,278.64,278.64,2024-05-01,PayPal,Japan,49,Female,0
+25,C0025,Sports,Yoga Mat,2,119.89,239.78,2024-07-18,Debit Card,Brazil,36,Female,0
+26,C0026,Beauty,Body Lotion,2,65.06,130.12,2024-04-21,Credit Card,USA,65,Female,0
+27,C0027,Books,Statistics,5,276.61,1383.05,2024-09-28,PayPal,USA,50,Male,0
+28,C0028,Electronics,Smartphone Case,2,127.08,254.16,2024-10-18,PayPal,USA,57,Male,0
+29,C0029,Books,Cloud Computing,3,69.23,207.69,2024-06-09,PayPal,France,43,Male,0
+30,C0030,Home & Garden,Curtains,3,279.41,838.23,2024-02-07,Credit Card,Brazil,57,Male,0
+31,C0031,Clothing,Dress,2,280.64,561.28,2024-02-05,PayPal,Australia,36,Male,0
+32,C0032,Books,SQL Basics,5,295.31,1476.55,2024-09-27,Credit Card,France,60,Male,0
+33,C0033,Clothing,Dress,1,268.01,268.01,2024-10-10,PayPal,France,36,Male,0
+34,C0034,Clothing,Dress,5,151.66,758.3,2024-01-27,Credit Card,Japan,35,Male,1
+35,C0035,Clothing,Dress,2,224.95,449.9,2024-10-09,Apple Pay,USA,25,Male,0
+36,C0036,Beauty,Perfume,5,20.44,102.2,2024-07-08,PayPal,Japan,26,Male,0
+37,C0037,Electronics,Webcam,2,207.79,415.58,2024-02-22,Debit Card,Japan,57,Male,0
+38,C0038,Clothing,Jacket,2,265.6,531.2,2024-01-13,PayPal,Australia,44,Male,0
+39,C0039,Beauty,Shampoo,4,262.92,1051.68,2024-08-28,PayPal,Germany,47,Female,0
+40,C0040,Clothing,Sneakers,1,201.4,201.4,2024-07-23,Debit Card,France,22,Female,0
+41,C0041,Books,AI Ethics,5,106.02,530.1,2024-01-15,Credit Card,France,29,Female,1
+42,C0042,Books,AI Ethics,3,221.27,663.81,2024-06-09,Apple Pay,Canada,42,Male,0
+43,C0043,Beauty,Hair Oil,1,160.77,160.77,2024-10-02,PayPal,Australia,45,Male,0
+44,C0044,Home & Garden,Lamp,1,218.72,218.72,2024-06-02,Debit Card,Japan,38,Female,0
+45,C0045,Books,Machine Learning,2,131.92,263.84,2024-07-13,PayPal,France,43,Male,0
+46,C0046,Clothing,Sweater,5,185.92,929.6,2024-06-13,Apple Pay,Brazil,46,Male,0
+47,C0047,Beauty,Perfume,1,92.29,92.29,2024-06-20,Credit Card,Germany,61,Female,0
+48,C0048,Clothing,Jacket,1,23.39,23.39,2024-08-31,Credit Card,Brazil,44,Male,0
+49,C0049,Sports,Resistance Band,4,80.75,323.0,2024-01-03,Credit Card,Japan,32,Male,0
+50,C0050,Beauty,Body Lotion,1,171.64,171.64,2024-03-03,Apple Pay,UK,47,Female,0
+51,C0051,Sports,Gym Bag,5,139.3,696.5,2024-03-22,Apple Pay,Brazil,34,Male,0
+52,C0052,Home & Garden,Curtains,2,89.62,179.24,2024-02-09,Debit Card,Germany,35,Female,0
+53,C0053,Books,Data Science,2,53.73,107.46,2024-07-15,PayPal,Germany,22,Female,0
+54,C0054,Books,Statistics,4,28.05,112.2,2024-08-03,Apple Pay,USA,54,Female,0
+55,C0055,Home & Garden,Blender,4,257.49,1029.96,2024-08-02,PayPal,Brazil,32,Female,0
+56,C0056,Electronics,Mouse,3,203.96,611.88,2024-07-26,PayPal,Brazil,26,Male,0
+57,C0057,Books,Python Guide,1,196.39,196.39,2024-03-10,Apple Pay,UK,21,Female,0
+58,C0058,Clothing,Shorts,3,107.87,323.61,2024-07-13,Debit Card,Japan,34,Male,0
+59,C0059,Beauty,Face Cream,3,75.01,225.03,2024-02-05,Credit Card,USA,33,Male,0
+60,C0060,Books,Machine Learning,2,46.59,93.18,2024-02-28,PayPal,Brazil,62,Female,0
+61,C0061,Clothing,Jeans,2,289.76,579.52,2024-02-25,Credit Card,France,54,Female,0
+62,C0062,Beauty,Lipstick,1,181.7,181.7,2024-05-04,Credit Card,France,61,Male,0
+63,C0063,Books,Python Guide,3,164.49,493.47,2024-07-08,Credit Card,Australia,18,Female,0
+64,C0064,Electronics,Mouse,3,194.31,582.93,2024-08-23,PayPal,Japan,29,Female,0
+65,C0065,Books,Statistics,4,136.31,545.24,2024-05-17,Debit Card,Germany,23,Female,0
+66,C0066,Clothing,Shorts,5,186.99,934.95,2024-07-13,Debit Card,USA,49,Female,0
+67,C0067,Clothing,Hoodie,3,108.69,326.07,2024-05-21,Credit Card,Germany,23,Male,0
+68,C0068,Sports,Tennis Racket,4,197.3,789.2,2024-09-08,Apple Pay,USA,23,Female,0
+69,C0069,Beauty,Lipstick,3,202.54,607.62,2024-07-07,Apple Pay,Australia,45,Female,0
+70,C0070,Sports,Jump Rope,3,82.9,248.7,2024-03-02,PayPal,Australia,25,Male,0
+71,C0071,Beauty,Body Lotion,3,220.12,660.36,2024-09-25,Debit Card,Canada,30,Female,0
+72,C0072,Clothing,Dress,1,215.32,215.32,2024-03-05,Debit Card,USA,21,Female,0
+73,C0073,Clothing,Shorts,1,263.08,263.08,2024-10-20,Debit Card,Brazil,48,Female,0
+74,C0074,Electronics,Power Bank,4,43.08,172.32,2024-02-03,Apple Pay,Brazil,22,Male,0
+75,C0075,Books,SQL Basics,1,298.23,298.23,2024-03-01,Apple Pay,Germany,51,Female,0
+76,C0076,Sports,Jump Rope,5,297.1,1485.5,2024-06-05,Credit Card,Canada,31,Male,0
+77,C0077,Electronics,USB Hub,2,60.4,120.8,2024-02-08,PayPal,USA,44,Female,0
+78,C0078,Sports,Jump Rope,1,77.12,77.12,2024-05-24,Apple Pay,Canada,61,Male,0
+79,C0079,Beauty,Lipstick,4,43.28,173.12,2024-04-25,PayPal,France,27,Male,0
+80,C0080,Home & Garden,Blender,4,46.05,184.2,2024-06-04,Apple Pay,France,50,Female,0
+81,C0081,Books,Python Guide,4,223.0,892.0,2024-05-08,Credit Card,Canada,32,Male,0
+82,C0082,Beauty,Mascara,5,21.66,108.3,2024-03-30,Apple Pay,Brazil,35,Male,0
+83,C0083,Sports,Resistance Band,1,146.29,146.29,2024-07-28,Debit Card,Australia,60,Male,0
+84,C0084,Home & Garden,Rug,4,93.57,374.28,2024-07-24,Credit Card,Brazil,23,Female,0
+85,C0085,Electronics,Mouse,5,249.22,1246.1,2024-01-01,Apple Pay,Japan,21,Male,0
+86,C0086,Books,Statistics,4,230.39,921.56,2024-04-14,Debit Card,UK,36,Female,0
+87,C0087,Sports,Dumbbell,1,292.2,292.2,2024-05-02,PayPal,France,53,Male,0
+88,C0088,Electronics,Bluetooth Speaker,1,143.81,143.81,2024-03-01,PayPal,Brazil,63,Female,0
+89,C0089,Home & Garden,Rug,4,294.26,1177.04,2024-05-04,Apple Pay,UK,42,Male,0
+90,C0090,Books,Machine Learning,1,90.1,90.1,2024-07-31,Debit Card,France,18,Female,0
+91,C0091,Books,Statistics,2,139.49,278.98,2024-09-04,Debit Card,Australia,53,Female,0
+92,C0092,Home & Garden,Air Purifier,2,175.81,351.62,2024-04-29,Apple Pay,USA,38,Female,0
+93,C0093,Sports,Gym Bag,2,153.64,307.28,2024-01-19,PayPal,Australia,24,Female,0
+94,C0094,Sports,Yoga Mat,2,128.88,257.76,2024-03-20,Credit Card,Brazil,34,Female,0
+95,C0095,Sports,Dumbbell,3,257.17,771.51,2024-09-30,Apple Pay,Australia,58,Female,0
+96,C0096,Electronics,Smartphone Case,2,193.03,386.06,2024-05-27,PayPal,Canada,45,Male,0
+97,C0097,Beauty,Shampoo,4,58.24,232.96,2024-06-02,Credit Card,USA,38,Male,0
+98,C0098,Home & Garden,Rug,2,80.81,161.62,2024-07-29,PayPal,UK,29,Male,0
+99,C0099,Sports,Tennis Racket,4,274.71,1098.84,2024-03-14,PayPal,Brazil,58,Female,0
+100,C0100,Beauty,Face Cream,4,271.34,1085.36,2024-10-06,PayPal,Canada,46,Female,0
+101,C0101,Home & Garden,Rug,3,142.47,427.41,2024-06-03,PayPal,Japan,48,Male,0
+102,C0102,Books,Cloud Computing,5,95.79,478.95,2024-05-31,Credit Card,Japan,35,Male,0
+103,C0103,Beauty,Face Cream,5,226.09,1130.45,2024-05-26,PayPal,Australia,32,Male,0
+104,C0104,Beauty,Perfume,1,271.98,271.98,2024-01-21,Debit Card,Brazil,20,Female,0
+105,C0105,Electronics,Power Bank,3,226.76,680.28,2024-03-30,PayPal,UK,52,Female,0
+106,C0106,Home & Garden,Vacuum,3,275.06,825.18,2024-09-03,Debit Card,Australia,25,Female,0
+107,C0107,Clothing,Sneakers,4,290.5,1162.0,2024-10-12,Debit Card,Canada,43,Male,0
+108,C0108,Electronics,Keyboard,3,205.11,615.33,2024-05-14,Apple Pay,Australia,24,Male,0
+109,C0109,Books,Cloud Computing,5,74.19,370.95,2024-02-02,Apple Pay,France,59,Female,0
+110,C0110,Electronics,Wireless Headphones,3,298.81,896.43,2024-02-29,Credit Card,Germany,52,Male,0
+111,C0111,Home & Garden,Rug,5,225.25,1126.25,2024-03-20,Apple Pay,Canada,49,Female,0
+112,C0112,Home & Garden,Coffee Maker,3,73.0,219.0,2024-08-15,PayPal,Australia,24,Female,0
+113,C0113,Beauty,Sunscreen,1,125.45,125.45,2024-04-07,Credit Card,Brazil,23,Male,0
+114,C0114,Books,Python Guide,1,238.16,238.16,2024-05-04,PayPal,Germany,22,Male,0
+115,C0115,Clothing,Hoodie,2,238.7,477.4,2024-01-02,Debit Card,UK,26,Female,0
+116,C0116,Electronics,Wireless Headphones,2,14.3,28.6,2024-05-01,Debit Card,USA,29,Female,0
+117,C0117,Beauty,Hair Oil,5,42.95,214.75,2024-02-02,Apple Pay,Brazil,41,Male,0
+118,C0118,Clothing,T-Shirt,5,97.46,487.3,2024-01-16,Credit Card,Brazil,43,Female,0
+119,C0119,Sports,Resistance Band,1,270.78,270.78,2024-06-13,PayPal,Canada,26,Female,0
+120,C0120,Books,Cloud Computing,4,298.43,1193.72,2024-09-28,Debit Card,Brazil,50,Female,0
+121,C0121,Beauty,Shampoo,5,219.03,1095.15,2024-04-20,Apple Pay,Brazil,32,Female,0
+122,C0122,Sports,Gym Bag,4,221.58,886.32,2024-06-09,Apple Pay,Australia,60,Female,0
+123,C0123,Clothing,Shorts,1,36.45,36.45,2024-02-13,Credit Card,Japan,24,Female,0
+124,C0124,Books,Python Guide,5,287.41,1437.05,2024-10-14,Debit Card,Canada,44,Female,0
+125,C0125,Sports,Yoga Mat,3,184.11,552.33,2024-06-29,Credit Card,Germany,27,Female,0
+126,C0126,Electronics,Webcam,5,116.58,582.9,2024-05-22,PayPal,Japan,53,Male,0
+127,C0127,Beauty,Mascara,1,62.31,62.31,2024-06-07,Debit Card,Australia,18,Male,0
+128,C0128,Books,AI Ethics,1,51.13,51.13,2024-01-16,Credit Card,Germany,42,Female,0
+129,C0129,Clothing,Hoodie,3,219.25,657.75,2024-10-17,Credit Card,USA,27,Male,0
+130,C0130,Electronics,Smartphone Case,3,138.49,415.47,2024-08-05,Apple Pay,Brazil,44,Female,0
+131,C0131,Books,Data Science,3,134.66,403.98,2024-05-25,Apple Pay,France,20,Male,0
+132,C0132,Books,Python Guide,1,69.27,69.27,2024-04-18,PayPal,France,36,Female,0
+133,C0133,Sports,Gym Bag,2,47.45,94.9,2024-09-29,PayPal,Australia,22,Female,0
+134,C0134,Electronics,Mouse,1,143.32,143.32,2024-02-09,Debit Card,Japan,54,Female,0
+135,C0135,Sports,Jump Rope,1,127.45,127.45,2024-06-15,PayPal,Brazil,62,Female,0
+136,C0136,Electronics,Bluetooth Speaker,4,180.76,723.04,2024-09-25,Credit Card,Japan,37,Female,0
+137,C0137,Clothing,Jeans,5,193.63,968.15,2024-09-28,PayPal,Australia,40,Male,0
+138,C0138,Clothing,Dress,2,60.3,120.6,2024-03-19,Credit Card,UK,58,Female,0
+139,C0139,Books,Statistics,5,196.46,982.3,2024-06-14,Debit Card,UK,46,Male,0
+140,C0140,Beauty,Mascara,3,181.5,544.5,2024-06-29,Credit Card,France,47,Female,1
+141,C0141,Home & Garden,Blender,1,196.94,196.94,2024-02-16,Apple Pay,Brazil,55,Male,0
+142,C0142,Books,Web Development,3,185.44,556.32,2024-09-13,PayPal,USA,46,Male,0
+143,C0143,Home & Garden,Plant Pot,5,197.37,986.85,2024-01-21,PayPal,Brazil,46,Male,0
+144,C0144,Home & Garden,Rug,4,234.58,938.32,2024-01-27,Debit Card,Canada,39,Male,0
+145,C0145,Sports,Jump Rope,3,219.87,659.61,2024-03-17,Debit Card,Canada,55,Male,0
+146,C0146,Home & Garden,Rug,2,182.55,365.1,2024-02-13,Debit Card,Japan,59,Female,0
+147,C0147,Beauty,Shampoo,4,157.45,629.8,2024-01-10,Debit Card,France,29,Male,0
+148,C0148,Sports,Tennis Racket,2,299.98,599.96,2024-03-20,Credit Card,France,24,Male,0
+149,C0149,Books,Machine Learning,5,119.24,596.2,2024-03-24,PayPal,UK,64,Female,1
+150,C0150,Home & Garden,Air Purifier,4,187.06,748.24,2024-08-17,PayPal,Germany,37,Female,0
+151,C0151,Clothing,Hoodie,5,295.48,1477.4,2024-08-24,Debit Card,Japan,50,Female,0
+152,C0152,Clothing,Jacket,3,25.12,75.36,2024-09-03,Debit Card,Canada,63,Male,0
+153,C0153,Clothing,Dress,4,272.53,1090.12,2024-03-16,Apple Pay,Canada,32,Female,0
+154,C0154,Electronics,Mouse,1,124.96,124.96,2024-07-10,PayPal,Japan,23,Female,0
+155,C0155,Home & Garden,Plant Pot,3,239.49,718.47,2024-03-11,Credit Card,France,48,Male,0
+156,C0156,Sports,Resistance Band,5,11.51,57.55,2024-02-10,Credit Card,France,31,Male,0
+157,C0157,Beauty,Hair Oil,1,235.08,235.08,2024-05-01,Debit Card,Canada,21,Male,0
+158,C0158,Books,Statistics,1,42.14,42.14,2024-09-12,Credit Card,Germany,63,Male,0
+159,C0159,Electronics,Webcam,2,175.48,350.96,2024-04-05,Credit Card,Australia,22,Male,0
+160,C0160,Sports,Yoga Mat,4,294.49,1177.96,2024-05-09,Credit Card,Australia,22,Female,0
+161,C0161,Beauty,Shampoo,5,223.19,1115.95,2024-06-19,PayPal,USA,40,Female,0
+162,C0162,Clothing,Shorts,4,193.19,772.76,2024-03-10,Credit Card,Brazil,20,Female,0
+163,C0163,Clothing,T-Shirt,3,280.67,842.01,2024-09-20,Apple Pay,Brazil,34,Male,0
+164,C0164,Clothing,Dress,3,260.01,780.03,2024-01-25,Debit Card,France,25,Female,0
+165,C0165,Sports,Resistance Band,4,108.31,433.24,2024-04-05,Apple Pay,Brazil,41,Female,0
+166,C0166,Beauty,Hair Oil,1,134.87,134.87,2024-04-02,Debit Card,Australia,24,Male,0
+167,C0167,Home & Garden,Blender,4,184.75,739.0,2024-08-06,PayPal,Brazil,40,Female,1
+168,C0168,Home & Garden,Rug,3,195.44,586.32,2024-01-30,Credit Card,Japan,41,Male,0
+169,C0169,Clothing,Shorts,1,46.6,46.6,2024-04-30,Debit Card,Australia,42,Male,0
+170,C0170,Beauty,Body Lotion,3,117.87,353.61,2024-02-09,PayPal,Australia,43,Female,0
+171,C0171,Clothing,Jeans,1,223.34,223.34,2024-09-12,Apple Pay,Canada,34,Female,0
+172,C0172,Clothing,Dress,4,68.04,272.16,2024-03-10,Credit Card,Brazil,29,Female,0
+173,C0173,Beauty,Sunscreen,3,215.76,647.28,2024-10-08,Debit Card,France,28,Male,0
+174,C0174,Books,Web Development,1,295.68,295.68,2024-03-12,PayPal,Brazil,19,Female,0
+175,C0175,Home & Garden,Curtains,5,47.62,238.1,2024-02-14,Credit Card,France,43,Female,0
+176,C0176,Sports,Dumbbell,2,291.98,583.96,2024-02-07,Apple Pay,Brazil,61,Female,0
+177,C0177,Books,Machine Learning,2,135.45,270.9,2024-01-29,Credit Card,UK,37,Male,0
+178,C0178,Beauty,Lipstick,3,284.76,854.28,2024-09-22,Debit Card,Canada,34,Male,0
+179,C0179,Books,SQL Basics,2,191.25,382.5,2024-09-30,Credit Card,UK,55,Male,0
+180,C0180,Books,Cloud Computing,5,21.94,109.7,2024-01-15,Credit Card,USA,59,Female,0
+181,C0181,Books,AI Ethics,5,195.3,976.5,2024-09-11,Debit Card,France,48,Male,0
+182,C0182,Beauty,Hair Oil,3,141.52,424.56,2024-01-31,PayPal,Brazil,44,Female,0
+183,C0183,Home & Garden,Vacuum,3,259.82,779.46,2024-06-12,Debit Card,Japan,26,Female,0
+184,C0184,Electronics,Webcam,2,145.27,290.54,2024-05-16,Apple Pay,Germany,27,Male,0
+185,C0185,Sports,Gym Bag,2,289.17,578.34,2024-03-22,Debit Card,Australia,30,Male,0
+186,C0186,Books,Statistics,4,264.92,1059.68,2024-09-11,Credit Card,Canada,43,Female,0
+187,C0187,Clothing,Hoodie,1,24.65,24.65,2024-09-10,Apple Pay,France,52,Male,0
+188,C0188,Sports,Basketball,3,220.97,662.91,2024-07-25,Debit Card,USA,43,Male,0
+189,C0189,Clothing,Hoodie,5,93.68,468.4,2024-07-16,Apple Pay,France,57,Male,0
+190,C0190,Electronics,Mouse,3,240.51,721.53,2024-06-22,Debit Card,UK,30,Female,0
+191,C0191,Electronics,Wireless Headphones,2,216.93,433.86,2024-08-30,Apple Pay,UK,56,Male,0
+192,C0192,Books,Cloud Computing,2,123.95,247.9,2024-06-02,Debit Card,Brazil,63,Female,0
+193,C0193,Electronics,Webcam,3,205.39,616.17,2024-08-01,Debit Card,USA,56,Female,0
+194,C0194,Beauty,Lipstick,1,179.21,179.21,2024-03-28,Apple Pay,UK,61,Male,1
+195,C0195,Beauty,Shampoo,2,15.48,30.96,2024-06-09,Apple Pay,UK,44,Male,0
+196,C0196,Books,Statistics,1,214.66,214.66,2024-09-22,PayPal,Australia,60,Female,0
+197,C0197,Home & Garden,Vacuum,4,274.51,1098.04,2024-06-24,Debit Card,France,57,Female,0
+198,C0198,Clothing,Dress,5,96.55,482.75,2024-06-01,Debit Card,Germany,62,Female,0
+199,C0199,Home & Garden,Blender,3,45.33,135.99,2024-10-05,Apple Pay,Japan,40,Male,0
+200,C0200,Home & Garden,Plant Pot,3,277.95,833.85,2024-05-11,Apple Pay,Germany,30,Female,0
+201,C0201,Beauty,Mascara,2,41.67,83.34,2024-10-27,PayPal,Germany,21,Male,0
+202,C0202,Electronics,Smartphone Case,4,105.78,423.12,2024-08-29,Credit Card,UK,18,Male,0
+203,C0203,Sports,Resistance Band,2,229.2,458.4,2024-05-27,Debit Card,France,59,Male,0
+204,C0204,Electronics,Bluetooth Speaker,5,224.21,1121.05,2024-01-20,PayPal,Japan,29,Male,0
+205,C0205,Sports,Resistance Band,2,281.61,563.22,2024-05-28,Credit Card,USA,37,Male,0
+206,C0206,Home & Garden,Blender,4,296.83,1187.32,2024-10-05,Apple Pay,UK,50,Female,0
+207,C0207,Electronics,Webcam,2,222.01,444.02,2024-05-11,PayPal,USA,65,Female,0
+208,C0208,Books,Web Development,2,187.17,374.34,2024-07-26,Apple Pay,Australia,23,Female,0
+209,C0209,Clothing,Jacket,4,103.83,415.32,2024-05-07,Credit Card,France,42,Male,0
+210,C0210,Home & Garden,Lamp,3,178.9,536.7,2024-10-20,Credit Card,France,59,Female,0
+211,C0211,Electronics,Smartphone Case,4,98.96,395.84,2024-07-26,Debit Card,Canada,58,Female,0
+212,C0212,Clothing,Sneakers,2,148.66,297.32,2024-08-20,Debit Card,Japan,62,Female,0
+213,C0213,Beauty,Lipstick,2,207.29,414.58,2024-02-11,Apple Pay,Australia,22,Male,0
+214,C0214,Books,Web Development,5,165.62,828.1,2024-03-25,Debit Card,Brazil,25,Male,0
+215,C0215,Sports,Dumbbell,5,139.18,695.9,2024-01-29,Apple Pay,UK,50,Female,0
+216,C0216,Electronics,Keyboard,3,219.74,659.22,2024-07-21,Debit Card,USA,65,Male,0
+217,C0217,Electronics,Mouse,3,213.1,639.3,2024-10-04,Credit Card,Canada,48,Male,0
+218,C0218,Clothing,Jacket,4,118.58,474.32,2024-07-14,Apple Pay,Japan,42,Male,0
+219,C0219,Beauty,Perfume,3,44.39,133.17,2024-10-02,Apple Pay,UK,64,Male,0
+220,C0220,Electronics,Power Bank,4,205.3,821.2,2024-10-05,Apple Pay,Japan,32,Male,0
+221,C0221,Clothing,Dress,2,281.84,563.68,2024-02-27,Credit Card,Japan,57,Male,0
+222,C0222,Electronics,Smartphone Case,5,19.73,98.65,2024-01-25,PayPal,USA,43,Female,0
+223,C0223,Clothing,T-Shirt,2,156.12,312.24,2024-05-28,PayPal,Australia,54,Female,0
+224,C0224,Clothing,Sneakers,4,97.14,388.56,2024-02-01,PayPal,Japan,53,Female,1
+225,C0225,Home & Garden,Rug,5,102.42,512.1,2024-08-01,Apple Pay,UK,37,Female,0
+226,C0226,Books,Statistics,2,256.3,512.6,2024-06-02,PayPal,Brazil,21,Female,0
+227,C0227,Books,Machine Learning,4,80.42,321.68,2024-04-14,Debit Card,Canada,46,Female,0
+228,C0228,Beauty,Lipstick,1,87.84,87.84,2024-01-21,Credit Card,Germany,55,Male,0
+229,C0229,Home & Garden,Blender,1,71.41,71.41,2024-04-07,Credit Card,Brazil,33,Male,0
+230,C0230,Clothing,Hoodie,3,120.38,361.14,2024-09-30,Debit Card,France,34,Female,0
+231,C0231,Sports,Resistance Band,1,242.81,242.81,2024-08-28,Debit Card,Germany,41,Female,0
+232,C0232,Books,Web Development,2,14.69,29.38,2024-10-10,Apple Pay,France,27,Male,0
+233,C0233,Sports,Tennis Racket,4,169.68,678.72,2024-06-21,Debit Card,Brazil,64,Female,0
+234,C0234,Beauty,Sunscreen,2,50.58,101.16,2024-10-06,Apple Pay,UK,52,Male,0
+235,C0235,Electronics,Wireless Headphones,1,129.58,129.58,2024-04-28,Credit Card,UK,18,Male,0
+236,C0236,Home & Garden,Coffee Maker,5,194.93,974.65,2024-09-04,Apple Pay,USA,18,Female,1
+237,C0237,Books,SQL Basics,5,293.46,1467.3,2024-01-09,Apple Pay,UK,24,Male,0
+238,C0238,Clothing,Sneakers,5,162.66,813.3,2024-06-30,Debit Card,Japan,23,Female,0
+239,C0239,Sports,Tennis Racket,2,96.98,193.96,2024-02-11,Credit Card,Canada,43,Female,0
+240,C0240,Sports,Yoga Mat,1,213.82,213.82,2024-02-12,Apple Pay,Japan,59,Female,0
+241,C0241,Electronics,Wireless Headphones,2,71.3,142.6,2024-10-17,Apple Pay,France,20,Male,0
+242,C0242,Home & Garden,Coffee Maker,2,279.33,558.66,2024-06-10,Credit Card,Germany,55,Male,0
+243,C0243,Beauty,Hair Oil,1,96.78,96.78,2024-10-15,PayPal,Japan,61,Female,0
+244,C0244,Beauty,Perfume,1,155.22,155.22,2024-06-26,Credit Card,Canada,45,Male,0
+245,C0245,Home & Garden,Rug,3,18.58,55.74,2024-05-19,Apple Pay,Brazil,32,Female,0
+246,C0246,Sports,Gym Bag,2,207.1,414.2,2024-07-13,Credit Card,France,33,Male,0
+247,C0247,Clothing,Sweater,2,224.49,448.98,2024-06-11,Debit Card,Canada,23,Male,0
+248,C0248,Sports,Water Bottle,3,39.64,118.92,2024-02-14,PayPal,Japan,46,Female,0
+249,C0249,Electronics,Webcam,5,36.98,184.9,2024-06-15,Apple Pay,USA,36,Female,0
+250,C0250,Electronics,Bluetooth Speaker,5,161.11,805.55,2024-07-13,PayPal,UK,35,Female,0
+251,C0251,Clothing,Jeans,2,136.05,272.1,2024-08-03,Debit Card,Brazil,22,Female,0
+252,C0252,Clothing,Shorts,5,188.82,944.1,2024-08-22,Credit Card,UK,37,Male,0
+253,C0253,Home & Garden,Rug,3,137.65,412.95,2024-08-08,PayPal,France,38,Male,0
+254,C0254,Clothing,Sweater,3,94.51,283.53,2024-09-08,PayPal,Australia,42,Female,0
+255,C0255,Sports,Water Bottle,1,280.29,280.29,2024-04-12,PayPal,USA,64,Female,0
+256,C0256,Clothing,Shorts,3,251.06,753.18,2024-02-05,Apple Pay,Brazil,26,Female,0
+257,C0257,Beauty,Perfume,4,238.82,955.28,2024-02-07,Apple Pay,Brazil,55,Female,0
+258,C0258,Beauty,Hair Oil,5,20.65,103.25,2024-07-03,Credit Card,Canada,33,Female,0
+259,C0259,Books,Python Guide,5,295.24,1476.2,2024-07-23,Debit Card,Japan,24,Male,0
+260,C0260,Clothing,Sneakers,4,118.48,473.92,2024-08-25,PayPal,Australia,19,Female,0
+261,C0261,Sports,Dumbbell,1,251.07,251.07,2024-03-13,Debit Card,France,39,Female,0
+262,C0262,Books,Statistics,3,148.08,444.24,2024-08-12,Apple Pay,Australia,22,Female,1
+263,C0263,Beauty,Shampoo,1,256.25,256.25,2024-02-25,PayPal,Germany,51,Male,0
+264,C0264,Home & Garden,Rug,4,77.23,308.92,2024-07-26,PayPal,UK,58,Female,0
+265,C0265,Beauty,Lipstick,4,181.73,726.92,2024-07-18,Credit Card,Germany,31,Female,0
+266,C0266,Electronics,Smartphone Case,5,64.21,321.05,2024-06-15,PayPal,Brazil,25,Female,0
+267,C0267,Sports,Water Bottle,5,122.7,613.5,2024-07-19,Credit Card,Australia,40,Female,0
+268,C0268,Beauty,Mascara,5,181.14,905.7,2024-03-09,Debit Card,Canada,33,Female,0
+269,C0269,Home & Garden,Vacuum,5,122.64,613.2,2024-03-11,Apple Pay,Japan,29,Female,0
+270,C0270,Beauty,Perfume,5,58.38,291.9,2024-05-27,PayPal,UK,38,Female,0
+271,C0271,Home & Garden,Coffee Maker,4,49.59,198.36,2024-07-15,Apple Pay,Japan,61,Female,0
+272,C0272,Sports,Resistance Band,2,33.96,67.92,2024-01-16,PayPal,France,20,Female,0
+273,C0273,Home & Garden,Vacuum,4,174.03,696.12,2024-09-10,Credit Card,Canada,35,Female,0
+274,C0274,Electronics,Keyboard,5,73.37,366.85,2024-08-05,Credit Card,Germany,37,Male,0
+275,C0275,Home & Garden,Plant Pot,4,260.92,1043.68,2024-03-01,PayPal,Germany,65,Female,0
+276,C0276,Books,AI Ethics,2,188.67,377.34,2024-04-15,PayPal,USA,54,Female,0
+277,C0277,Books,Machine Learning,3,293.9,881.7,2024-05-29,Debit Card,France,50,Male,0
+278,C0278,Sports,Yoga Mat,3,261.43,784.29,2024-03-05,PayPal,Germany,27,Female,0
+279,C0279,Beauty,Hair Oil,4,51.22,204.88,2024-05-17,Apple Pay,Japan,46,Male,0
+280,C0280,Electronics,Mouse,5,227.43,1137.15,2024-07-07,Apple Pay,Brazil,38,Male,0
+281,C0281,Beauty,Shampoo,4,194.09,776.36,2024-07-02,Credit Card,Japan,31,Female,0
+282,C0282,Sports,Jump Rope,3,250.21,750.63,2024-06-21,PayPal,Brazil,39,Male,1
+283,C0283,Beauty,Body Lotion,1,46.02,46.02,2024-03-21,Apple Pay,Brazil,18,Female,0
+284,C0284,Beauty,Perfume,3,56.09,168.27,2024-05-20,Credit Card,Australia,34,Male,0
+285,C0285,Beauty,Perfume,1,124.93,124.93,2024-06-05,PayPal,Japan,59,Male,0
+286,C0286,Electronics,Bluetooth Speaker,4,32.59,130.36,2024-04-25,Apple Pay,USA,18,Female,0
+287,C0287,Sports,Basketball,4,30.53,122.12,2024-07-15,Credit Card,Canada,24,Female,0
+288,C0288,Home & Garden,Vacuum,4,234.29,937.16,2024-03-09,PayPal,Canada,51,Male,0
+289,C0289,Clothing,Shorts,3,219.5,658.5,2024-03-18,Apple Pay,Brazil,31,Male,0
+290,C0290,Clothing,Jeans,5,221.69,1108.45,2024-06-28,Apple Pay,Australia,26,Male,0
+291,C0291,Electronics,Bluetooth Speaker,5,184.28,921.4,2024-05-25,Credit Card,France,31,Male,0
+292,C0292,Home & Garden,Coffee Maker,2,153.51,307.02,2024-02-27,PayPal,Brazil,58,Male,0
+293,C0293,Electronics,Webcam,3,48.27,144.81,2024-10-18,Apple Pay,Australia,52,Male,0
+294,C0294,Electronics,Wireless Headphones,5,29.57,147.85,2024-05-14,PayPal,USA,21,Female,0
+295,C0295,Beauty,Hair Oil,4,213.52,854.08,2024-02-12,PayPal,France,23,Female,0
+296,C0296,Clothing,Jacket,5,104.75,523.75,2024-10-27,Credit Card,France,62,Female,0
+297,C0297,Clothing,T-Shirt,2,34.99,69.98,2024-08-10,Credit Card,Brazil,57,Male,0
+298,C0298,Beauty,Perfume,1,13.66,13.66,2024-03-11,Credit Card,UK,49,Female,0
+299,C0299,Beauty,Mascara,2,117.83,235.66,2024-05-17,Credit Card,USA,39,Female,0
+300,C0300,Electronics,Power Bank,5,191.97,959.85,2024-09-11,Apple Pay,Australia,21,Female,0
+301,C0301,Clothing,Hoodie,2,83.97,167.94,2024-02-22,Credit Card,Germany,65,Male,1
+302,C0302,Electronics,Bluetooth Speaker,1,146.8,146.8,2024-07-15,PayPal,UK,20,Female,0
+303,C0303,Clothing,Sweater,3,88.65,265.95,2024-02-09,Debit Card,Canada,50,Male,0
+304,C0304,Books,Python Guide,4,29.98,119.92,2024-08-26,Debit Card,France,38,Male,0
+305,C0305,Electronics,Webcam,2,94.55,189.1,2024-06-04,PayPal,Brazil,41,Female,0
+306,C0306,Clothing,Sneakers,2,11.84,23.68,2024-07-28,Credit Card,Germany,52,Female,0
+307,C0307,Beauty,Face Cream,3,10.41,31.23,2024-07-11,Debit Card,Canada,31,Male,0
+308,C0308,Electronics,USB Hub,3,36.97,110.91,2024-04-28,Apple Pay,Australia,47,Male,0
+309,C0309,Books,Machine Learning,4,31.69,126.76,2024-10-17,Credit Card,Japan,60,Male,0
+310,C0310,Home & Garden,Lamp,4,213.2,852.8,2024-06-16,Debit Card,Brazil,35,Male,0
+311,C0311,Clothing,Jacket,5,41.59,207.95,2024-02-24,PayPal,Brazil,47,Female,0
+312,C0312,Books,Cloud Computing,2,141.05,282.1,2024-08-25,Debit Card,Canada,23,Male,0
+313,C0313,Home & Garden,Coffee Maker,2,252.41,504.82,2024-06-16,PayPal,Canada,63,Male,0
+314,C0314,Sports,Yoga Mat,3,85.44,256.32,2024-03-30,Credit Card,Japan,46,Male,0
+315,C0315,Electronics,USB Hub,1,13.46,13.46,2024-04-23,PayPal,Germany,43,Female,0
+316,C0316,Beauty,Shampoo,5,179.96,899.8,2024-02-08,Credit Card,Canada,30,Female,0
+317,C0317,Electronics,Webcam,1,22.37,22.37,2024-08-24,Credit Card,UK,54,Female,0
+318,C0318,Sports,Resistance Band,1,120.98,120.98,2024-08-06,PayPal,Australia,31,Male,0
+319,C0319,Sports,Basketball,1,188.08,188.08,2024-05-05,Debit Card,Brazil,44,Female,0
+320,C0320,Home & Garden,Rug,2,131.57,263.14,2024-09-26,PayPal,USA,42,Female,0
+321,C0321,Sports,Water Bottle,5,155.68,778.4,2024-07-17,Debit Card,UK,19,Female,0
+322,C0322,Electronics,Power Bank,1,244.5,244.5,2024-08-29,Debit Card,Germany,28,Male,0
+323,C0323,Clothing,Dress,5,246.71,1233.55,2024-01-29,PayPal,Japan,40,Male,0
+324,C0324,Books,Cloud Computing,3,275.04,825.12,2024-01-15,Debit Card,UK,54,Male,0
+325,C0325,Sports,Jump Rope,2,152.22,304.44,2024-02-16,Credit Card,Germany,56,Male,1
+326,C0326,Sports,Yoga Mat,3,276.18,828.54,2024-04-13,PayPal,Australia,63,Male,0
+327,C0327,Home & Garden,Coffee Maker,1,52.83,52.83,2024-03-13,Credit Card,Australia,22,Female,0
+328,C0328,Beauty,Hair Oil,5,39.29,196.45,2024-06-03,Debit Card,UK,28,Female,0
+329,C0329,Sports,Water Bottle,2,215.07,430.14,2024-10-14,Debit Card,Germany,60,Male,0
+330,C0330,Beauty,Mascara,2,61.53,123.06,2024-01-01,Apple Pay,USA,29,Female,0
+331,C0331,Books,Web Development,5,40.18,200.9,2024-09-11,PayPal,Australia,65,Male,0
+332,C0332,Home & Garden,Vacuum,1,248.27,248.27,2024-06-20,Apple Pay,USA,34,Male,0
+333,C0333,Electronics,Webcam,3,238.23,714.69,2024-01-01,Credit Card,Japan,46,Female,0
+334,C0334,Sports,Resistance Band,4,111.85,447.4,2024-07-11,Credit Card,Brazil,54,Male,0
+335,C0335,Electronics,Wireless Headphones,3,15.81,47.43,2024-05-13,Credit Card,Canada,39,Male,0
+336,C0336,Clothing,Jeans,5,283.12,1415.6,2024-02-17,Debit Card,Brazil,63,Male,0
+337,C0337,Beauty,Perfume,5,268.02,1340.1,2024-03-21,Credit Card,Canada,39,Male,0
+338,C0338,Sports,Jump Rope,3,96.24,288.72,2024-02-19,Credit Card,Japan,54,Female,0
+339,C0339,Home & Garden,Coffee Maker,4,35.4,141.6,2024-09-02,PayPal,Canada,19,Male,0
+340,C0340,Home & Garden,Plant Pot,4,254.68,1018.72,2024-06-06,Apple Pay,Brazil,49,Female,0
+341,C0341,Books,AI Ethics,2,117.59,235.18,2024-07-14,Debit Card,UK,46,Male,0
+342,C0342,Sports,Jump Rope,2,252.74,505.48,2024-10-15,Credit Card,UK,62,Male,0
+343,C0343,Home & Garden,Rug,5,75.97,379.85,2024-02-01,Apple Pay,Japan,52,Female,0
+344,C0344,Clothing,Shorts,3,32.89,98.67,2024-01-18,PayPal,Canada,46,Male,0
+345,C0345,Clothing,Sneakers,2,46.58,93.16,2024-08-04,Credit Card,Japan,30,Male,0
+346,C0346,Home & Garden,Lamp,1,35.23,35.23,2024-10-11,Apple Pay,Australia,35,Female,0
+347,C0347,Electronics,Mouse,1,130.18,130.18,2024-03-16,Credit Card,Canada,54,Male,0
+348,C0348,Books,Cloud Computing,4,86.59,346.36,2024-09-05,Apple Pay,USA,29,Female,0
+349,C0349,Books,AI Ethics,1,124.77,124.77,2024-06-18,PayPal,USA,65,Female,0
+350,C0350,Home & Garden,Coffee Maker,3,247.03,741.09,2024-06-04,Debit Card,France,49,Male,0
+351,C0351,Clothing,Jacket,3,292.51,877.53,2024-08-14,Debit Card,France,64,Female,0
+352,C0352,Electronics,Bluetooth Speaker,4,71.29,285.16,2024-07-27,Apple Pay,Australia,21,Male,0
+353,C0353,Beauty,Hair Oil,2,236.34,472.68,2024-09-25,Credit Card,UK,30,Male,0
+354,C0354,Clothing,T-Shirt,4,24.65,98.6,2024-07-03,PayPal,France,41,Female,0
+355,C0355,Beauty,Shampoo,1,80.15,80.15,2024-09-07,Apple Pay,UK,48,Female,0
+356,C0356,Home & Garden,Plant Pot,3,17.95,53.85,2024-01-26,PayPal,Germany,32,Male,0
+357,C0357,Home & Garden,Rug,5,15.81,79.05,2024-01-05,Apple Pay,UK,59,Male,0
+358,C0358,Electronics,Bluetooth Speaker,3,186.41,559.23,2024-06-05,Debit Card,Japan,42,Female,0
+359,C0359,Clothing,Shorts,3,206.38,619.14,2024-07-22,Credit Card,USA,50,Female,0
+360,C0360,Books,SQL Basics,3,208.47,625.41,2024-09-03,Credit Card,Australia,35,Female,0
+361,C0361,Home & Garden,Blender,2,53.47,106.94,2024-05-03,Credit Card,Japan,60,Female,0
+362,C0362,Beauty,Face Cream,4,299.26,1197.04,2024-05-12,Apple Pay,Japan,42,Male,0
+363,C0363,Books,Web Development,3,220.69,662.07,2024-04-23,Apple Pay,Australia,50,Female,0
+364,C0364,Beauty,Perfume,3,38.29,114.87,2024-03-06,Debit Card,UK,61,Female,0
+365,C0365,Clothing,Hoodie,2,225.81,451.62,2024-06-06,Apple Pay,Australia,41,Female,0
+366,C0366,Sports,Dumbbell,4,25.56,102.24,2024-10-25,Credit Card,Brazil,30,Male,0
+367,C0367,Sports,Jump Rope,4,25.67,102.68,2024-03-18,PayPal,Germany,39,Female,0
+368,C0368,Sports,Basketball,3,260.08,780.24,2024-04-02,Credit Card,Brazil,39,Male,0
+369,C0369,Electronics,Wireless Headphones,4,89.31,357.24,2024-03-27,PayPal,Brazil,23,Male,0
+370,C0370,Beauty,Hair Oil,4,134.41,537.64,2024-09-01,Apple Pay,USA,20,Male,0
+371,C0371,Electronics,Webcam,5,65.26,326.3,2024-01-03,PayPal,Germany,62,Female,0
+372,C0372,Electronics,Mouse,5,180.7,903.5,2024-03-26,Credit Card,USA,37,Female,0
+373,C0373,Books,Cloud Computing,4,267.5,1070.0,2024-03-09,Debit Card,Brazil,40,Male,0
+374,C0374,Sports,Yoga Mat,2,75.04,150.08,2024-03-08,PayPal,USA,55,Male,0
+375,C0375,Beauty,Face Cream,4,264.19,1056.76,2024-05-10,Credit Card,USA,60,Male,0
+376,C0376,Electronics,Wireless Headphones,1,130.85,130.85,2024-07-13,Credit Card,France,48,Male,0
+377,C0377,Beauty,Face Cream,3,132.04,396.12,2024-02-21,Debit Card,UK,44,Male,0
+378,C0378,Books,Data Science,3,43.05,129.15,2024-02-24,Apple Pay,Germany,56,Male,0
+379,C0379,Books,Web Development,3,213.99,641.97,2024-05-31,PayPal,USA,53,Female,0
+380,C0380,Beauty,Body Lotion,3,78.0,234.0,2024-01-07,Credit Card,Canada,54,Female,0
+381,C0381,Electronics,Smartphone Case,1,272.38,272.38,2024-04-28,Apple Pay,France,34,Female,0
+382,C0382,Clothing,T-Shirt,3,114.45,343.35,2024-06-09,Apple Pay,Canada,24,Male,1
+383,C0383,Clothing,Jacket,3,113.67,341.01,2024-08-12,Debit Card,Canada,41,Female,0
+384,C0384,Sports,Gym Bag,4,88.82,355.28,2024-07-16,Apple Pay,Japan,59,Male,0
+385,C0385,Beauty,Face Cream,2,40.07,80.14,2024-09-04,Apple Pay,UK,57,Female,0
+386,C0386,Books,Python Guide,2,150.08,300.16,2024-09-06,Credit Card,Japan,46,Male,0
+387,C0387,Beauty,Sunscreen,1,214.31,214.31,2024-09-25,PayPal,Australia,51,Male,0
+388,C0388,Beauty,Lipstick,4,110.26,441.04,2024-07-16,PayPal,USA,18,Male,0
+389,C0389,Sports,Resistance Band,2,31.7,63.4,2024-09-08,Debit Card,Germany,39,Female,0
+390,C0390,Clothing,Sweater,4,246.95,987.8,2024-02-10,Apple Pay,Brazil,54,Female,0
+391,C0391,Sports,Resistance Band,3,44.41,133.23,2024-09-11,Credit Card,Canada,43,Female,1
+392,C0392,Books,Python Guide,1,239.61,239.61,2024-06-04,PayPal,Brazil,39,Female,0
+393,C0393,Clothing,Shorts,3,172.43,517.29,2024-08-30,Debit Card,Brazil,25,Male,0
+394,C0394,Clothing,T-Shirt,3,112.98,338.94,2024-05-29,Debit Card,Canada,20,Male,0
+395,C0395,Beauty,Hair Oil,1,83.73,83.73,2024-04-10,PayPal,Canada,43,Male,0
+396,C0396,Clothing,Hoodie,1,229.56,229.56,2024-01-24,Credit Card,Brazil,47,Male,0
+397,C0397,Electronics,Wireless Headphones,5,281.23,1406.15,2024-10-26,Apple Pay,UK,62,Male,0
+398,C0398,Clothing,Jeans,4,200.67,802.68,2024-06-13,Apple Pay,Japan,56,Male,0
+399,C0399,Home & Garden,Blender,4,243.38,973.52,2024-03-11,Apple Pay,France,62,Female,0
+400,C0400,Books,Web Development,2,70.81,141.62,2024-05-28,Debit Card,UK,63,Male,0
+401,C0401,Beauty,Sunscreen,1,230.61,230.61,2024-10-14,Apple Pay,Japan,61,Female,0
+402,C0402,Sports,Yoga Mat,5,40.87,204.35,2024-07-14,PayPal,USA,60,Male,0
+403,C0403,Clothing,Dress,3,52.45,157.35,2024-02-01,Debit Card,Germany,52,Male,0
+404,C0404,Sports,Dumbbell,5,261.72,1308.6,2024-10-14,PayPal,Japan,33,Female,0
+405,C0405,Electronics,Mouse,4,130.79,523.16,2024-06-09,Credit Card,USA,65,Female,0
+406,C0406,Sports,Tennis Racket,3,228.97,686.91,2024-10-06,PayPal,Germany,36,Female,0
+407,C0407,Beauty,Shampoo,2,289.11,578.22,2024-09-20,Credit Card,Japan,20,Female,0
+408,C0408,Home & Garden,Vacuum,2,179.35,358.7,2024-05-10,Credit Card,Australia,47,Male,1
+409,C0409,Home & Garden,Coffee Maker,5,254.5,1272.5,2024-06-03,Apple Pay,Australia,22,Female,0
+410,C0410,Clothing,Jeans,5,56.21,281.05,2024-10-05,Apple Pay,Canada,40,Male,0
+411,C0411,Beauty,Sunscreen,3,114.62,343.86,2024-04-21,Apple Pay,USA,25,Female,0
+412,C0412,Beauty,Lipstick,1,207.93,207.93,2024-06-13,Apple Pay,Canada,42,Female,0
+413,C0413,Home & Garden,Coffee Maker,5,248.4,1242.0,2024-07-10,Apple Pay,Brazil,20,Female,0
+414,C0414,Clothing,Hoodie,5,33.87,169.35,2024-02-19,PayPal,USA,58,Male,0
+415,C0415,Beauty,Lipstick,4,252.33,1009.32,2024-04-15,Apple Pay,Canada,65,Male,1
+416,C0416,Beauty,Sunscreen,1,35.37,35.37,2024-01-28,PayPal,France,53,Male,0
+417,C0417,Clothing,Dress,4,122.52,490.08,2024-07-26,Apple Pay,Australia,19,Female,0
+418,C0418,Books,Python Guide,5,28.33,141.65,2024-10-26,Credit Card,Canada,40,Male,0
+419,C0419,Beauty,Mascara,5,35.08,175.4,2024-08-12,Apple Pay,Japan,60,Male,0
+420,C0420,Books,Web Development,2,226.55,453.1,2024-10-06,Debit Card,UK,37,Female,0
+421,C0421,Electronics,USB Hub,1,22.1,22.1,2024-10-20,Apple Pay,Canada,37,Male,0
+422,C0422,Beauty,Sunscreen,2,129.66,259.32,2024-09-19,PayPal,UK,29,Male,0
+423,C0423,Home & Garden,Air Purifier,1,62.58,62.58,2024-10-17,Credit Card,Brazil,59,Male,0
+424,C0424,Electronics,Power Bank,1,67.24,67.24,2024-10-24,Apple Pay,Australia,40,Male,0
+425,C0425,Clothing,Jeans,3,189.65,568.95,2024-04-09,Debit Card,Brazil,46,Female,0
+426,C0426,Home & Garden,Vacuum,5,174.38,871.9,2024-06-10,Apple Pay,UK,18,Female,0
+427,C0427,Clothing,Sweater,3,253.62,760.86,2024-03-09,Debit Card,Brazil,47,Female,0
+428,C0428,Home & Garden,Curtains,5,41.55,207.75,2024-02-11,Debit Card,UK,52,Male,0
+429,C0429,Beauty,Shampoo,1,268.7,268.7,2024-09-16,Credit Card,Japan,55,Male,0
+430,C0430,Books,SQL Basics,5,269.25,1346.25,2024-10-03,Apple Pay,UK,41,Female,0
+431,C0431,Books,SQL Basics,2,144.75,289.5,2024-09-18,Credit Card,Japan,41,Male,0
+432,C0432,Books,Machine Learning,5,50.7,253.5,2024-03-22,PayPal,UK,65,Female,0
+433,C0433,Electronics,Bluetooth Speaker,4,77.2,308.8,2024-05-15,Debit Card,Germany,20,Male,0
+434,C0434,Home & Garden,Rug,4,276.18,1104.72,2024-01-24,Credit Card,Australia,24,Female,0
+435,C0435,Home & Garden,Vacuum,4,199.56,798.24,2024-07-06,Credit Card,France,42,Male,0
+436,C0436,Home & Garden,Lamp,4,239.86,959.44,2024-01-04,PayPal,Brazil,28,Male,0
+437,C0437,Beauty,Mascara,2,53.56,107.12,2024-03-21,Debit Card,Canada,60,Male,0
+438,C0438,Home & Garden,Plant Pot,4,205.81,823.24,2024-09-02,PayPal,UK,59,Female,1
+439,C0439,Electronics,USB Hub,5,181.77,908.85,2024-03-09,Credit Card,UK,21,Male,0
+440,C0440,Clothing,Sweater,5,291.07,1455.35,2024-01-10,Debit Card,Canada,31,Female,0
+441,C0441,Sports,Resistance Band,2,73.61,147.22,2024-07-29,PayPal,UK,57,Female,0
+442,C0442,Beauty,Sunscreen,4,182.98,731.92,2024-02-05,PayPal,Japan,42,Male,0
+443,C0443,Clothing,Sweater,2,185.59,371.18,2024-03-31,Apple Pay,USA,52,Male,0
+444,C0444,Beauty,Perfume,5,166.38,831.9,2024-01-01,Apple Pay,Japan,41,Male,0
+445,C0445,Sports,Tennis Racket,4,238.96,955.84,2024-07-14,Debit Card,Canada,45,Male,0
+446,C0446,Clothing,Jeans,3,183.49,550.47,2024-10-05,Apple Pay,France,30,Male,0
+447,C0447,Electronics,Smartphone Case,5,12.08,60.4,2024-04-15,Debit Card,Japan,41,Male,0
+448,C0448,Beauty,Mascara,3,257.93,773.79,2024-08-04,Debit Card,France,61,Female,0
+449,C0449,Sports,Resistance Band,2,117.35,234.7,2024-10-11,Apple Pay,France,37,Female,0
+450,C0450,Sports,Basketball,1,226.86,226.86,2024-08-16,PayPal,Canada,31,Female,0
+451,C0451,Books,Python Guide,2,122.83,245.66,2024-01-03,Credit Card,UK,48,Female,0
+452,C0452,Home & Garden,Air Purifier,3,33.2,99.6,2024-01-20,Apple Pay,Japan,57,Female,0
+453,C0453,Books,Python Guide,2,195.67,391.34,2024-08-12,Credit Card,Germany,60,Female,0
+454,C0454,Books,Web Development,5,59.14,295.7,2024-01-19,Debit Card,Germany,59,Male,0
+455,C0455,Electronics,Power Bank,4,112.4,449.6,2024-07-21,Apple Pay,Germany,51,Male,0
+456,C0456,Electronics,Smartphone Case,5,92.49,462.45,2024-10-13,Debit Card,Australia,35,Male,0
+457,C0457,Clothing,Shorts,4,176.71,706.84,2024-05-13,PayPal,Japan,50,Male,0
+458,C0458,Books,SQL Basics,3,284.62,853.86,2024-09-19,Debit Card,France,62,Female,0
+459,C0459,Books,Statistics,2,229.66,459.32,2024-08-22,Apple Pay,USA,48,Male,0
+460,C0460,Sports,Tennis Racket,2,242.04,484.08,2024-07-30,Debit Card,USA,62,Female,0
+461,C0461,Electronics,Mouse,3,32.04,96.12,2024-04-01,Apple Pay,Australia,40,Male,0
+462,C0462,Home & Garden,Vacuum,2,154.7,309.4,2024-04-12,PayPal,Germany,34,Male,0
+463,C0463,Clothing,Hoodie,2,235.88,471.76,2024-03-02,Credit Card,Brazil,57,Male,0
+464,C0464,Books,Python Guide,4,117.64,470.56,2024-06-10,Apple Pay,France,49,Male,0
+465,C0465,Books,SQL Basics,4,74.4,297.6,2024-10-22,PayPal,USA,51,Female,0
+466,C0466,Books,Python Guide,5,110.7,553.5,2024-03-30,Apple Pay,Canada,62,Female,0
+467,C0467,Electronics,Wireless Headphones,2,120.02,240.04,2024-02-21,Debit Card,Australia,57,Female,0
+468,C0468,Home & Garden,Air Purifier,3,146.68,440.04,2024-06-24,Debit Card,UK,49,Female,0
+469,C0469,Beauty,Sunscreen,3,257.74,773.22,2024-05-23,Apple Pay,UK,54,Male,0
+470,C0470,Beauty,Lipstick,1,219.03,219.03,2024-04-30,Apple Pay,Japan,30,Male,0
+471,C0471,Beauty,Perfume,4,243.63,974.52,2024-03-31,Apple Pay,Brazil,26,Female,0
+472,C0472,Home & Garden,Blender,5,258.96,1294.8,2024-01-25,Apple Pay,Canada,62,Male,0
+473,C0473,Home & Garden,Curtains,1,140.45,140.45,2024-06-20,Debit Card,Australia,41,Female,0
+474,C0474,Sports,Dumbbell,3,261.53,784.59,2024-04-11,PayPal,France,40,Female,0
+475,C0475,Sports,Resistance Band,1,120.5,120.5,2024-05-26,Apple Pay,UK,28,Female,0
+476,C0476,Books,AI Ethics,1,32.93,32.93,2024-06-24,PayPal,Australia,38,Female,0
+477,C0477,Books,AI Ethics,3,267.42,802.26,2024-07-04,Apple Pay,Japan,28,Male,0
+478,C0478,Clothing,Sneakers,3,282.72,848.16,2024-02-10,PayPal,UK,43,Male,0
+479,C0479,Sports,Yoga Mat,1,233.56,233.56,2024-09-25,Credit Card,Canada,34,Male,0
+480,C0480,Sports,Jump Rope,2,81.73,163.46,2024-05-25,Apple Pay,UK,26,Male,1
+481,C0481,Beauty,Sunscreen,3,260.62,781.86,2024-08-27,Debit Card,Brazil,26,Male,0
+482,C0482,Sports,Gym Bag,5,195.53,977.65,2024-09-30,Debit Card,Australia,48,Male,0
+483,C0483,Sports,Jump Rope,3,129.53,388.59,2024-03-20,Debit Card,USA,18,Male,0
+484,C0484,Sports,Yoga Mat,4,284.61,1138.44,2024-09-01,Debit Card,USA,45,Female,0
+485,C0485,Electronics,Webcam,2,129.39,258.78,2024-10-14,Apple Pay,Japan,33,Male,0
+486,C0486,Beauty,Hair Oil,4,73.96,295.84,2024-02-10,Apple Pay,Germany,51,Female,0
+487,C0487,Beauty,Mascara,4,64.51,258.04,2024-02-05,PayPal,UK,36,Male,0
+488,C0488,Books,Statistics,3,213.13,639.39,2024-09-08,PayPal,Australia,19,Male,1
+489,C0489,Books,Python Guide,2,291.97,583.94,2024-05-24,Debit Card,UK,63,Female,0
+490,C0490,Clothing,Jeans,2,14.26,28.52,2024-04-21,Debit Card,Japan,37,Female,0
+491,C0491,Sports,Yoga Mat,3,33.25,99.75,2024-03-15,Credit Card,France,43,Male,0
+492,C0492,Clothing,Sneakers,3,246.99,740.97,2024-01-07,Credit Card,Germany,42,Female,0
+493,C0493,Electronics,Bluetooth Speaker,4,223.23,892.92,2024-02-18,PayPal,Brazil,42,Female,0
+494,C0494,Clothing,T-Shirt,5,161.06,805.3,2024-05-09,Apple Pay,France,30,Female,0
+495,C0495,Beauty,Lipstick,1,78.42,78.42,2024-08-10,Debit Card,USA,28,Female,0
+496,C0496,Sports,Tennis Racket,1,290.95,290.95,2024-10-24,Apple Pay,UK,41,Male,0
+497,C0497,Sports,Dumbbell,5,108.13,540.65,2024-01-31,Credit Card,Australia,59,Male,0
+498,C0498,Electronics,USB Hub,4,77.47,309.88,2024-10-12,Debit Card,Brazil,64,Male,1
+499,C0499,Sports,Water Bottle,2,82.69,165.38,2024-01-21,Apple Pay,Brazil,53,Female,0
+500,C0500,Sports,Tennis Racket,5,64.11,320.55,2024-06-27,Debit Card,Brazil,35,Male,0
+501,C0501,Clothing,Shorts,3,247.62,742.86,2024-10-04,Debit Card,Brazil,18,Female,0
+502,C0502,Electronics,Webcam,5,79.24,396.2,2024-02-02,Apple Pay,Germany,51,Female,0
+503,C0503,Clothing,Dress,3,128.83,386.49,2024-06-13,Credit Card,Canada,51,Male,1
+504,C0504,Clothing,Jacket,1,68.59,68.59,2024-09-05,PayPal,Canada,20,Female,0
+505,C0505,Books,SQL Basics,1,116.23,116.23,2024-02-06,Credit Card,Germany,59,Female,0
+506,C0506,Electronics,Keyboard,1,114.66,114.66,2024-07-31,Debit Card,USA,57,Female,0
+507,C0507,Beauty,Shampoo,3,32.59,97.77,2024-04-20,Credit Card,Canada,64,Male,0
+508,C0508,Clothing,Sneakers,5,200.48,1002.4,2024-10-18,PayPal,Japan,65,Male,0
+509,C0509,Books,Cloud Computing,4,213.73,854.92,2024-08-06,Credit Card,UK,29,Female,0
+510,C0510,Beauty,Perfume,5,299.54,1497.7,2024-08-14,Debit Card,Australia,53,Female,0
+511,C0511,Sports,Gym Bag,3,186.43,559.29,2024-10-15,PayPal,Japan,53,Female,0
+512,C0512,Sports,Resistance Band,4,10.05,40.2,2024-01-18,Debit Card,USA,51,Male,0
+513,C0513,Home & Garden,Coffee Maker,3,295.46,886.38,2024-04-19,Debit Card,USA,62,Female,0
+514,C0514,Books,Machine Learning,1,20.93,20.93,2024-07-01,PayPal,UK,34,Female,0
+515,C0515,Clothing,Sneakers,3,245.2,735.6,2024-02-17,Apple Pay,Germany,64,Male,0
+516,C0516,Sports,Basketball,4,249.44,997.76,2024-10-22,Credit Card,France,20,Female,0
+517,C0517,Electronics,Webcam,3,265.13,795.39,2024-08-10,Apple Pay,Canada,32,Male,0
+518,C0518,Beauty,Hair Oil,1,98.38,98.38,2024-01-22,Debit Card,UK,38,Male,0
+519,C0519,Beauty,Hair Oil,4,228.31,913.24,2024-10-21,Credit Card,Germany,45,Female,0
+520,C0520,Clothing,Jacket,3,33.93,101.79,2024-10-19,Credit Card,Japan,34,Male,0
+521,C0521,Sports,Basketball,2,149.46,298.92,2024-04-11,Apple Pay,Japan,59,Male,0
+522,C0522,Beauty,Lipstick,2,30.77,61.54,2024-08-08,Debit Card,Canada,25,Female,0
+523,C0523,Home & Garden,Air Purifier,3,109.9,329.7,2024-01-13,Debit Card,UK,40,Female,0
+524,C0524,Sports,Yoga Mat,2,67.9,135.8,2024-07-10,PayPal,Canada,25,Male,0
+525,C0525,Books,Machine Learning,3,13.97,41.91,2024-02-26,Debit Card,Brazil,48,Male,0
+526,C0526,Beauty,Lipstick,2,168.45,336.9,2024-05-12,Apple Pay,UK,62,Male,0
+527,C0527,Beauty,Face Cream,3,59.38,178.14,2024-05-25,PayPal,France,21,Female,0
+528,C0528,Electronics,Smartphone Case,4,201.5,806.0,2024-07-03,Credit Card,USA,36,Female,0
+529,C0529,Sports,Dumbbell,3,150.54,451.62,2024-09-29,Credit Card,UK,30,Female,0
+530,C0530,Beauty,Face Cream,1,81.73,81.73,2024-09-28,Debit Card,Australia,49,Female,0
+531,C0531,Electronics,Webcam,3,113.05,339.15,2024-06-03,PayPal,France,21,Female,0
+532,C0532,Electronics,Power Bank,2,53.99,107.98,2024-07-20,PayPal,Canada,64,Female,0
+533,C0533,Beauty,Lipstick,4,79.69,318.76,2024-03-19,Apple Pay,France,56,Female,0
+534,C0534,Clothing,Sneakers,2,178.49,356.98,2024-04-13,PayPal,France,62,Male,0
+535,C0535,Clothing,Jacket,3,29.66,88.98,2024-09-29,Credit Card,UK,38,Male,0
+536,C0536,Home & Garden,Rug,4,97.96,391.84,2024-05-20,PayPal,Germany,24,Male,0
+537,C0537,Books,SQL Basics,5,174.43,872.15,2024-04-28,PayPal,Germany,61,Male,0
+538,C0538,Beauty,Body Lotion,2,155.66,311.32,2024-08-28,Debit Card,UK,42,Female,0
+539,C0539,Clothing,Sneakers,2,19.34,38.68,2024-01-08,Debit Card,Japan,32,Male,0
+540,C0540,Electronics,USB Hub,4,261.46,1045.84,2024-09-07,Debit Card,Brazil,33,Female,0
+541,C0541,Electronics,Mouse,3,124.29,372.87,2024-10-19,Credit Card,Canada,46,Female,0
+542,C0542,Electronics,Bluetooth Speaker,5,165.97,829.85,2024-01-21,Apple Pay,USA,30,Female,0
+543,C0543,Home & Garden,Blender,4,58.27,233.08,2024-05-30,Credit Card,UK,47,Female,0
+544,C0544,Books,Data Science,2,235.82,471.64,2024-10-06,PayPal,Japan,44,Female,0
+545,C0545,Clothing,Shorts,5,270.01,1350.05,2024-04-13,Apple Pay,Canada,34,Female,0
+546,C0546,Beauty,Perfume,1,36.44,36.44,2024-08-18,Debit Card,Canada,51,Female,0
+547,C0547,Books,Machine Learning,4,169.59,678.36,2024-01-23,PayPal,Australia,54,Male,0
+548,C0548,Clothing,Jacket,1,131.67,131.67,2024-06-07,Apple Pay,France,58,Male,0
+549,C0549,Clothing,Sneakers,1,190.53,190.53,2024-05-09,Credit Card,Brazil,49,Female,0
+550,C0550,Electronics,Keyboard,2,72.88,145.76,2024-08-31,Apple Pay,Japan,46,Male,0
+551,C0551,Electronics,Bluetooth Speaker,5,90.64,453.2,2024-10-12,PayPal,USA,29,Male,0
+552,C0552,Home & Garden,Coffee Maker,2,257.6,515.2,2024-10-22,Debit Card,Australia,23,Male,0
+553,C0553,Clothing,Jacket,3,187.21,561.63,2024-10-20,PayPal,Brazil,65,Female,0
+554,C0554,Electronics,Power Bank,3,116.88,350.64,2024-07-13,Credit Card,Japan,53,Male,0
+555,C0555,Clothing,Jeans,3,105.46,316.38,2024-07-30,PayPal,Germany,57,Male,0
+556,C0556,Beauty,Shampoo,4,219.97,879.88,2024-05-27,Apple Pay,Australia,34,Female,0
+557,C0557,Books,Statistics,5,221.45,1107.25,2024-09-11,Apple Pay,UK,57,Male,0
+558,C0558,Clothing,T-Shirt,1,16.95,16.95,2024-03-01,PayPal,Japan,44,Male,0
+559,C0559,Books,Web Development,1,195.77,195.77,2024-05-24,Debit Card,Canada,37,Female,0
+560,C0560,Home & Garden,Coffee Maker,1,208.88,208.88,2024-06-23,Apple Pay,USA,29,Male,0
+561,C0561,Home & Garden,Curtains,4,241.19,964.76,2024-03-10,Apple Pay,UK,58,Female,0
+562,C0562,Books,Cloud Computing,4,237.35,949.4,2024-07-30,Credit Card,France,54,Female,0
+563,C0563,Electronics,Bluetooth Speaker,5,208.78,1043.9,2024-06-30,Credit Card,UK,35,Male,0
+564,C0564,Sports,Basketball,5,185.64,928.2,2024-04-05,Credit Card,France,63,Female,0
+565,C0565,Home & Garden,Rug,1,154.14,154.14,2024-05-01,Debit Card,Brazil,37,Male,0
+566,C0566,Clothing,Jeans,3,237.62,712.86,2024-04-13,Credit Card,Brazil,50,Male,0
+567,C0567,Books,Machine Learning,2,108.62,217.24,2024-09-04,Debit Card,Australia,27,Male,0
+568,C0568,Books,Machine Learning,2,220.12,440.24,2024-08-23,Apple Pay,Canada,18,Female,0
+569,C0569,Beauty,Shampoo,3,145.38,436.14,2024-01-24,Credit Card,France,19,Female,0
+570,C0570,Clothing,Hoodie,2,65.83,131.66,2024-05-21,Debit Card,Brazil,60,Male,0
+571,C0571,Clothing,Dress,1,14.41,14.41,2024-10-13,Credit Card,Germany,52,Female,0
+572,C0572,Home & Garden,Vacuum,3,176.47,529.41,2024-03-28,Credit Card,France,57,Female,0
+573,C0573,Electronics,USB Hub,1,146.5,146.5,2024-01-26,Credit Card,Japan,21,Male,0
+574,C0574,Clothing,Shorts,5,113.12,565.6,2024-06-19,PayPal,Canada,47,Male,0
+575,C0575,Beauty,Body Lotion,1,142.11,142.11,2024-08-26,Apple Pay,Germany,32,Male,0
+576,C0576,Books,SQL Basics,3,123.69,371.07,2024-06-18,Debit Card,Brazil,49,Male,0
+577,C0577,Electronics,Webcam,4,143.75,575.0,2024-03-28,Debit Card,Australia,56,Male,0
+578,C0578,Sports,Dumbbell,3,171.27,513.81,2024-02-06,Debit Card,Brazil,43,Female,0
+579,C0579,Clothing,Jacket,4,121.3,485.2,2024-06-23,PayPal,Japan,45,Female,0
+580,C0580,Clothing,Jacket,1,224.41,224.41,2024-10-20,Apple Pay,Canada,55,Female,0
+581,C0581,Electronics,Keyboard,2,99.32,198.64,2024-07-26,Credit Card,Canada,61,Female,0
+582,C0582,Beauty,Face Cream,1,73.1,73.1,2024-03-12,Credit Card,UK,60,Male,0
+583,C0583,Home & Garden,Rug,5,177.59,887.95,2024-04-10,PayPal,Australia,37,Female,0
+584,C0584,Sports,Water Bottle,1,178.98,178.98,2024-09-18,Apple Pay,UK,36,Male,0
+585,C0585,Books,Python Guide,1,213.96,213.96,2024-07-02,Credit Card,France,19,Male,0
+586,C0586,Books,AI Ethics,3,216.4,649.2,2024-07-26,Apple Pay,Japan,52,Male,0
+587,C0587,Sports,Basketball,2,171.06,342.12,2024-07-03,Apple Pay,UK,36,Male,0
+588,C0588,Electronics,Wireless Headphones,2,219.18,438.36,2024-09-06,Apple Pay,UK,23,Male,0
+589,C0589,Sports,Resistance Band,5,279.78,1398.9,2024-04-02,Apple Pay,Japan,53,Female,0
+590,C0590,Clothing,Jacket,4,185.32,741.28,2024-10-22,Apple Pay,Germany,63,Female,0
+591,C0591,Books,Cloud Computing,1,293.68,293.68,2024-10-17,Apple Pay,Australia,25,Female,0
+592,C0592,Electronics,USB Hub,5,295.23,1476.15,2024-05-23,Apple Pay,Canada,51,Male,0
+593,C0593,Beauty,Shampoo,5,241.44,1207.2,2024-06-08,Credit Card,Australia,52,Male,0
+594,C0594,Books,Statistics,5,222.8,1114.0,2024-08-03,Debit Card,France,36,Male,1
+595,C0595,Books,SQL Basics,5,85.52,427.6,2024-08-30,PayPal,USA,60,Female,0
+596,C0596,Books,Python Guide,3,150.57,451.71,2024-03-05,Credit Card,France,34,Male,0
+597,C0597,Home & Garden,Blender,1,225.0,225.0,2024-03-30,PayPal,Brazil,41,Male,0
+598,C0598,Beauty,Lipstick,4,62.42,249.68,2024-09-27,Credit Card,Australia,23,Male,0
+599,C0599,Clothing,Shorts,4,233.4,933.6,2024-05-01,Apple Pay,UK,31,Female,0
+600,C0600,Home & Garden,Plant Pot,1,58.59,58.59,2024-07-23,Apple Pay,France,48,Male,0
+601,C0601,Beauty,Hair Oil,4,86.15,344.6,2024-09-28,Apple Pay,USA,36,Female,0
+602,C0602,Home & Garden,Coffee Maker,1,276.13,276.13,2024-06-30,Apple Pay,France,39,Female,0
+603,C0603,Electronics,Power Bank,5,123.42,617.1,2024-05-03,PayPal,Australia,61,Male,0
+604,C0604,Electronics,Wireless Headphones,1,13.46,13.46,2024-02-20,Credit Card,Brazil,40,Male,0
+605,C0605,Home & Garden,Air Purifier,1,16.86,16.86,2024-02-17,Credit Card,Germany,56,Male,0
+606,C0606,Electronics,Smartphone Case,5,47.66,238.3,2024-10-16,PayPal,Canada,62,Male,0
+607,C0607,Sports,Dumbbell,4,277.57,1110.28,2024-05-21,Apple Pay,Australia,34,Male,0
+608,C0608,Home & Garden,Coffee Maker,4,122.68,490.72,2024-01-31,Debit Card,France,29,Female,0
+609,C0609,Clothing,Sweater,2,197.18,394.36,2024-02-25,PayPal,Japan,31,Male,0
+610,C0610,Beauty,Mascara,1,20.1,20.1,2024-02-06,Debit Card,Brazil,19,Female,0
+611,C0611,Beauty,Face Cream,1,202.73,202.73,2024-05-16,PayPal,Australia,43,Male,0
+612,C0612,Sports,Resistance Band,4,127.12,508.48,2024-02-05,PayPal,USA,42,Female,0
+613,C0613,Books,Cloud Computing,3,207.72,623.16,2024-07-24,Credit Card,Canada,41,Female,0
+614,C0614,Sports,Jump Rope,2,61.21,122.42,2024-01-21,Apple Pay,Germany,37,Female,0
+615,C0615,Beauty,Sunscreen,4,34.6,138.4,2024-08-12,PayPal,UK,20,Male,1
+616,C0616,Books,Web Development,4,122.73,490.92,2024-10-03,Debit Card,Brazil,52,Female,0
+617,C0617,Electronics,Wireless Headphones,3,26.25,78.75,2024-01-22,Apple Pay,Canada,31,Female,0
+618,C0618,Books,Machine Learning,5,77.56,387.8,2024-02-06,Credit Card,UK,49,Male,0
+619,C0619,Books,Python Guide,2,213.37,426.74,2024-03-07,Credit Card,UK,58,Male,0
+620,C0620,Electronics,Keyboard,5,59.49,297.45,2024-02-02,Credit Card,Canada,49,Male,0
+621,C0621,Clothing,Sweater,3,245.33,735.99,2024-07-24,Debit Card,Canada,61,Male,0
+622,C0622,Clothing,T-Shirt,5,60.29,301.45,2024-02-02,Credit Card,France,27,Female,0
+623,C0623,Home & Garden,Vacuum,4,80.65,322.6,2024-10-24,Credit Card,UK,24,Female,0
+624,C0624,Electronics,Keyboard,1,11.83,11.83,2024-04-01,Credit Card,France,44,Female,0
+625,C0625,Clothing,Jacket,3,161.69,485.07,2024-07-29,PayPal,UK,57,Male,0
+626,C0626,Beauty,Body Lotion,5,285.58,1427.9,2024-06-03,Debit Card,Japan,18,Male,0
+627,C0627,Books,Data Science,5,114.94,574.7,2024-10-03,PayPal,Brazil,58,Male,0
+628,C0628,Clothing,Jeans,2,208.71,417.42,2024-08-30,Apple Pay,UK,28,Male,0
+629,C0629,Home & Garden,Blender,2,136.04,272.08,2024-06-20,Apple Pay,USA,24,Male,0
+630,C0630,Clothing,Jacket,1,150.66,150.66,2024-02-29,Credit Card,Germany,64,Female,0
+631,C0631,Home & Garden,Rug,2,226.65,453.3,2024-06-15,PayPal,Canada,38,Male,0
+632,C0632,Beauty,Hair Oil,2,118.89,237.78,2024-04-22,Credit Card,Brazil,55,Female,0
+633,C0633,Sports,Basketball,2,279.08,558.16,2024-08-20,PayPal,Japan,41,Male,0
+634,C0634,Clothing,Hoodie,3,68.63,205.89,2024-03-06,Credit Card,USA,35,Male,0
+635,C0635,Sports,Resistance Band,4,59.64,238.56,2024-06-24,PayPal,France,56,Male,0
+636,C0636,Beauty,Perfume,5,291.33,1456.65,2024-04-27,Credit Card,Japan,51,Female,0
+637,C0637,Clothing,Shorts,4,90.95,363.8,2024-08-07,PayPal,Germany,38,Female,0
+638,C0638,Books,Machine Learning,5,270.48,1352.4,2024-08-01,Credit Card,USA,48,Male,0
+639,C0639,Sports,Resistance Band,1,141.2,141.2,2024-05-03,Credit Card,USA,62,Female,0
+640,C0640,Clothing,Hoodie,3,79.32,237.96,2024-02-16,Credit Card,Brazil,60,Female,0
+641,C0641,Sports,Yoga Mat,4,144.48,577.92,2024-03-11,Apple Pay,UK,41,Female,0
+642,C0642,Electronics,Smartphone Case,4,269.09,1076.36,2024-06-19,Credit Card,France,45,Female,0
+643,C0643,Books,Web Development,1,189.92,189.92,2024-06-20,Credit Card,Australia,21,Male,0
+644,C0644,Sports,Yoga Mat,3,116.26,348.78,2024-10-13,Credit Card,Germany,26,Female,0
+645,C0645,Electronics,Keyboard,5,262.62,1313.1,2024-04-17,PayPal,Australia,40,Female,0
+646,C0646,Sports,Jump Rope,1,28.37,28.37,2024-06-25,Apple Pay,Brazil,50,Male,0
+647,C0647,Books,SQL Basics,4,190.07,760.28,2024-02-03,PayPal,Brazil,23,Male,0
+648,C0648,Clothing,Dress,1,41.71,41.71,2024-05-21,Credit Card,UK,49,Male,0
+649,C0649,Books,Python Guide,3,130.79,392.37,2024-10-04,PayPal,Brazil,40,Female,0
+650,C0650,Beauty,Face Cream,3,64.82,194.46,2024-01-12,PayPal,Australia,44,Female,0
+651,C0651,Home & Garden,Curtains,5,203.09,1015.45,2024-09-28,Apple Pay,Brazil,37,Male,0
+652,C0652,Home & Garden,Vacuum,3,75.76,227.28,2024-07-09,Debit Card,USA,27,Female,0
+653,C0653,Clothing,Jacket,5,92.71,463.55,2024-03-30,PayPal,UK,33,Male,1
+654,C0654,Home & Garden,Vacuum,4,85.51,342.04,2024-04-04,PayPal,USA,60,Female,0
+655,C0655,Clothing,Hoodie,4,166.55,666.2,2024-03-24,Debit Card,Canada,19,Female,0
+656,C0656,Clothing,Shorts,3,55.25,165.75,2024-10-06,Debit Card,France,48,Female,0
+657,C0657,Books,Machine Learning,5,221.27,1106.35,2024-08-14,Debit Card,Canada,64,Female,0
+658,C0658,Clothing,Jeans,3,17.18,51.54,2024-04-22,Apple Pay,Australia,23,Female,0
+659,C0659,Beauty,Lipstick,5,162.66,813.3,2024-05-22,PayPal,USA,23,Female,0
+660,C0660,Electronics,Mouse,2,152.22,304.44,2024-09-18,Credit Card,Australia,43,Male,0
+661,C0661,Sports,Water Bottle,4,118.11,472.44,2024-05-25,Debit Card,Australia,37,Female,0
+662,C0662,Electronics,Bluetooth Speaker,4,225.03,900.12,2024-07-31,Apple Pay,France,28,Female,0
+663,C0663,Sports,Basketball,5,183.39,916.95,2024-03-14,PayPal,France,48,Female,0
+664,C0664,Books,AI Ethics,1,11.91,11.91,2024-05-19,Apple Pay,UK,53,Female,0
+665,C0665,Clothing,Sneakers,2,251.35,502.7,2024-05-28,Apple Pay,USA,37,Female,0
+666,C0666,Beauty,Body Lotion,2,17.77,35.54,2024-01-02,PayPal,France,37,Female,0
+667,C0667,Beauty,Mascara,4,62.01,248.04,2024-05-05,Credit Card,Canada,35,Female,0
+668,C0668,Electronics,Webcam,5,149.33,746.65,2024-08-11,Debit Card,Brazil,62,Male,0
+669,C0669,Beauty,Face Cream,3,57.22,171.66,2024-01-30,PayPal,Australia,47,Male,0
+670,C0670,Electronics,Power Bank,3,131.65,394.95,2024-07-01,Credit Card,France,36,Male,0
+671,C0671,Beauty,Perfume,1,183.63,183.63,2024-03-26,Debit Card,Australia,61,Female,0
+672,C0672,Beauty,Sunscreen,1,164.97,164.97,2024-06-29,PayPal,USA,26,Female,0
+673,C0673,Sports,Gym Bag,3,277.05,831.15,2024-03-24,Credit Card,Germany,27,Male,0
+674,C0674,Books,Data Science,4,143.53,574.12,2024-02-09,Credit Card,UK,19,Female,0
+675,C0675,Beauty,Sunscreen,2,246.93,493.86,2024-09-24,Debit Card,UK,63,Female,1
+676,C0676,Electronics,Bluetooth Speaker,2,258.47,516.94,2024-03-13,PayPal,France,26,Male,0
+677,C0677,Electronics,Mouse,1,32.53,32.53,2024-09-04,Apple Pay,USA,30,Male,1
+678,C0678,Beauty,Face Cream,4,44.48,177.92,2024-05-09,Credit Card,Canada,37,Male,0
+679,C0679,Electronics,Bluetooth Speaker,5,271.33,1356.65,2024-04-04,Debit Card,USA,23,Male,0
+680,C0680,Home & Garden,Lamp,3,56.55,169.65,2024-09-13,PayPal,Canada,24,Male,0
+681,C0681,Beauty,Lipstick,3,59.8,179.4,2024-10-02,Credit Card,Canada,31,Female,0
+682,C0682,Books,Machine Learning,4,205.31,821.24,2024-02-24,PayPal,Australia,42,Female,0
+683,C0683,Clothing,Sweater,1,230.8,230.8,2024-06-09,Credit Card,Brazil,25,Male,0
+684,C0684,Home & Garden,Blender,5,219.41,1097.05,2024-02-12,Debit Card,Brazil,25,Female,0
+685,C0685,Books,SQL Basics,4,75.49,301.96,2024-07-27,Debit Card,Japan,30,Male,0
+686,C0686,Sports,Water Bottle,2,13.7,27.4,2024-09-08,Credit Card,Japan,46,Male,0
+687,C0687,Sports,Gym Bag,5,293.49,1467.45,2024-03-27,Credit Card,Australia,30,Female,0
+688,C0688,Sports,Dumbbell,2,253.04,506.08,2024-09-12,Debit Card,France,59,Female,0
+689,C0689,Beauty,Hair Oil,4,158.3,633.2,2024-03-16,Apple Pay,Canada,25,Female,0
+690,C0690,Clothing,Jacket,1,38.87,38.87,2024-01-28,Credit Card,Brazil,61,Male,0
+691,C0691,Sports,Water Bottle,2,97.79,195.58,2024-02-19,Credit Card,Brazil,47,Male,0
+692,C0692,Sports,Resistance Band,5,85.87,429.35,2024-06-24,Credit Card,USA,45,Male,0
+693,C0693,Home & Garden,Rug,4,143.29,573.16,2024-01-17,PayPal,France,63,Male,0
+694,C0694,Clothing,Dress,4,151.35,605.4,2024-02-26,Apple Pay,Brazil,48,Male,0
+695,C0695,Sports,Jump Rope,4,181.39,725.56,2024-07-12,Debit Card,France,38,Male,1
+696,C0696,Electronics,USB Hub,3,111.16,333.48,2024-10-25,Credit Card,Australia,42,Male,0
+697,C0697,Home & Garden,Rug,3,26.36,79.08,2024-05-05,PayPal,Germany,59,Female,0
+698,C0698,Beauty,Shampoo,3,43.19,129.57,2024-03-27,Credit Card,Australia,20,Female,0
+699,C0699,Sports,Gym Bag,3,15.91,47.73,2024-08-28,Credit Card,Australia,42,Female,0
+700,C0700,Electronics,Keyboard,1,210.34,210.34,2024-04-15,Debit Card,Brazil,50,Female,0
+701,C0701,Home & Garden,Lamp,4,68.5,274.0,2024-02-08,PayPal,France,34,Male,0
+702,C0702,Books,AI Ethics,2,191.12,382.24,2024-02-17,Credit Card,Australia,35,Male,0
+703,C0703,Books,Statistics,4,70.81,283.24,2024-02-09,Debit Card,France,45,Female,0
+704,C0704,Sports,Jump Rope,5,159.45,797.25,2024-10-07,PayPal,USA,58,Male,0
+705,C0705,Clothing,Shorts,3,281.77,845.31,2024-09-29,Apple Pay,USA,51,Male,0
+706,C0706,Clothing,Sneakers,2,226.46,452.92,2024-06-02,Apple Pay,Japan,38,Male,0
+707,C0707,Sports,Jump Rope,3,197.34,592.02,2024-05-11,PayPal,Japan,33,Male,0
+708,C0708,Electronics,Bluetooth Speaker,3,144.6,433.8,2024-10-13,Apple Pay,Japan,59,Male,0
+709,C0709,Home & Garden,Vacuum,1,84.93,84.93,2024-05-22,PayPal,USA,64,Female,0
+710,C0710,Electronics,Smartphone Case,3,184.45,553.35,2024-02-02,Apple Pay,Australia,60,Male,0
+711,C0711,Beauty,Perfume,2,42.45,84.9,2024-09-13,Credit Card,France,49,Male,0
+712,C0712,Electronics,Webcam,3,251.37,754.11,2024-07-18,PayPal,Japan,31,Male,0
+713,C0713,Clothing,Dress,4,128.42,513.68,2024-01-29,Apple Pay,Australia,62,Male,0
+714,C0714,Sports,Resistance Band,2,289.35,578.7,2024-03-15,Debit Card,Brazil,63,Female,0
+715,C0715,Electronics,Wireless Headphones,1,210.29,210.29,2024-05-02,Debit Card,Japan,37,Female,0
+716,C0716,Beauty,Shampoo,5,261.41,1307.05,2024-08-14,Apple Pay,USA,43,Female,0
+717,C0717,Clothing,Dress,2,259.22,518.44,2024-03-23,Apple Pay,Australia,59,Female,0
+718,C0718,Home & Garden,Plant Pot,4,146.61,586.44,2024-07-30,Debit Card,Japan,24,Male,0
+719,C0719,Books,Data Science,3,132.04,396.12,2024-10-07,Debit Card,Brazil,62,Male,0
+720,C0720,Beauty,Perfume,4,239.39,957.56,2024-03-10,Credit Card,Japan,30,Female,0
+721,C0721,Electronics,Smartphone Case,2,82.38,164.76,2024-03-07,Apple Pay,Australia,46,Female,0
+722,C0722,Clothing,Dress,2,209.36,418.72,2024-06-16,Debit Card,Germany,23,Female,0
+723,C0723,Sports,Gym Bag,5,75.09,375.45,2024-01-12,PayPal,Canada,47,Male,0
+724,C0724,Clothing,T-Shirt,4,189.21,756.84,2024-05-13,PayPal,Canada,41,Male,0
+725,C0725,Electronics,Wireless Headphones,5,136.19,680.95,2024-08-20,Apple Pay,Canada,32,Male,0
+726,C0726,Home & Garden,Blender,4,120.79,483.16,2024-08-08,PayPal,Germany,36,Male,0
+727,C0727,Sports,Basketball,1,94.15,94.15,2024-05-14,PayPal,Brazil,33,Female,0
+728,C0728,Beauty,Body Lotion,1,12.98,12.98,2024-03-09,Debit Card,Japan,61,Male,0
+729,C0729,Beauty,Hair Oil,5,84.3,421.5,2024-02-18,Credit Card,USA,39,Male,0
+730,C0730,Home & Garden,Coffee Maker,1,83.55,83.55,2024-07-14,Debit Card,Japan,60,Female,0
+731,C0731,Books,Python Guide,5,62.01,310.05,2024-03-27,Apple Pay,Australia,47,Male,0
+732,C0732,Beauty,Hair Oil,2,85.51,171.02,2024-06-09,Credit Card,UK,49,Female,0
+733,C0733,Sports,Jump Rope,3,187.74,563.22,2024-05-15,Debit Card,Japan,28,Female,0
+734,C0734,Sports,Basketball,5,257.37,1286.85,2024-08-13,Credit Card,Germany,27,Male,0
+735,C0735,Electronics,Keyboard,3,57.42,172.26,2024-08-27,Apple Pay,Canada,49,Male,0
+736,C0736,Beauty,Body Lotion,4,152.96,611.84,2024-03-16,Credit Card,Australia,23,Male,0
+737,C0737,Clothing,Jacket,5,248.54,1242.7,2024-10-15,PayPal,USA,51,Male,0
+738,C0738,Electronics,Bluetooth Speaker,4,206.29,825.16,2024-06-17,Credit Card,France,61,Male,0
+739,C0739,Books,Data Science,3,54.58,163.74,2024-02-11,Apple Pay,Brazil,47,Female,0
+740,C0740,Electronics,Webcam,1,200.28,200.28,2024-08-19,Debit Card,UK,31,Male,0
+741,C0741,Home & Garden,Lamp,1,225.69,225.69,2024-10-07,Apple Pay,Canada,43,Female,0
+742,C0742,Sports,Dumbbell,1,257.17,257.17,2024-03-24,Apple Pay,Japan,36,Male,0
+743,C0743,Sports,Gym Bag,3,272.07,816.21,2024-03-08,Debit Card,Canada,41,Male,0
+744,C0744,Sports,Resistance Band,3,173.28,519.84,2024-08-04,Credit Card,Japan,41,Male,0
+745,C0745,Sports,Dumbbell,1,158.86,158.86,2024-08-25,PayPal,UK,49,Male,0
+746,C0746,Sports,Dumbbell,4,97.1,388.4,2024-03-06,Debit Card,Germany,51,Female,0
+747,C0747,Electronics,Smartphone Case,1,158.88,158.88,2024-09-18,Apple Pay,Japan,24,Female,0
+748,C0748,Books,SQL Basics,3,83.9,251.7,2024-02-11,Credit Card,Canada,65,Female,0
+749,C0749,Clothing,Sweater,1,34.14,34.14,2024-06-01,Debit Card,Brazil,60,Female,0
+750,C0750,Home & Garden,Lamp,2,71.2,142.4,2024-02-10,Debit Card,Canada,45,Male,1
+751,C0751,Electronics,Wireless Headphones,2,200.17,400.34,2024-08-23,Apple Pay,Brazil,37,Female,0
+752,C0752,Beauty,Hair Oil,3,35.4,106.2,2024-03-10,Credit Card,Germany,25,Male,0
+753,C0753,Clothing,T-Shirt,2,149.51,299.02,2024-03-15,PayPal,Japan,58,Male,0
+754,C0754,Sports,Basketball,4,132.33,529.32,2024-02-29,PayPal,UK,65,Female,0
+755,C0755,Sports,Yoga Mat,4,179.71,718.84,2024-04-13,Debit Card,Japan,21,Female,1
+756,C0756,Beauty,Hair Oil,4,256.09,1024.36,2024-10-23,Debit Card,USA,49,Female,0
+757,C0757,Books,Statistics,2,217.13,434.26,2024-09-27,Credit Card,Japan,54,Female,0
+758,C0758,Home & Garden,Rug,4,43.9,175.6,2024-06-26,Apple Pay,Japan,19,Male,0
+759,C0759,Clothing,Shorts,3,137.04,411.12,2024-09-16,PayPal,Australia,56,Female,0
+760,C0760,Home & Garden,Rug,4,251.58,1006.32,2024-07-03,Apple Pay,UK,57,Male,0
+761,C0761,Beauty,Shampoo,4,47.43,189.72,2024-04-12,PayPal,Brazil,24,Female,0
+762,C0762,Sports,Jump Rope,2,70.73,141.46,2024-01-25,Credit Card,Australia,34,Female,0
+763,C0763,Clothing,T-Shirt,1,107.93,107.93,2024-02-28,PayPal,Canada,53,Male,0
+764,C0764,Home & Garden,Lamp,1,233.32,233.32,2024-10-12,Debit Card,UK,62,Male,0
+765,C0765,Sports,Resistance Band,1,292.64,292.64,2024-02-22,Credit Card,Canada,28,Male,0
+766,C0766,Home & Garden,Vacuum,3,215.36,646.08,2024-09-16,Apple Pay,Canada,27,Female,0
+767,C0767,Clothing,Jeans,2,137.33,274.66,2024-07-31,Credit Card,Germany,48,Female,0
+768,C0768,Clothing,Jeans,3,118.0,354.0,2024-07-31,Debit Card,Germany,27,Female,0
+769,C0769,Clothing,Sweater,4,276.22,1104.88,2024-08-22,Debit Card,USA,46,Male,0
+770,C0770,Beauty,Shampoo,1,108.1,108.1,2024-07-24,PayPal,Japan,21,Female,0
+771,C0771,Beauty,Perfume,5,26.75,133.75,2024-09-23,Debit Card,Japan,43,Female,0
+772,C0772,Home & Garden,Lamp,1,249.82,249.82,2024-09-27,PayPal,Japan,46,Male,0
+773,C0773,Books,Statistics,3,267.42,802.26,2024-07-26,PayPal,France,23,Male,0
+774,C0774,Sports,Basketball,5,297.65,1488.25,2024-05-25,PayPal,Canada,50,Female,0
+775,C0775,Beauty,Perfume,1,18.08,18.08,2024-10-03,Debit Card,Germany,37,Female,0
+776,C0776,Electronics,Wireless Headphones,3,85.32,255.96,2024-09-16,Debit Card,Canada,21,Male,0
+777,C0777,Books,Python Guide,4,108.29,433.16,2024-04-30,PayPal,Australia,37,Female,0
+778,C0778,Beauty,Perfume,4,160.69,642.76,2024-05-06,Credit Card,Australia,51,Male,0
+779,C0779,Home & Garden,Curtains,1,52.49,52.49,2024-08-05,Apple Pay,Canada,23,Male,0
+780,C0780,Clothing,Shorts,2,139.38,278.76,2024-07-08,Apple Pay,Japan,34,Female,0
+781,C0781,Sports,Resistance Band,4,248.9,995.6,2024-03-14,PayPal,Brazil,63,Female,0
+782,C0782,Beauty,Shampoo,2,142.07,284.14,2024-01-17,PayPal,Australia,25,Female,0
+783,C0783,Home & Garden,Blender,1,161.6,161.6,2024-03-01,Debit Card,France,41,Female,0
+784,C0784,Electronics,USB Hub,2,237.29,474.58,2024-08-03,Credit Card,France,36,Male,0
+785,C0785,Beauty,Body Lotion,1,45.47,45.47,2024-06-27,Credit Card,USA,44,Female,0
+786,C0786,Books,Statistics,3,236.58,709.74,2024-08-31,PayPal,UK,50,Female,0
+787,C0787,Beauty,Body Lotion,2,261.23,522.46,2024-06-15,Credit Card,Japan,42,Male,0
+788,C0788,Home & Garden,Coffee Maker,4,223.4,893.6,2024-02-15,PayPal,USA,54,Female,0
+789,C0789,Electronics,Smartphone Case,2,286.99,573.98,2024-10-04,Credit Card,Germany,48,Male,0
+790,C0790,Books,Machine Learning,1,89.73,89.73,2024-04-15,PayPal,Brazil,23,Female,0
+791,C0791,Electronics,Keyboard,1,108.58,108.58,2024-04-02,Apple Pay,USA,51,Female,0
+792,C0792,Electronics,Smartphone Case,1,167.11,167.11,2024-05-26,PayPal,UK,34,Male,0
+793,C0793,Sports,Basketball,1,188.19,188.19,2024-06-15,PayPal,USA,63,Male,0
+794,C0794,Electronics,Webcam,2,129.71,259.42,2024-06-14,Debit Card,Japan,25,Male,0
+795,C0795,Books,Web Development,4,157.49,629.96,2024-09-15,Apple Pay,Canada,35,Male,0
+796,C0796,Books,AI Ethics,1,150.4,150.4,2024-07-27,PayPal,USA,35,Male,0
+797,C0797,Books,Machine Learning,3,174.78,524.34,2024-08-16,Credit Card,Germany,27,Female,0
+798,C0798,Clothing,Sneakers,5,286.25,1431.25,2024-10-11,Apple Pay,USA,18,Female,0
+799,C0799,Books,SQL Basics,2,10.15,20.3,2024-09-03,Debit Card,France,61,Female,0
+800,C0800,Beauty,Lipstick,5,253.79,1268.95,2024-05-24,Credit Card,UK,65,Male,0
+801,C0801,Sports,Dumbbell,2,220.26,440.52,2024-05-23,Apple Pay,Germany,57,Female,0
+802,C0802,Home & Garden,Blender,4,89.16,356.64,2024-06-13,Debit Card,Germany,47,Female,1
+803,C0803,Beauty,Perfume,1,186.54,186.54,2024-01-03,Credit Card,UK,44,Female,0
+804,C0804,Books,Data Science,1,166.2,166.2,2024-08-15,Credit Card,Australia,42,Female,0
+805,C0805,Beauty,Face Cream,1,144.17,144.17,2024-04-08,Apple Pay,USA,32,Male,0
+806,C0806,Beauty,Sunscreen,2,36.08,72.16,2024-06-04,PayPal,Germany,49,Female,1
+807,C0807,Sports,Tennis Racket,1,66.86,66.86,2024-07-21,Credit Card,France,54,Female,0
+808,C0808,Clothing,Jacket,1,180.56,180.56,2024-02-03,PayPal,France,54,Male,0
+809,C0809,Beauty,Mascara,2,255.81,511.62,2024-01-12,Debit Card,Brazil,18,Female,0
+810,C0810,Beauty,Face Cream,3,135.43,406.29,2024-07-27,Debit Card,Canada,61,Female,0
+811,C0811,Books,Python Guide,2,23.61,47.22,2024-08-03,Apple Pay,Australia,18,Female,0
+812,C0812,Electronics,Wireless Headphones,2,293.64,587.28,2024-08-04,Credit Card,Germany,30,Male,0
+813,C0813,Electronics,Smartphone Case,1,149.18,149.18,2024-01-13,Debit Card,France,33,Male,0
+814,C0814,Home & Garden,Coffee Maker,3,160.7,482.1,2024-05-01,Credit Card,Brazil,24,Female,0
+815,C0815,Electronics,Wireless Headphones,1,119.43,119.43,2024-02-03,PayPal,USA,46,Male,0
+816,C0816,Beauty,Hair Oil,1,39.52,39.52,2024-01-29,Credit Card,France,42,Female,0
+817,C0817,Sports,Tennis Racket,5,238.36,1191.8,2024-01-06,Apple Pay,Japan,47,Female,0
+818,C0818,Books,Data Science,3,198.76,596.28,2024-01-14,Apple Pay,Australia,55,Male,0
+819,C0819,Electronics,Smartphone Case,5,238.92,1194.6,2024-04-09,PayPal,France,40,Female,0
+820,C0820,Books,Statistics,2,80.5,161.0,2024-01-23,Credit Card,UK,37,Female,0
+821,C0821,Beauty,Sunscreen,3,179.25,537.75,2024-10-04,PayPal,UK,48,Female,0
+822,C0822,Home & Garden,Lamp,1,160.12,160.12,2024-03-15,Credit Card,Germany,50,Male,0
+823,C0823,Clothing,Sneakers,2,237.72,475.44,2024-06-23,PayPal,Brazil,62,Female,0
+824,C0824,Home & Garden,Lamp,5,96.88,484.4,2024-06-17,PayPal,Canada,47,Male,0
+825,C0825,Electronics,Bluetooth Speaker,2,145.29,290.58,2024-04-19,PayPal,Brazil,65,Female,0
+826,C0826,Sports,Tennis Racket,4,63.42,253.68,2024-01-04,Debit Card,USA,22,Female,1
+827,C0827,Electronics,USB Hub,3,137.71,413.13,2024-10-26,Debit Card,USA,19,Male,0
+828,C0828,Clothing,Sneakers,3,218.45,655.35,2024-06-22,PayPal,UK,30,Male,0
+829,C0829,Home & Garden,Plant Pot,1,251.11,251.11,2024-03-11,Apple Pay,Canada,39,Male,0
+830,C0830,Clothing,Hoodie,3,201.65,604.95,2024-09-26,Apple Pay,Canada,25,Male,0
+831,C0831,Clothing,Sneakers,2,164.43,328.86,2024-07-10,Debit Card,Japan,58,Male,0
+832,C0832,Books,Web Development,5,95.3,476.5,2024-03-17,Debit Card,Germany,21,Female,0
+833,C0833,Books,Statistics,2,220.91,441.82,2024-08-28,Credit Card,UK,50,Female,0
+834,C0834,Beauty,Sunscreen,4,160.47,641.88,2024-04-01,Debit Card,Australia,51,Female,0
+835,C0835,Sports,Resistance Band,3,178.53,535.59,2024-10-25,Credit Card,Germany,32,Male,0
+836,C0836,Clothing,Sweater,2,98.73,197.46,2024-07-12,PayPal,Australia,34,Male,0
+837,C0837,Electronics,Power Bank,4,160.45,641.8,2024-04-27,Credit Card,Brazil,50,Female,0
+838,C0838,Sports,Gym Bag,4,116.57,466.28,2024-09-11,Debit Card,France,42,Male,0
+839,C0839,Clothing,Dress,1,114.13,114.13,2024-02-12,Debit Card,Canada,35,Male,0
+840,C0840,Electronics,Webcam,1,168.34,168.34,2024-06-19,PayPal,Australia,34,Female,0
+841,C0841,Beauty,Mascara,2,214.63,429.26,2024-03-11,Debit Card,USA,37,Female,0
+842,C0842,Sports,Gym Bag,5,229.75,1148.75,2024-01-07,Apple Pay,UK,43,Male,0
+843,C0843,Beauty,Lipstick,4,77.77,311.08,2024-10-27,Apple Pay,Brazil,39,Male,0
+844,C0844,Clothing,Sweater,4,70.77,283.08,2024-08-18,Credit Card,Australia,26,Male,0
+845,C0845,Beauty,Face Cream,4,245.01,980.04,2024-06-30,Debit Card,Germany,44,Female,0
+846,C0846,Sports,Jump Rope,3,180.21,540.63,2024-10-17,Credit Card,UK,27,Female,0
+847,C0847,Books,AI Ethics,4,69.21,276.84,2024-07-19,Credit Card,Japan,30,Female,0
+848,C0848,Books,Statistics,3,37.03,111.09,2024-02-23,PayPal,USA,62,Female,1
+849,C0849,Clothing,Jeans,4,92.3,369.2,2024-04-29,Debit Card,Canada,47,Male,0
+850,C0850,Electronics,USB Hub,3,259.31,777.93,2024-07-29,Apple Pay,UK,25,Male,0
+851,C0851,Sports,Dumbbell,4,286.97,1147.88,2024-04-15,PayPal,Germany,37,Female,0
+852,C0852,Beauty,Body Lotion,2,185.07,370.14,2024-06-07,PayPal,Brazil,35,Male,1
+853,C0853,Clothing,Shorts,1,249.12,249.12,2024-05-06,Debit Card,Brazil,47,Female,0
+854,C0854,Beauty,Shampoo,3,197.42,592.26,2024-08-21,Debit Card,France,43,Male,0
+855,C0855,Clothing,Sweater,4,121.54,486.16,2024-04-03,Credit Card,Japan,62,Male,0
+856,C0856,Clothing,Dress,5,94.64,473.2,2024-02-04,PayPal,Brazil,44,Male,0
+857,C0857,Electronics,Smartphone Case,5,232.29,1161.45,2024-06-15,Apple Pay,Brazil,28,Female,0
+858,C0858,Electronics,Keyboard,1,31.22,31.22,2024-08-24,Apple Pay,Australia,65,Female,0
+859,C0859,Sports,Yoga Mat,1,82.67,82.67,2024-03-10,Debit Card,Brazil,49,Female,0
+860,C0860,Books,Web Development,4,50.66,202.64,2024-05-22,PayPal,UK,19,Male,0
+861,C0861,Electronics,Mouse,2,32.49,64.98,2024-01-06,Debit Card,UK,46,Female,0
+862,C0862,Beauty,Face Cream,5,72.68,363.4,2024-01-25,Credit Card,Japan,62,Female,0
+863,C0863,Books,Python Guide,1,233.99,233.99,2024-04-13,PayPal,Australia,33,Male,0
+864,C0864,Sports,Yoga Mat,1,107.75,107.75,2024-04-08,Credit Card,Germany,24,Male,0
+865,C0865,Electronics,Mouse,5,41.22,206.1,2024-06-16,Debit Card,Germany,57,Male,0
+866,C0866,Sports,Gym Bag,1,77.39,77.39,2024-02-24,Debit Card,Australia,29,Male,0
+867,C0867,Home & Garden,Coffee Maker,4,71.69,286.76,2024-04-22,Credit Card,France,59,Female,1
+868,C0868,Clothing,Sweater,3,232.58,697.74,2024-09-12,Credit Card,UK,34,Male,0
+869,C0869,Beauty,Hair Oil,2,106.28,212.56,2024-06-11,Apple Pay,Canada,39,Male,0
+870,C0870,Books,Statistics,4,158.19,632.76,2024-04-29,Credit Card,Germany,19,Male,0
+871,C0871,Beauty,Hair Oil,2,189.72,379.44,2024-01-31,PayPal,Australia,49,Female,0
+872,C0872,Sports,Tennis Racket,1,79.03,79.03,2024-08-15,Debit Card,UK,35,Female,0
+873,C0873,Electronics,Mouse,3,227.65,682.95,2024-04-27,Debit Card,Australia,33,Male,0
+874,C0874,Beauty,Lipstick,2,186.33,372.66,2024-07-14,Debit Card,UK,46,Male,0
+875,C0875,Sports,Dumbbell,2,25.1,50.2,2024-03-13,PayPal,UK,23,Male,0
+876,C0876,Clothing,Sneakers,5,32.66,163.3,2024-08-27,Debit Card,UK,64,Male,0
+877,C0877,Clothing,Sneakers,3,92.74,278.22,2024-08-17,PayPal,France,48,Male,0
+878,C0878,Home & Garden,Rug,4,58.64,234.56,2024-08-13,Apple Pay,Japan,27,Female,1
+879,C0879,Sports,Gym Bag,1,230.06,230.06,2024-06-02,PayPal,UK,34,Female,0
+880,C0880,Sports,Jump Rope,4,173.01,692.04,2024-09-03,Credit Card,Australia,26,Female,0
+881,C0881,Clothing,T-Shirt,1,259.87,259.87,2024-07-10,Apple Pay,Japan,44,Female,0
+882,C0882,Home & Garden,Rug,4,99.26,397.04,2024-02-06,Apple Pay,USA,25,Female,0
+883,C0883,Clothing,Sneakers,4,287.55,1150.2,2024-06-27,Apple Pay,Australia,62,Male,0
+884,C0884,Sports,Tennis Racket,2,148.53,297.06,2024-07-04,Credit Card,UK,34,Female,0
+885,C0885,Clothing,Dress,2,184.61,369.22,2024-03-23,Credit Card,Canada,23,Female,0
+886,C0886,Books,Data Science,5,273.88,1369.4,2024-08-04,PayPal,Japan,34,Female,0
+887,C0887,Books,AI Ethics,5,99.3,496.5,2024-07-29,Credit Card,Canada,58,Female,0
+888,C0888,Home & Garden,Air Purifier,4,212.7,850.8,2024-01-04,PayPal,Brazil,18,Male,0
+889,C0889,Beauty,Hair Oil,5,130.87,654.35,2024-05-27,Apple Pay,UK,29,Female,0
+890,C0890,Clothing,Sneakers,4,62.77,251.08,2024-02-26,Apple Pay,Germany,29,Male,0
+891,C0891,Clothing,Sneakers,3,295.04,885.12,2024-07-28,Apple Pay,Canada,58,Male,0
+892,C0892,Electronics,Mouse,1,90.25,90.25,2024-06-24,Credit Card,Germany,48,Female,0
+893,C0893,Electronics,Wireless Headphones,1,87.15,87.15,2024-01-04,Credit Card,Canada,31,Male,0
+894,C0894,Books,SQL Basics,4,147.23,588.92,2024-06-21,Apple Pay,Australia,41,Female,0
+895,C0895,Clothing,Hoodie,4,119.74,478.96,2024-01-30,Debit Card,Australia,24,Male,0
+896,C0896,Beauty,Hair Oil,2,17.44,34.88,2024-03-03,Debit Card,Germany,41,Female,0
+897,C0897,Beauty,Body Lotion,5,129.8,649.0,2024-04-06,Credit Card,Australia,19,Female,0
+898,C0898,Beauty,Sunscreen,4,77.72,310.88,2024-09-05,Apple Pay,Canada,40,Female,0
+899,C0899,Sports,Dumbbell,4,95.21,380.84,2024-04-09,PayPal,USA,26,Female,0
+900,C0900,Home & Garden,Curtains,2,269.95,539.9,2024-02-29,Apple Pay,Germany,33,Male,0
+901,C0901,Beauty,Shampoo,1,136.11,136.11,2024-01-15,PayPal,Australia,42,Female,0
+902,C0902,Home & Garden,Curtains,1,202.98,202.98,2024-09-30,Apple Pay,Canada,62,Female,0
+903,C0903,Books,Data Science,3,119.32,357.96,2024-07-14,Apple Pay,Germany,32,Female,0
+904,C0904,Electronics,Smartphone Case,1,108.66,108.66,2024-04-06,Credit Card,Australia,26,Female,0
+905,C0905,Books,Python Guide,3,27.94,83.82,2024-10-01,PayPal,Japan,45,Female,0
+906,C0906,Beauty,Perfume,5,202.48,1012.4,2024-04-23,Credit Card,Japan,18,Female,0
+907,C0907,Home & Garden,Air Purifier,4,207.18,828.72,2024-03-16,Debit Card,UK,65,Male,0
+908,C0908,Home & Garden,Plant Pot,3,299.08,897.24,2024-10-20,Apple Pay,Germany,49,Female,0
+909,C0909,Sports,Yoga Mat,3,54.27,162.81,2024-04-17,PayPal,USA,29,Female,0
+910,C0910,Home & Garden,Vacuum,1,168.89,168.89,2024-06-21,Apple Pay,Brazil,40,Female,0
+911,C0911,Books,SQL Basics,3,211.94,635.82,2024-04-09,Apple Pay,Canada,26,Female,0
+912,C0912,Books,Python Guide,3,142.67,428.01,2024-03-24,PayPal,Brazil,62,Female,0
+913,C0913,Clothing,Sneakers,2,243.25,486.5,2024-04-10,Credit Card,Australia,64,Male,0
+914,C0914,Clothing,Sweater,4,207.03,828.12,2024-03-27,Credit Card,Canada,40,Female,0
+915,C0915,Electronics,Smartphone Case,5,198.52,992.6,2024-08-10,PayPal,Japan,33,Male,0
+916,C0916,Sports,Resistance Band,3,209.51,628.53,2024-03-29,Apple Pay,Canada,47,Female,0
+917,C0917,Beauty,Body Lotion,3,13.35,40.05,2024-02-29,Credit Card,Canada,49,Male,1
+918,C0918,Books,Statistics,3,211.17,633.51,2024-02-18,PayPal,Japan,48,Female,0
+919,C0919,Clothing,Jeans,3,28.4,85.2,2024-10-02,PayPal,Japan,62,Male,0
+920,C0920,Books,Statistics,1,160.47,160.47,2024-10-26,Credit Card,Germany,60,Male,0
+921,C0921,Books,Machine Learning,1,170.86,170.86,2024-06-09,Credit Card,USA,26,Male,0
+922,C0922,Electronics,Power Bank,1,34.53,34.53,2024-03-04,Debit Card,Australia,52,Male,0
+923,C0923,Beauty,Face Cream,2,97.16,194.32,2024-09-22,Debit Card,Brazil,26,Female,0
+924,C0924,Books,Cloud Computing,5,166.07,830.35,2024-04-17,Credit Card,USA,33,Male,0
+925,C0925,Home & Garden,Air Purifier,2,184.61,369.22,2024-04-20,Debit Card,France,26,Female,0
+926,C0926,Home & Garden,Blender,4,198.42,793.68,2024-03-24,Apple Pay,Brazil,23,Female,0
+927,C0927,Beauty,Perfume,5,69.08,345.4,2024-05-17,PayPal,Australia,54,Male,0
+928,C0928,Clothing,Hoodie,4,119.88,479.52,2024-05-06,Credit Card,France,25,Male,0
+929,C0929,Sports,Dumbbell,3,195.64,586.92,2024-07-04,Debit Card,France,27,Male,0
+930,C0930,Electronics,Mouse,2,119.79,239.58,2024-02-23,Credit Card,UK,51,Female,0
+931,C0931,Sports,Dumbbell,5,111.17,555.85,2024-10-19,Debit Card,France,56,Male,0
+932,C0932,Clothing,Hoodie,4,62.39,249.56,2024-09-29,Apple Pay,Brazil,55,Male,0
+933,C0933,Beauty,Perfume,2,51.36,102.72,2024-10-17,Debit Card,USA,64,Female,0
+934,C0934,Clothing,Sweater,4,63.09,252.36,2024-06-30,Apple Pay,France,35,Female,0
+935,C0935,Beauty,Lipstick,3,194.32,582.96,2024-02-14,Debit Card,Japan,38,Male,0
+936,C0936,Electronics,Bluetooth Speaker,1,57.87,57.87,2024-01-30,Credit Card,France,53,Female,0
+937,C0937,Electronics,Mouse,5,280.4,1402.0,2024-03-10,Apple Pay,Brazil,50,Male,0
+938,C0938,Books,Web Development,1,217.1,217.1,2024-09-30,Debit Card,Germany,65,Male,0
+939,C0939,Clothing,Sneakers,2,31.78,63.56,2024-03-09,Debit Card,USA,45,Female,0
+940,C0940,Home & Garden,Plant Pot,3,275.06,825.18,2024-05-07,Credit Card,France,37,Female,0
+941,C0941,Clothing,T-Shirt,5,124.14,620.7,2024-06-05,Credit Card,Brazil,57,Female,0
+942,C0942,Electronics,Keyboard,3,96.51,289.53,2024-02-24,Credit Card,Australia,64,Male,0
+943,C0943,Electronics,Smartphone Case,4,152.68,610.72,2024-02-13,PayPal,Japan,25,Female,1
+944,C0944,Beauty,Mascara,2,146.49,292.98,2024-07-10,Debit Card,Australia,45,Male,0
+945,C0945,Home & Garden,Plant Pot,4,200.31,801.24,2024-08-12,PayPal,UK,40,Female,1
+946,C0946,Beauty,Lipstick,1,64.96,64.96,2024-01-21,PayPal,Japan,44,Female,0
+947,C0947,Clothing,Sneakers,4,288.3,1153.2,2024-05-16,Credit Card,Japan,49,Female,0
+948,C0948,Beauty,Perfume,3,227.81,683.43,2024-07-23,Apple Pay,UK,25,Male,0
+949,C0949,Clothing,Jacket,3,154.99,464.97,2024-05-01,Credit Card,Australia,45,Male,0
+950,C0950,Home & Garden,Blender,4,33.95,135.8,2024-08-07,PayPal,UK,64,Male,0
+951,C0951,Electronics,Power Bank,2,203.23,406.46,2024-08-07,PayPal,Brazil,63,Male,0
+952,C0952,Books,Machine Learning,2,297.83,595.66,2024-03-17,PayPal,Canada,26,Female,1
+953,C0953,Clothing,Jacket,4,15.11,60.44,2024-04-12,Credit Card,USA,42,Female,0
+954,C0954,Beauty,Lipstick,2,107.48,214.96,2024-09-02,Credit Card,Japan,59,Male,0
+955,C0955,Home & Garden,Lamp,3,283.46,850.38,2024-08-02,PayPal,Australia,21,Male,1
+956,C0956,Electronics,Webcam,2,92.73,185.46,2024-05-23,Credit Card,Japan,29,Female,0
+957,C0957,Home & Garden,Lamp,3,42.33,126.99,2024-01-07,PayPal,Australia,41,Female,0
+958,C0958,Books,Cloud Computing,2,198.56,397.12,2024-04-17,Apple Pay,Canada,24,Male,0
+959,C0959,Books,Data Science,1,180.09,180.09,2024-04-07,PayPal,Brazil,24,Male,0
+960,C0960,Books,Cloud Computing,3,220.34,661.02,2024-04-13,PayPal,USA,26,Male,0
+961,C0961,Beauty,Mascara,5,292.78,1463.9,2024-07-06,Apple Pay,Canada,45,Male,0
+962,C0962,Books,Python Guide,2,183.74,367.48,2024-03-07,Debit Card,USA,54,Male,0
+963,C0963,Beauty,Lipstick,4,153.55,614.2,2024-09-29,Credit Card,UK,46,Female,0
+964,C0964,Sports,Gym Bag,5,88.72,443.6,2024-04-04,Credit Card,UK,54,Male,0
+965,C0965,Electronics,Keyboard,5,215.24,1076.2,2024-09-25,Debit Card,France,32,Female,0
+966,C0966,Books,Data Science,2,74.93,149.86,2024-09-30,PayPal,France,20,Male,0
+967,C0967,Home & Garden,Vacuum,3,263.27,789.81,2024-01-27,PayPal,Germany,52,Male,1
+968,C0968,Home & Garden,Lamp,3,34.13,102.39,2024-10-08,Debit Card,UK,44,Female,0
+969,C0969,Electronics,Wireless Headphones,3,73.58,220.74,2024-05-23,PayPal,France,19,Male,0
+970,C0970,Beauty,Hair Oil,3,262.3,786.9,2024-10-09,PayPal,Brazil,32,Female,0
+971,C0971,Books,AI Ethics,2,139.35,278.7,2024-08-10,Debit Card,UK,48,Male,0
+972,C0972,Sports,Basketball,2,64.76,129.52,2024-09-08,PayPal,France,19,Female,0
+973,C0973,Clothing,Sweater,5,64.47,322.35,2024-03-14,Credit Card,Japan,33,Female,0
+974,C0974,Sports,Dumbbell,5,49.8,249.0,2024-01-07,Credit Card,Japan,42,Male,0
+975,C0975,Electronics,Wireless Headphones,2,82.01,164.02,2024-02-12,Debit Card,UK,58,Male,0
+976,C0976,Electronics,Smartphone Case,5,223.47,1117.35,2024-06-22,Credit Card,Germany,26,Female,0
+977,C0977,Sports,Basketball,3,106.2,318.6,2024-03-20,PayPal,USA,52,Female,0
+978,C0978,Electronics,Wireless Headphones,1,39.81,39.81,2024-05-31,Credit Card,Japan,27,Male,0
+979,C0979,Electronics,Bluetooth Speaker,4,121.75,487.0,2024-06-29,Debit Card,Germany,61,Female,0
+980,C0980,Beauty,Shampoo,4,59.16,236.64,2024-02-26,PayPal,Canada,36,Female,0
+981,C0981,Home & Garden,Plant Pot,3,277.75,833.25,2024-02-13,Credit Card,UK,29,Female,0
+982,C0982,Books,Machine Learning,4,53.55,214.2,2024-06-03,Debit Card,Australia,24,Female,0
+983,C0983,Beauty,Sunscreen,3,245.1,735.3,2024-02-09,Credit Card,UK,59,Male,0
+984,C0984,Sports,Resistance Band,4,246.24,984.96,2024-02-27,Apple Pay,France,27,Male,0
+985,C0985,Clothing,Jacket,4,112.25,449.0,2024-09-10,Apple Pay,Brazil,62,Female,0
+986,C0986,Beauty,Sunscreen,2,242.61,485.22,2024-05-05,Apple Pay,Japan,53,Female,0
+987,C0987,Sports,Tennis Racket,4,34.24,136.96,2024-08-03,PayPal,Canada,33,Female,1
+988,C0988,Electronics,Webcam,5,147.43,737.15,2024-03-09,Credit Card,USA,40,Female,0
+989,C0989,Clothing,Dress,4,51.79,207.16,2024-10-09,Apple Pay,Germany,31,Male,0
+990,C0990,Clothing,Jeans,2,119.45,238.9,2024-01-14,Apple Pay,Australia,21,Male,0
+991,C0991,Electronics,Keyboard,5,262.43,1312.15,2024-01-16,PayPal,Australia,27,Male,0
+992,C0992,Electronics,Mouse,2,231.96,463.92,2024-08-28,PayPal,France,48,Female,0
+993,C0993,Sports,Yoga Mat,3,42.26,126.78,2024-01-31,Credit Card,UK,50,Male,1
+994,C0994,Sports,Resistance Band,5,216.3,1081.5,2024-05-12,Debit Card,Germany,45,Male,0
+995,C0995,Electronics,Mouse,2,225.5,451.0,2024-07-24,Credit Card,Germany,43,Male,0
+996,C0996,Books,Data Science,4,148.44,593.76,2024-07-26,Apple Pay,UK,21,Female,0
+997,C0997,Clothing,Dress,1,40.27,40.27,2024-07-04,Debit Card,USA,33,Female,0
+998,C0998,Electronics,Smartphone Case,2,183.15,366.3,2024-06-07,PayPal,Germany,58,Male,0
+999,C0999,Electronics,Wireless Headphones,5,296.07,1480.35,2024-09-04,Credit Card,USA,38,Male,0
+1000,C1000,Electronics,Webcam,3,288.02,864.06,2024-09-13,PayPal,Australia,43,Female,0
