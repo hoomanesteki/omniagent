@@ -13,7 +13,7 @@
 ## 🌟 Features
 
 - **Natural Language Interface** - Ask questions in plain English
-- **🎤 Voice Assistant** - Two-way voice conversation (speak & listen)
+- **Voice Assistant** - Two-way voice conversation (speak & listen)
 - **Multi-Agent Architecture** - 6 specialized agents working together
 - **Smart Routing** - Automatically finds the right agent for your query
 - **Interactive Visualizations** - Beautiful Plotly charts with zoom/pan
