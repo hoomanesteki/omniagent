@@ -42,7 +42,7 @@ def render_chat():
             st.markdown('</div>', unsafe_allow_html=True)
             
             # Figure
-            if msg.get('figure'):
+            if msg.get('figure') is not None:
                 st.plotly_chart(msg['figure'], use_container_width=True, key=f"fig_{i}")
             
             # Dataframe
@@ -57,11 +57,16 @@ def render_chat():
                 )
             
             # Scroll indicator for last message if there's more content below
-            if is_last and (msg.get('figure') or msg.get('dataframe') or msg.get('insights')):
+            if is_last and (msg.get('figure') is not None or msg.get('dataframe') is not None or msg.get('insights')):
                 st.markdown(
                     '<div class="scroll-indicator">⬇️ More content & suggestions below</div>',
                     unsafe_allow_html=True
                 )
+            
+            # Text-to-speech for last message if voice enabled
+            if is_last and st.session_state.get('voice_enabled') and st.session_state.get('voice_auto_speak'):
+                from agents.voice_agent import speak_response
+                speak_response(msg['content'], msg.get('agent'))
     
     # CRITICAL: Inject scroll-to-top JavaScript after all messages rendered
     if total_messages > 0:
@@ -312,6 +317,37 @@ def _handle_suggestion_click(original: str, cleaned: str):
     st.rerun()
 
 
+def _clean_for_speech(text: str) -> str:
+    """Clean markdown text for natural speech."""
+    import re
+    
+    if not text:
+        return ""
+    
+    # Remove markdown formatting
+    text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)  # Bold
+    text = re.sub(r'\*([^*]+)\*', r'\1', text)      # Italic
+    text = re.sub(r'`([^`]+)`', r'\1', text)        # Code
+    text = re.sub(r'#{1,6}\s*', '', text)           # Headers
+    text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)  # Links
+    text = re.sub(r'[|]', ' ', text)                # Tables
+    text = re.sub(r'[-]{3,}', '', text)             # Horizontal rules
+    text = re.sub(r'\n+', '. ', text)               # Newlines to periods
+    text = re.sub(r'[•\-\*]\s*', '', text)          # Bullet points
+    text = re.sub(r'^\d+\.\s*', '', text, flags=re.MULTILINE)  # Numbered lists
+    
+    # Remove emojis
+    text = re.sub(r'[📊📈📦🤖🔍🧠💡✅❌⚠️🎯🆘🏠📋ℹ️🔢📝🎤🔊🔇💾🔑🗑️🧭📂🔧🚀👋]', '', text)
+    
+    # Clean up whitespace and punctuation
+    text = re.sub(r'\s+', ' ', text)
+    text = re.sub(r'\.\s*\.', '.', text)
+    text = re.sub(r',\s*,', ',', text)
+    text = text.strip()
+    
+    return text
+
+
 def render_welcome():
     """Render welcome screen."""
     st.markdown('<h1 class="main-header">🤖 OmniAgent</h1>', unsafe_allow_html=True)
@@ -337,6 +373,12 @@ I'm your **intelligent data analysis companion**. Upload a CSV and ask me anythi
 1. **📂 Load data** from the sidebar
 2. **💬 Ask naturally** - "What's the average age?", "Show histogram of price"
 3. **📊 Get insights** with beautiful visualizations
+
+### 🎤 Voice Assistant
+
+Enable **Voice** in the sidebar for two-way conversation:
+- **Speak** your questions using the microphone
+- **Listen** as the agent speaks responses back to you
 
 **👈 Load some data to begin!**
     """)

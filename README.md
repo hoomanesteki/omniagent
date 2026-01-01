@@ -1,4 +1,4 @@
-# 🤖 OmniAgent: AI-Powered Data Analysis Assistant
+# 🤖 OmniAgent - AI-Powered Data Analysis Assistant
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io)
@@ -6,12 +6,14 @@
 
 **OmniAgent** is an intelligent, multi-agent data analysis assistant that helps you explore, visualize, and understand your data through natural conversation.
 
+Created by [Hooman Esteki](https://esteki.ca/)
 
 ---
 
 ## 🌟 Features
 
 - **Natural Language Interface** - Ask questions in plain English
+- **🎤 Voice Assistant** - Two-way voice conversation (speak & listen)
 - **Multi-Agent Architecture** - 6 specialized agents working together
 - **Smart Routing** - Automatically finds the right agent for your query
 - **Interactive Visualizations** - Beautiful Plotly charts with zoom/pan
@@ -21,27 +23,48 @@
 
 ---
 
+## 🎤 Voice Assistant
+
+OmniAgent includes a **two-way voice conversation** feature:
+
+| Feature | Description |
+|---------|-------------|
+| **🎤 Speak** | Click "Start Speaking" and ask your question by voice |
+| **🔊 Listen** | Agent speaks responses back to you automatically |
+| **⚙️ Settings** | Adjust voice speed and pitch |
+
+### How to Use Voice:
+1. Enable **Voice** toggle in the sidebar
+2. Click **"Start Speaking"** button
+3. Ask your question (e.g., "Show me statistics")
+4. Your question auto-submits to chat
+5. Agent responds in text AND speaks the answer!
+
+*Works best in Chrome or Edge browsers*
+
+---
+
 ## 🏗️ Architecture
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
-│                         USER QUERY                               │
-│                             ↓                                    │
+│                         USER QUERY                                │
+│                             ↓                                     │
 │  ┌────────────────────────────────────────────────────────────┐  │
-│  │                   🧠 MASTER AGENT                          │  │
-│  │         Natural Language Understanding & Routing           │  │
-│  │                Message Communication Protocol              │  │
+│  │                   🧠 MASTER AGENT                           │  │
+│  │         Natural Language Understanding & Routing            │  │
+│  │                Message Communication Protocol               │  │
 │  └────────────────────────────────────────────────────────────┘  │
-│                             ↓                                    │
-│      ┌─────────┬────────┬─────────┬──────────┬─────────┐         │
-│      ↓         ↓        ↓         ↓          ↓         ↓         │
-│  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐      │
-│  │  📊  │  │  📈   │  │  📦  │  │  🤖  │  │  🔍   │  │  🧠  │      │
-│  │Stats │  │ Viz  │  │ Agg  │  │Pred  │  │ SQL  │  │Master│      │
-│  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │      │
-│  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘      │
-│                             ↓                                    │
-│                       RESPONSE + INSIGHTS                        │
+│                             ↓                                     │
+│      ┌──────────┬──────────┬──────────┬──────────┬──────────┐   │
+│      ↓          ↓          ↓          ↓          ↓          ↓   │
+│  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐   │
+│  │  📊  │  │  📈  │  │  📦  │  │  🤖  │  │  🔍  │  │  🧠  │   │
+│  │Stats │  │ Viz  │  │ Agg  │  │Pred  │  │ SQL  │  │Master│   │
+│  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │   │
+│  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘   │
+│                             ↓                                     │
+│                       RESPONSE + INSIGHTS                         │
 └──────────────────────────────────────────────────────────────────┘
 ```
 

@@ -16,12 +16,16 @@ def render_sidebar():
     """Render the sidebar UI."""
     with st.sidebar:
         st.markdown("## 🤖 OmniAgent")
-        st.caption("AI Data Analysis")
-        st.markdown(f"Made with ❤️ by [{Config.AUTHOR}]({Config.AUTHOR_URL})", unsafe_allow_html=True)
+        st.caption("AI-Powered Data Analysis")
         st.divider()
         
         # AI Settings Section
         _render_ai_settings()
+        
+        st.divider()
+        
+        # Voice Settings Section
+        _render_voice_settings()
         
         st.divider()
         
@@ -39,116 +43,108 @@ def render_sidebar():
         _render_navigation()
 
 
+def _render_voice_settings():
+    """Render voice control settings."""
+    from agents.voice_agent import render_voice_controls
+    render_voice_controls()
+
+
 def _render_ai_settings():
-    """Render AI settings section."""
-    st.markdown("### 🧠 AI Settings")
+    """Render AI settings section with validation."""
+    st.markdown("### 🧠 AI Assistant")
     
-    if st.session_state.llm and st.session_state.llm.available:
-        # AI is available - show toggle
-        ai_enabled = st.toggle(
-            "Enable AI Mode",
-            value=st.session_state.ai_enabled,
-            key="ai_toggle"
-        )
-        st.session_state.ai_enabled = ai_enabled
+    # AI toggle
+    ai_enabled = st.toggle(
+        "Enable AI Mode",
+        value=st.session_state.get('ai_enabled', False),
+        key="ai_toggle"
+    )
+    st.session_state.ai_enabled = ai_enabled
+    
+    if not ai_enabled:
+        st.caption("Enable for smarter responses")
+        return
+    
+    # Check if API key exists and is validated
+    api_key = st.session_state.get('api_key', '')
+    llm = st.session_state.get('llm')
+    is_valid = llm and llm.available
+    
+    if not api_key or not is_valid:
+        st.warning("⚠️ API Key Required")
         
-        if st.session_state.llm:
-            st.session_state.llm.toggle(ai_enabled)
+        st.markdown("""
+**Get Free Groq API Key:**
+1. Go to [console.groq.com](https://console.groq.com)
+2. Sign up (free, no credit card)
+3. Go to API Keys → Create
+4. Copy & paste below
+        """)
         
-        if ai_enabled:
-            st.success("🧠 AI Mode: **Active**")
-            st.caption(f"Model: {st.session_state.llm.model}")
-        else:
-            st.warning("💡 AI Mode: **Disabled**")
-            st.caption("Using keyword matching only")
-    else:
-        # AI is offline - show help and setup
-        st.error("⚠️ **AI Offline**")
-        st.caption("App works but AI features disabled")
-        
-        # Help button to show setup guide in chat
-        if st.button("❓ How to Enable AI", use_container_width=True, key="ai_help_btn"):
-            _show_ai_setup_guide()
-            st.rerun()
-        
-        st.markdown("---")
-        st.markdown("**🔑 Quick Setup:**")
-        
-        # API Key input directly visible
-        api_key = st.text_input(
-            "Paste your Groq API Key:",
+        new_key = st.text_input(
+            "Groq API Key:",
+            value=api_key,
             type="password",
             placeholder="gsk_xxxxxxxxxxxx",
-            key="api_input",
-            help="Get free key at console.groq.com"
+            key="groq_key_input"
         )
         
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("💾 Save", use_container_width=True, key="save_key"):
-                if api_key and api_key.startswith("gsk_"):
-                    st.session_state.api_key = api_key
-                    st.session_state.llm = LLMClient(api_key)
-                    if st.session_state.master:
-                        st.session_state.master.llm = st.session_state.llm
-                    st.success("✅ Saved!")
-                    st.rerun()
-                elif api_key:
-                    st.error("Key should start with 'gsk_'")
+            if st.button("✅ Validate", key="validate_ai_key", use_container_width=True):
+                if new_key:
+                    if new_key.startswith("gsk_"):
+                        with st.spinner("Validating..."):
+                            # Test the key
+                            test_llm = LLMClient(new_key)
+                        
+                        if test_llm.available:
+                            st.session_state.api_key = new_key
+                            st.session_state.llm = test_llm
+                            if st.session_state.get('master'):
+                                st.session_state.master.llm = test_llm
+                            st.success("✅ AI Enabled!")
+                            st.rerun()
+                        else:
+                            st.error("❌ Invalid key or connection error")
+                    else:
+                        st.error("❌ Key should start with 'gsk_'")
+                else:
+                    st.error("Please enter an API key")
+        
         with col2:
             st.link_button("🔗 Get Key", "https://console.groq.com", use_container_width=True)
-
-
-def _show_ai_setup_guide():
-    """Show AI setup guide in chat."""
-    guide_content = """## 🔧 How to Enable AI Features
-
-OmniAgent uses **Groq's free AI API** to provide smarter, more natural responses. Here's how to set it up:
-
-### 📝 Step-by-Step Guide
-
-**Step 1: Create a Groq Account**
-- Go to [console.groq.com](https://console.groq.com)
-- Sign up with Google or email (it's free!)
-
-**Step 2: Generate API Key**
-- Once logged in, go to "API Keys"
-- Click "Create API Key"
-- Give it a name (e.g., "OmniAgent")
-- Copy the key (starts with `gsk_`)
-
-**Step 3: Add Key to OmniAgent**
-- Paste your key in the sidebar under "AI Settings"
-- Click "Save"
-- You should see "AI Mode: Active" ✅
-
-### 💡 What AI Mode Adds
-
-| Feature | Without AI | With AI |
-|---------|------------|---------|
-| Query Understanding | Keywords only | Natural language |
-| Response Quality | Basic | Detailed & contextual |
-| Unknown Queries | Error message | AI tries to help |
-| Insights | Template-based | AI-generated |
-
-### 🆓 Is it Free?
-
-Yes! Groq offers a generous free tier:
-- No credit card required
-- Thousands of requests per day
-- Fast responses (Groq is very fast!)
-
-### 🔒 Is it Safe?
-
-- Your API key stays in your browser
-- Data is processed by Groq (not stored)
-- You can delete the key anytime
-
----
-
-**👈 Add your API key in the sidebar to get started!**"""
+        
+        st.info("💡 App works without AI, but with basic responses")
     
-    add_message('assistant', guide_content, agent="System", emoji="⚙️")
+    else:
+        # AI is active
+        st.success("✅ AI Active")
+        st.caption(f"Model: {llm.model}")
+        
+        # Update LLM state
+        if llm:
+            llm.toggle(ai_enabled)
+        
+        # Settings
+        with st.expander("⚙️ Settings"):
+            st.caption(f"**API Key:** {api_key[:10]}...{api_key[-4:]}")
+            
+            if st.button("🔄 Change API Key", key="change_ai_key"):
+                st.session_state.api_key = ''
+                st.session_state.llm = LLMClient('')
+                st.rerun()
+            
+            if st.button("🧪 Test AI", key="test_ai"):
+                with st.spinner("Testing..."):
+                    try:
+                        response = llm.understand_query("test", "testing connection")
+                        if response:
+                            st.success("✅ AI is responding!")
+                        else:
+                            st.warning("⚠️ AI may be slow")
+                    except Exception as e:
+                        st.error(f"❌ Error: {str(e)[:50]}")
 
 
 def _render_data_loading():
@@ -241,3 +237,12 @@ def _render_navigation():
     if st.button("🗑️ Clear Chat", use_container_width=True):
         st.session_state.messages = []
         st.rerun()
+    
+    # Footer
+    st.divider()
+    st.markdown(
+        f"<div style='text-align: center; color: #888; font-size: 12px;'>"
+        f"Made with ❤️ by <a href='{Config.AUTHOR_URL}' target='_blank' style='color: #888;'>{Config.AUTHOR}</a>"
+        f"</div>",
+        unsafe_allow_html=True
+    )

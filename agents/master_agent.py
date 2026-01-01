@@ -452,6 +452,18 @@ Just type what you want to know! I understand natural language.
 
 ---
 
+### 🎤 Voice Assistant
+
+**Talk to me!** Enable Voice in the sidebar for two-way conversation:
+
+| Feature | How to Use |
+|---------|------------|
+| **Speak** | Click "Start Speaking" button, ask your question |
+| **Listen** | I'll speak my responses back to you |
+| **Settings** | Adjust voice speed and pitch in Voice Settings |
+
+---
+
 ### 📊 Statistics Agent
 
 **What it does:** Calculates statistics, analyzes distributions, checks data quality
@@ -534,6 +546,7 @@ Just type what you want to know! I understand natural language.
 3. **Click suggestions** - Quick actions are always available
 4. **Try aggregations** - "Sum sales by region" gives powerful insights
 5. **Build models** - "Predict [column]" creates ML models automatically
+6. **Use voice** - Enable Voice in sidebar to speak your questions!
 """
         
         return {

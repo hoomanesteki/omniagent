@@ -11,6 +11,7 @@ from agents.predict_agent import PredictAgent
 from agents.sql_agent import SQLAgent
 from agents.aggregate_agent import AggregateAgent
 from agents.master_agent import MasterAgent
+from agents.voice_agent import VoiceAgent
 
 __all__ = [
     'BaseAgent',
@@ -19,5 +20,6 @@ __all__ = [
     'PredictAgent',
     'SQLAgent',
     'AggregateAgent',
-    'MasterAgent'
+    'MasterAgent',
+    'VoiceAgent'
 ]
