@@ -6,7 +6,6 @@
 
 **OmniAgent** is an intelligent, multi-agent data analysis assistant that helps you explore, visualize, and understand your data through natural conversation.
 
-Created by [Hooman Esteki](https://esteki.ca/)
 
 ---
 
@@ -26,23 +25,23 @@ Created by [Hooman Esteki](https://esteki.ca/)
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
-│                         USER QUERY                                │
-│                             ↓                                     │
+│                         USER QUERY                               │
+│                             ↓                                    │
 │  ┌────────────────────────────────────────────────────────────┐  │
-│  │                   🧠 MASTER AGENT                           │  │
-│  │         Natural Language Understanding & Routing            │  │
-│  │                Message Communication Protocol               │  │
+│  │                   🧠 MASTER AGENT                          │  │
+│  │         Natural Language Understanding & Routing           │  │
+│  │                Message Communication Protocol              │  │
 │  └────────────────────────────────────────────────────────────┘  │
-│                             ↓                                     │
-│      ┌──────────┬──────────┬──────────┬──────────┬──────────┐   │
-│      ↓          ↓          ↓          ↓          ↓          ↓   │
-│  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐   │
-│  │  📊  │  │  📈  │  │  📦  │  │  🤖  │  │  🔍  │  │  🧠  │   │
-│  │Stats │  │ Viz  │  │ Agg  │  │Pred  │  │ SQL  │  │Master│   │
-│  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │   │
-│  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘   │
-│                             ↓                                     │
-│                       RESPONSE + INSIGHTS                         │
+│                             ↓                                    │
+│      ┌──────────┬──────────┬──────────┬──────────┬──────────┐    │
+│      ↓          ↓          ↓          ↓          ↓          ↓    │
+│  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐      │
+│  │  📊  │  │  📈   │  │  📦  │  │  🤖  │  │  🔍   │  │  🧠  │      │
+│  │Stats │  │ Viz  │  │ Agg  │  │Pred  │  │ SQL  │  │Master│      │
+│  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │      │
+│  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘      │
+│                             ↓                                    │
+│                       RESPONSE + INSIGHTS                        │
 └──────────────────────────────────────────────────────────────────┘
 ```
 
