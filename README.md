@@ -1,4 +1,4 @@
-# 🤖 OmniAgent - AI-Powered Data Analysis Assistant
+# 🤖 OmniAgent: AI-Powered Data Analysis Assistant
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io)
@@ -6,7 +6,7 @@
 
 **OmniAgent** is an intelligent, multi-agent data analysis assistant that helps you explore, visualize, and understand your data through natural conversation.
 
-Created by [Hooman Esteki](https://esteki.ca/)
+
 
 ---
 
@@ -20,6 +20,43 @@ Created by [Hooman Esteki](https://esteki.ca/)
 - **Machine Learning** - Build predictive models with one command
 - **Data Aggregation** - GroupBy, pivot, and summary operations
 - **AI Enhancement** - Optional Groq LLM for smarter responses
+
+---
+
+## 🏗️ Architecture
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                         USER QUERY                               │
+│                             ↓                                    │
+│  ┌────────────────────────────────────────────────────────────┐  │
+│  │                   🧠 MASTER AGENT                          │  │
+│  │         Natural Language Understanding & Routing           │  │
+│  │                Message Communication Protocol              │  │
+│  └────────────────────────────────────────────────────────────┘  │
+│                             ↓                                    │
+│      ┌────────┬─────────┬─────────┬──────────┬─────────┐         │
+│      ↓        ↓         ↓         ↓         ↓          ↓         │
+│  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐      │
+│  │  📊  │  │  📈   │  │  📦  │  │  🤖  │   │  🔍  │  │  🧠  │      │
+│  │Stats │  │ Viz  │  │ Agg  │  │Pred  │  │ SQL  │  │Master│      │
+│  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │      │
+│  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘      │
+│                             ↓                                    │
+│                       RESPONSE + INSIGHTS                        │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### Agent Responsibilities
+
+| Agent | Emoji | Responsibilities |
+|-------|-------|------------------|
+| **Master** | 🧠 | Query understanding, routing, orchestration |
+| **Stats** | 📊 | Statistics, summaries, missing values, distributions |
+| **Viz** | 📈 | Charts, plots, heatmaps, visualizations |
+| **Aggregate** | 📦 | GroupBy, pivot tables, aggregations |
+| **Predict** | 🤖 | Machine learning models, predictions |
+| **SQL** | 🔍 | Data preview, schema, sampling |
 
 ---
 
@@ -41,43 +78,6 @@ OmniAgent includes a **two-way voice conversation** feature:
 5. Agent responds in text AND speaks the answer!
 
 *Works best in Chrome or Edge browsers*
-
----
-
-## 🏗️ Architecture
-
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                         USER QUERY                                │
-│                             ↓                                     │
-│  ┌────────────────────────────────────────────────────────────┐  │
-│  │                   🧠 MASTER AGENT                           │  │
-│  │         Natural Language Understanding & Routing            │  │
-│  │                Message Communication Protocol               │  │
-│  └────────────────────────────────────────────────────────────┘  │
-│                             ↓                                     │
-│      ┌──────────┬──────────┬──────────┬──────────┬──────────┐   │
-│      ↓          ↓          ↓          ↓          ↓          ↓   │
-│  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐   │
-│  │  📊  │  │  📈  │  │  📦  │  │  🤖  │  │  🔍  │  │  🧠  │   │
-│  │Stats │  │ Viz  │  │ Agg  │  │Pred  │  │ SQL  │  │Master│   │
-│  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │   │
-│  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘   │
-│                             ↓                                     │
-│                       RESPONSE + INSIGHTS                         │
-└──────────────────────────────────────────────────────────────────┘
-```
-
-### Agent Responsibilities
-
-| Agent | Emoji | Responsibilities |
-|-------|-------|------------------|
-| **Master** | 🧠 | Query understanding, routing, orchestration |
-| **Stats** | 📊 | Statistics, summaries, missing values, distributions |
-| **Viz** | 📈 | Charts, plots, heatmaps, visualizations |
-| **Aggregate** | 📦 | GroupBy, pivot tables, aggregations |
-| **Predict** | 🤖 | Machine learning models, predictions |
-| **SQL** | 🔍 | Data preview, schema, sampling |
 
 ---
 
