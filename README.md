@@ -1,134 +1,332 @@
-# 🤖 OmniAgent v2 - AI Data Analysis Assistant
+# 🤖 OmniAgent - AI-Powered Data Analysis Assistant
 
-A Streamlit application for interactive data analysis with optional LLM support.
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## ✨ Features
+**OmniAgent** is an intelligent, multi-agent data analysis assistant that helps you explore, visualize, and understand your data through natural conversation.
 
-- **Works with OR without API key!**
-  - With API key: Natural language understanding via Groq LLM
-  - Without API key: Smart keyword matching (still very capable!)
-- **6 Types of Visualizations**: Histogram, Scatter, Bar, Box, Heatmap, Pie
-- **Statistical Analysis**: Describe, Correlation, Outliers, Missing values
-- **ML Predictions**: Linear, Random Forest, Gradient Boosting
-- **3 Sample Datasets**: Fitness, Airbnb, E-commerce
+Created by [Hooman Esteki](https://esteki.ca/)
 
-## 🚀 Quick Start
+---
 
-### 1. Install Dependencies
+## 🌟 Features
 
-```bash
-# Option A: Conda (recommended)
-conda env create -f environment.yml
-conda activate omniagent
+- **Natural Language Interface** - Ask questions in plain English
+- **Multi-Agent Architecture** - 6 specialized agents working together
+- **Smart Routing** - Automatically finds the right agent for your query
+- **Interactive Visualizations** - Beautiful Plotly charts with zoom/pan
+- **Machine Learning** - Build predictive models with one command
+- **Data Aggregation** - GroupBy, pivot, and summary operations
+- **AI Enhancement** - Optional Groq LLM for smarter responses
 
-# Option B: Pip
-pip install -r requirements.txt
-pip install python-dotenv  # For .env file support
+---
+
+## 🏗️ Architecture
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                         USER QUERY                                │
+│                             ↓                                     │
+│  ┌────────────────────────────────────────────────────────────┐  │
+│  │                   🧠 MASTER AGENT                           │  │
+│  │         Natural Language Understanding & Routing            │  │
+│  │                Message Communication Protocol               │  │
+│  └────────────────────────────────────────────────────────────┘  │
+│                             ↓                                     │
+│      ┌──────────┬──────────┬──────────┬──────────┬──────────┐   │
+│      ↓          ↓          ↓          ↓          ↓          ↓   │
+│  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐   │
+│  │  📊  │  │  📈  │  │  📦  │  │  🤖  │  │  🔍  │  │  🧠  │   │
+│  │Stats │  │ Viz  │  │ Agg  │  │Pred  │  │ SQL  │  │Master│   │
+│  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │   │
+│  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘   │
+│                             ↓                                     │
+│                       RESPONSE + INSIGHTS                         │
+└──────────────────────────────────────────────────────────────────┘
 ```
 
-### 2. Configure (Optional but Recommended)
+### Agent Responsibilities
 
-```bash
-# Copy example .env file
-cp .env.example .env
+| Agent | Emoji | Responsibilities |
+|-------|-------|------------------|
+| **Master** | 🧠 | Query understanding, routing, orchestration |
+| **Stats** | 📊 | Statistics, summaries, missing values, distributions |
+| **Viz** | 📈 | Charts, plots, heatmaps, visualizations |
+| **Aggregate** | 📦 | GroupBy, pivot tables, aggregations |
+| **Predict** | 🤖 | Machine learning models, predictions |
+| **SQL** | 🔍 | Data preview, schema, sampling |
 
-# Edit .env and add your Groq API key
-# Get free key at: https://console.groq.com
-```
-
-### 3. Run Tests
-
-```bash
-python tests/test_all.py
-```
-
-### 4. Start the App
-
-```bash
-streamlit run app_with_llm.py
-```
+---
 
 ## 📁 Project Structure
 
 ```
 omniagent/
-├── app_with_llm.py          # Main app (with LLM support)
-├── app.py                   # Simple version (no LLM)
-├── requirements.txt         # Pip dependencies
-├── environment.yml          # Conda environment
-├── .env.example             # Environment template
-├── README.md                # This file
-├── data/
-│   └── samples/
-│       ├── fitness_tracker.csv
-│       ├── nyc_airbnb.csv
-│       └── ecommerce_sales.csv
-└── tests/
-    └── test_all.py          # Comprehensive tests
+├── app.py                    # Main entry point
+├── requirements.txt          # Dependencies
+├── README.md                 # This file
+├── .env.example              # Environment template
+│
+├── core/                     # Core utilities
+│   ├── __init__.py
+│   ├── config.py             # Configuration & CSS styles
+│   ├── analyzer.py           # DataAnalyzer class
+│   └── llm.py                # LLM client (Groq API)
+│
+├── agents/                   # Specialized agents
+│   ├── __init__.py
+│   ├── base.py               # BaseAgent abstract class
+│   ├── master_agent.py       # Orchestrator with MCP
+│   ├── stats_agent.py        # Statistical analysis
+│   ├── viz_agent.py          # Visualizations
+│   ├── aggregate_agent.py    # GroupBy & aggregations
+│   ├── predict_agent.py      # Machine learning
+│   └── sql_agent.py          # Data queries
+│
+├── mcp/                      # Message Communication Protocol
+│   ├── __init__.py
+│   └── protocol.py           # MCPMessage, MCPBus, AgentResponse
+│
+├── ui/                       # User interface
+│   ├── __init__.py
+│   ├── components.py         # Session, loading, messages
+│   ├── sidebar.py            # Sidebar UI
+│   └── chat.py               # Chat & suggestions
+│
+└── data/
+    ├── samples/              # Sample datasets
+    │   ├── fitness_tracker.csv
+    │   ├── nyc_airbnb.csv
+    │   └── ecommerce_sales.csv
+    └── uploads/              # User uploads
 ```
 
-## 🔑 Environment Variables (.env file)
+---
 
-| Variable | Required | Default | Description |
-|----------|----------|---------|-------------|
-| GROQ_API_KEY | No | None | Your Groq API key |
-| LLM_MODEL | No | llama-3.3-70b-versatile | Model to use |
+## 🚀 Quick Start
 
-Example `.env` file:
-```
-GROQ_API_KEY=gsk_your_key_here
-LLM_MODEL=llama-3.3-70b-versatile
-```
+### 1. Clone & Install
 
-## 💬 Example Queries
-
-**Statistics:**
-- Show descriptive statistics
-- Check for missing values
-- Find outliers in price
-
-**Visualizations:**
-- Show histogram of age
-- Create correlation heatmap
-- Bar chart of category
-- Scatter plot of price vs quantity
-
-**Predictions:**
-- Predict price using other columns
-- Train model for target
-
-## 🤖 Agent System
-
-| Agent | Purpose |
-|-------|---------|
-| 📋 Schema Agent | Data structure & info |
-| 📊 Stats Agent | Statistics, correlation, outliers |
-| 📈 Plot Agent | All visualizations |
-| 🔮 Prediction Agent | ML models |
-| 🎯 Master Agent | Orchestrates everything |
-
-## ⚠️ Rate Limits
-
-Groq free tier has limits (30 requests/minute). If you hit rate limits:
-- Wait a moment and retry
-- The app automatically falls back to keyword matching
-- Consider upgrading your Groq plan
-
-## 🧪 Testing
-
-Run all tests:
 ```bash
-python tests/test_all.py
+# Clone repository
+git clone https://github.com/yourusername/omniagent.git
+cd omniagent
+
+# Create virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# venv\Scripts\activate   # Windows
+
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-This tests:
-- Sample datasets loading
-- All agent functions
-- Keyword matching
-- Edge cases
-- File structure
-- Python syntax
+### 2. Configure (Optional - for AI features)
 
-## 📝 License
+```bash
+# Copy environment template
+cp .env.example .env
 
-MIT
+# Edit .env and add your Groq API key
+# Get free key at: https://console.groq.com
+GROQ_API_KEY=gsk_your_key_here
+```
+
+### 3. Run
+
+```bash
+streamlit run app.py
+```
+
+The app will open at `http://localhost:8501`
+
+---
+
+## 💬 Usage Examples
+
+### Statistics
+```
+"What's the average age?"
+"Show me statistics"
+"Check for missing values"
+"What's the median price?"
+```
+
+### Visualization
+```
+"Histogram of age"
+"Scatter plot price vs quantity"
+"Correlation heatmap"
+"Bar chart of categories"
+```
+
+### Aggregation
+```
+"Count by gender"
+"Sum sales by region"
+"Average price by category"
+"Group by status"
+```
+
+### Machine Learning
+```
+"Predict sales"
+"Build a model"
+"What can I predict?"
+"Feature importance"
+```
+
+### Data Exploration
+```
+"Show first 10 rows"
+"What columns do I have?"
+"Random sample"
+"Data structure"
+```
+
+---
+
+## 🔧 Technology Stack
+
+| Component | Technology |
+|-----------|------------|
+| **Frontend** | Streamlit |
+| **Visualization** | Plotly |
+| **Data Processing** | Pandas, NumPy |
+| **Machine Learning** | Scikit-learn |
+| **AI/NLU** | Groq (LLaMA 3.3 70B) |
+| **Architecture** | MCP (Message Communication Protocol) |
+
+---
+
+## 📡 Message Communication Protocol (MCP)
+
+OmniAgent uses a custom MCP for agent communication:
+
+```python
+# Message structure
+MCPMessage(
+    id="unique-id",
+    type=MessageType.QUERY,
+    source="master",
+    target="stats",
+    content="show statistics",
+    data={},
+    metadata={}
+)
+
+# Agent response
+AgentResponse(
+    content="## Statistics...",
+    figure=plotly_fig,
+    dataframe=df,
+    insights="Key findings...",
+    suggestions=["Next action 1", "Next action 2"]
+)
+```
+
+### Message Flow
+
+1. **User** sends natural language query
+2. **Master Agent** detects intent via pattern matching
+3. **MCP Bus** routes message to appropriate agent
+4. **Specialized Agent** processes and returns response
+5. **UI** renders response with charts, tables, insights
+
+---
+
+## 🎯 Agent Details
+
+### 📊 Stats Agent
+- Descriptive statistics (mean, median, std, etc.)
+- Missing value analysis
+- Distribution analysis
+- Data quality checks
+
+### 📈 Viz Agent
+- Histograms
+- Scatter plots
+- Bar charts (horizontal for better readability)
+- Box plots (outlier detection)
+- Correlation heatmaps
+- Pie charts
+- Multi-panel visualizations
+
+### 📦 Aggregate Agent
+- Count by category
+- Sum/Average/Max/Min by group
+- Group summaries
+- Pivot-style operations
+
+### 🤖 Predict Agent
+- Classification models
+- Regression models
+- Feature importance analysis
+- Model evaluation metrics
+- Interactive model builder
+
+### 🔍 SQL Agent
+- Data preview (head/tail/sample)
+- Schema exploration
+- Column information
+
+---
+
+## 🔐 Environment Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `GROQ_API_KEY` | Groq API key for AI features | No |
+| `LLM_MODEL` | Model name (default: llama-3.3-70b-versatile) | No |
+
+---
+
+## 📋 Requirements
+
+```
+streamlit>=1.28.0
+pandas>=2.0.0
+numpy>=1.24.0
+plotly>=5.15.0
+scikit-learn>=1.3.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+```
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
+
+---
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) for details.
+
+---
+
+## 👨‍💻 Author
+
+**Hooman Esteki**
+- Website: [esteki.ca](https://esteki.ca/)
+- GitHub: [@hoomanesteki](https://github.com/hoomanesteki)
+
+---
+
+## 🙏 Acknowledgments
+
+- [Streamlit](https://streamlit.io) for the amazing web framework
+- [Plotly](https://plotly.com) for interactive visualizations
+- [Groq](https://groq.com) for blazing fast AI inference
+- [Scikit-learn](https://scikit-learn.org) for machine learning
+
+---
+
+Made with ❤️ by [Hooman Esteki](https://esteki.ca/)
