@@ -7,6 +7,7 @@ Best-in-class agent routing and natural language understanding.
 
 import pandas as pd
 import re
+import streamlit as st
 from typing import Dict, Any, Optional, List
 from datetime import datetime
 
@@ -207,6 +208,85 @@ class MasterAgent(BaseAgent):
         ]
     }
     
+    # Advanced patterns that require Dynamic Agent (LLM code generation)
+    # These are MORE SPECIFIC phrases that indicate complex analysis
+    DYNAMIC_PATTERNS = [
+        # Rolling/Window calculations (specific phrases)
+        'rolling average', 'rolling mean', 'rolling sum',
+        'moving average', 'moving avg', 'moving mean',
+        'sliding window', 'window average',
+        'cumulative sum', 'cumulative average', 'running total', 'running sum', 'running average',
+        '3-day', '5-day', '7-day', '14-day', '30-day', '90-day',
+        'weekly average', 'monthly average', 'daily average',
+        
+        # Statistical methods (specific phrases)
+        'using iqr', 'iqr method', 'using the iqr',
+        'using z-score', 'z-score method', 'zscore method',
+        'outliers using', 'detect outliers using', 'find outliers using',
+        'outliers in', 'identify outliers',
+        'anomaly detection', 'detect anomalies',
+        'statistical test', 't-test', 'anova', 'chi-square', 'chi square',
+        'shapiro', 'normality test', 'test for normality',
+        'partial correlation', 'controlling for', 'control for',
+        
+        # Regression/Trend (specific phrases)
+        'with regression', 'regression line', 'with a regression',
+        'with trend', 'trend line', 'trendline', 'with a trend',
+        'best fit line', 'line of best fit',
+        'linear fit', 'polynomial fit', 'fitted line',
+        'r-squared', 'r squared', 'coefficient of determination',
+        
+        # Feature engineering (specific phrases)
+        'create a new column', 'create new column', 'add a column', 'add new column',
+        'categorize into', 'bin into', 'bucket into',
+        'bins', 'binning', 'discretize',
+        'split into categories', 'group into categories',
+        'based on percentile', 'percentile-based', 'quartile-based',
+        'normalize the', 'standardize the', 'scale the',
+        
+        # Clustering (specific phrases)
+        'cluster the', 'clustering', 'k-means', 'kmeans',
+        'dbscan', 'segment the data', 'segmentation',
+        'group similar', 'find groups',
+        
+        # Time series (specific phrases)
+        'time series decomposition', 'decompose',
+        'seasonality', 'seasonal pattern',
+        'year-over-year', 'yoy growth', 'month-over-month', 'mom growth',
+        'growth rate', 'percent change', 'percentage change',
+        'lag of', 'lagged', 'difference of',
+        
+        # Complex calculations (specific phrases)
+        'ratio of', 'calculate ratio', 'calories to duration ratio',
+        'per capita', 'weighted average', 'weighted mean',
+        'top 10', 'top 5', 'top 20', 'bottom 10', 'bottom 5',
+        'highest ratio', 'lowest ratio',
+        'rank by', 'ranking of',
+        
+        # Specific complex requests
+        'custom calculation', 'custom analysis',
+        'advanced analysis', 'complex analysis',
+    ]
+    
+    # Patterns that should be REFUSED (dangerous/not supported)
+    REFUSE_PATTERNS = {
+        'delete': "🚫 I can't delete or remove your data. Would you like to **filter** or **subset** it instead?",
+        'remove all': "🚫 I can't remove data. Try asking to **filter** or **show rows where...**",
+        'drop rows': "🚫 I can't drop rows from your data. Would you like to **filter** to specific rows instead?",
+        'drop columns': "🚫 I can't drop columns. Would you like to **show specific columns** instead?",
+        'download': "🚫 I can't download files. You can **copy** the results from the screen or take a screenshot.",
+        'upload': "🚫 Use the **📂 Load Data** section in the sidebar to upload files.",
+        'save to file': "🚫 I can't save files. You can **copy** results from the screen.",
+        'export': "🚫 I can't export files directly. Copy the results you need from the display.",
+        'hack': "🚫 I can't help with that. Let me know if you have a data analysis question!",
+        'exploit': "🚫 I can't help with security exploits. Ask me about data analysis instead.",
+        'inject': "🚫 I only do data analysis. What would you like to know about your data?",
+        'password': "🚫 I don't handle passwords or credentials. Ask me about your data!",
+        'credential': "🚫 I don't handle credentials. What data analysis can I help with?",
+        'send email': "🚫 I can't send emails. I only analyze the data you've loaded.",
+        'connect to': "🚫 I can't connect to external services. I work with the data you've uploaded.",
+    }
+    
     def __init__(self, df: pd.DataFrame, analyzer: DataAnalyzer, llm: LLMClient = None):
         super().__init__(df, analyzer)
         self.llm = llm
@@ -237,11 +317,22 @@ class MasterAgent(BaseAgent):
         Process user query using MCP routing.
         
         Flow:
-        1. Detect intent from query
-        2. Route to appropriate agent via MCP
-        3. Return formatted response with suggestions
+        1. CHECK if Dynamic Agent has pending confirmation (handle yes/no)
+        2. Detect intent from query
+        3. Route to appropriate agent via MCP
+        4. Return formatted response with suggestions
         """
         q = query.lower().strip()
+        
+        # FIRST: Check if Dynamic Agent is waiting for confirmation
+        # This MUST be checked before any other routing
+        if self._is_dynamic_pending():
+            result = self._send_to_dynamic(query)
+            result['agent'] = result.get('agent', "Dynamic Agent")
+            result['emoji'] = result.get('emoji', "🔮")
+            if 'suggestions' not in result or not result['suggestions']:
+                result['suggestions'] = self._get_suggestions()
+            return result
         
         # Log query for context
         self.conversation_context.append({
@@ -265,12 +356,30 @@ class MasterAgent(BaseAgent):
         
         return result
     
+    def _is_dynamic_pending(self) -> bool:
+        """Check if Dynamic Agent has a pending confirmation."""
+        if 'dynamic_state' not in st.session_state:
+            return False
+        state = st.session_state.dynamic_state
+        return state in ['offered', 'planned']
+    
     def _detect_intent(self, query: str) -> Optional[str]:
         """
         Detect user intent using pattern matching.
         Returns the most specific matching intent.
         """
-        # Check patterns in order (most specific first)
+        # FIRST: Check if this should be REFUSED
+        for pattern in self.REFUSE_PATTERNS.keys():
+            if pattern in query:
+                return 'refuse'
+        
+        # SECOND: Check if query requires Dynamic Agent (advanced analysis)
+        # These patterns indicate complex requests that built-in agents can't handle
+        for pattern in self.DYNAMIC_PATTERNS:
+            if pattern in query:
+                return 'dynamic'
+        
+        # Check standard patterns in order (most specific first)
         for intent, patterns in self.PATTERNS.items():
             for pattern in patterns:
                 if pattern in query:
@@ -288,6 +397,10 @@ class MasterAgent(BaseAgent):
     def _route(self, intent: str, query: str) -> Dict:
         """Route query to appropriate agent via MCP message bus."""
         
+        # REFUSE dangerous/unsupported requests
+        if intent == 'refuse':
+            return self._refuse_request(query)
+        
         # Navigation handlers (no MCP needed)
         if intent == 'home':
             return {'content': '__HOME__', 'suggestions': []}
@@ -303,6 +416,11 @@ class MasterAgent(BaseAgent):
         if intent == 'overview':
             self.current_agent = 'master'
             return self._data_overview()
+        
+        # Dynamic Agent for advanced/complex queries
+        if intent == 'dynamic':
+            self.current_agent = 'dynamic'
+            return self._send_to_dynamic(query)
         
         # MCP routing to specialized agents
         if intent == 'aggregate':
@@ -326,8 +444,37 @@ class MasterAgent(BaseAgent):
             self.current_agent = 'sql'
             return self._send_to_agent('sql', query)
         
-        # Unknown intent - provide guidance
+        # Unknown intent - try Dynamic Agent or provide guidance
         return self._unknown(query)
+    
+    def _refuse_request(self, query: str) -> Dict:
+        """Refuse a dangerous or unsupported request with helpful message."""
+        q = query.lower()
+        
+        # Find which refuse pattern matched
+        message = "🚫 I can't help with that request."
+        for pattern, msg in self.REFUSE_PATTERNS.items():
+            if pattern in q:
+                message = msg
+                break
+        
+        return {
+            'content': f"""## 🚫 Request Not Supported
+
+{message}
+
+### What I CAN do:
+- 📊 **Statistics**: "Show statistics", "Mean of [column]"
+- 📈 **Visualizations**: "Histogram of [column]", "Scatter plot"
+- 📦 **Aggregations**: "Count by [category]", "Sum [value] by [group]"
+- 🤖 **Predictions**: "Predict [column]", "Build model"
+- 🔮 **Custom Analysis**: "Calculate rolling average", "Find outliers"
+
+### Try one of the suggestions below!
+""",
+            'insights': "This request is not supported. Try a data analysis question instead.",
+            'suggestions': self._get_home_suggestions()
+        }
     
     def _send_to_agent(self, target: str, query: str) -> Dict:
         """Send message to agent via MCP bus and get response."""
@@ -345,6 +492,19 @@ class MasterAgent(BaseAgent):
             return response.to_dict()
         else:
             return self.format_error(f"Agent '{target}' failed to respond")
+    
+    def _send_to_dynamic(self, query: str) -> Dict:
+        """Send query to Dynamic Agent for AI-powered analysis."""
+        from agents.dynamic_agent import DynamicAgent
+        
+        dynamic_agent = DynamicAgent(analyzer=self.analyzer, llm=self.llm)
+        result = dynamic_agent.process(query)
+        
+        # Add agent info
+        result['agent'] = "Dynamic Agent"
+        result['emoji'] = "🔮"
+        
+        return result
     
     def _data_overview(self) -> Dict[str, Any]:
         """Generate comprehensive dataset overview."""
@@ -547,6 +707,24 @@ Just type what you want to know! I understand natural language.
 4. **Try aggregations** - "Sum sales by region" gives powerful insights
 5. **Build models** - "Predict [column]" creates ML models automatically
 6. **Use voice** - Enable Voice in sidebar to speak your questions!
+7. **Enable AI** - Get dynamic analysis for any question!
+
+---
+
+### 🔮 Dynamic Agent (AI Mode)
+
+With **AI Mode** enabled, I can create custom analysis for **any question**:
+
+**Example commands:**
+| Command | What it does |
+|---------|--------------|
+| "Calculate rolling average" | Time-window calculations |
+| "Find outliers using IQR" | Statistical outlier detection |
+| "Correlation controlling for X" | Partial correlations |
+| "Cumulative sum over time" | Running totals |
+| "Cluster the data" | Unsupervised ML |
+
+**Enable:** 🧠 AI Assistant in sidebar → Add Groq API key
 """
         
         return {
@@ -676,9 +854,18 @@ MCPMessage(
         }
     
     def _unknown(self, query: str) -> Dict[str, Any]:
-        """Handle unknown queries with helpful guidance."""
-        # Try LLM if available
+        """Handle unknown queries with Dynamic Agent or helpful guidance."""
+        # Try Dynamic Agent if LLM is available
         if self.llm and self.llm.is_active():
+            from agents.dynamic_agent import DynamicAgent
+            dynamic_agent = DynamicAgent(analyzer=self.analyzer, llm=self.llm)
+            result = dynamic_agent.process(query)
+            
+            # If dynamic agent succeeded, return its result
+            if result and 'Dynamic Analysis' in result.get('content', ''):
+                return result
+            
+            # Otherwise try simple LLM understanding
             context = f"""Dataset: {self.analyzer.row_count} rows, {self.analyzer.col_count} cols
 Numeric: {', '.join(self.analyzer.usable_numeric[:5])}
 Categorical: {', '.join(self.analyzer.usable_categorical[:5])}
@@ -696,7 +883,21 @@ Targets: {', '.join([t['column'] for t in self.analyzer.target_candidates[:3]])}
 
 I'm not sure how to handle: **"{query}"**
 
-### 💡 Here's What I Can Do:
+### 🔮 Enable AI for Dynamic Analysis
+
+With AI Mode enabled, I can create **custom analysis** for any question!
+
+**Examples of what I can do with AI:**
+- "Calculate the 7-day rolling average"
+- "Find outliers using IQR method"
+- "Show the trend over time"
+- "Calculate correlation controlling for a variable"
+
+**Enable AI:** 🧠 AI Assistant in sidebar → Add Groq API key
+
+---
+
+### 💡 Built-in Commands (No AI Needed):
 
 | Category | Try Saying |
 |----------|------------|
@@ -711,15 +912,11 @@ I'm not sure how to handle: **"{query}"**
 **Numeric:** {', '.join(self.analyzer.usable_numeric[:5])}
 
 **Categorical:** {', '.join(self.analyzer.usable_categorical[:5])}
-
----
-
-**💡 Tip:** Click one of the suggestion buttons below!
 """
         
         return {
             'content': content,
-            'insights': None,
+            'insights': "💡 Enable AI Mode for dynamic analysis capabilities!",
             'suggestions': self._get_home_suggestions()
         }
     

@@ -22,6 +22,19 @@ class VizAgent(BaseAgent):
     emoji = "📈"
     description = "Charts, plots, and visual analysis"
     
+    # Extended visualization patterns
+    VIZ_PATTERNS = {
+        'histogram': ['histogram', 'distribution', 'dist', 'frequency', 'frequencies'],
+        'scatter': ['scatter', 'vs', 'versus', 'against', 'relationship', 'x and y', 'compare two'],
+        'bar': ['bar', 'bars', 'categories', 'categorical', 'count chart'],
+        'box': ['box', 'boxplot', 'outlier', 'outliers', 'quartile', 'whisker'],
+        'heatmap': ['heatmap', 'correlation', 'corr', 'correlations', 'heat map'],
+        'pie': ['pie', 'proportion', 'proportions', 'percentage', 'share', 'breakdown'],
+        'line': ['line', 'trend', 'over time', 'time series', 'timeseries', 'progression'],
+        'violin': ['violin', 'density', 'kde'],
+        'area': ['area', 'stacked area', 'cumulative'],
+    }
+    
     def process(self, query: str) -> Dict[str, Any]:
         """Process visualization-related queries."""
         q = query.lower().strip()
@@ -31,33 +44,39 @@ class VizAgent(BaseAgent):
         num_cols = [c for c in cols if c in self.analyzer.usable_numeric]
         cat_cols = [c for c in cols if c in self.analyzer.usable_categorical]
         
-        # Route to specific chart type
-        if 'histogram' in q or 'distribution' in q:
-            return self.histogram(cols[0] if cols else None)
+        # Check for specific visualization patterns
+        for viz_type, patterns in self.VIZ_PATTERNS.items():
+            if any(p in q for p in patterns):
+                if viz_type == 'histogram':
+                    return self.histogram(cols[0] if cols else None)
+                elif viz_type == 'scatter':
+                    return self.scatter(
+                        num_cols[0] if num_cols else None,
+                        num_cols[1] if len(num_cols) > 1 else None
+                    )
+                elif viz_type == 'bar':
+                    return self.bar(cols[0] if cols else None)
+                elif viz_type == 'box':
+                    return self.box(cols[0] if cols else None)
+                elif viz_type == 'heatmap':
+                    return self.heatmap()
+                elif viz_type == 'pie':
+                    return self.pie(cols[0] if cols else None)
+                elif viz_type == 'line':
+                    return self.line(cols[0] if cols else None)
+                elif viz_type == 'violin':
+                    return self.violin(cols[0] if cols else None)
         
-        if 'scatter' in q or 'vs' in q or 'versus' in q:
-            return self.scatter(
-                num_cols[0] if num_cols else None,
-                num_cols[1] if len(num_cols) > 1 else None
-            )
-        
-        if 'bar' in q:
-            return self.bar(cols[0] if cols else None)
-        
-        if 'box' in q or 'outlier' in q:
-            return self.box(cols[0] if cols else None)
-        
-        if 'heatmap' in q or 'correlation' in q or 'corr' in q:
-            return self.heatmap()
-        
-        if 'pie' in q:
-            return self.pie(cols[0] if cols else None)
-        
-        if 'all numeric' in q or 'numeric overview' in q:
+        # Handle "show all" requests
+        if 'all numeric' in q or 'numeric overview' in q or 'all distributions' in q:
             return self.all_numeric()
         
         if 'all categorical' in q or 'categorical overview' in q:
             return self.all_categorical()
+        
+        # Handle comparisons
+        if 'by' in q and cat_cols and num_cols:
+            return self.box_by_category(num_cols[0], cat_cols[0])
         
         # Default: histogram for numeric, bar for categorical
         if num_cols:
@@ -252,6 +271,176 @@ class VizAgent(BaseAgent):
 • 50% of data falls between {Q1:,.2f} and {Q3:,.2f}
 
 • Consider investigating outliers before modeling"""
+        
+        return {
+            'content': content,
+            'figure': fig,
+            'insights': insights,
+            'suggestions': self.get_suggestions()
+        }
+    
+    def line(self, column: str = None) -> Dict[str, Any]:
+        """Create line chart for a numeric column (time series style)."""
+        col = self.find_column(column) or (
+            self.analyzer.usable_numeric[0] if self.analyzer.usable_numeric else None
+        )
+        if not col:
+            return self.format_error("No numeric column for line chart.")
+        
+        data = self.df[col].dropna()
+        
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(
+            y=data.values,
+            mode='lines',
+            name=col,
+            line=dict(color=Config.COLORS[0], width=2)
+        ))
+        
+        # Add trend line
+        x = np.arange(len(data))
+        z = np.polyfit(x, data.values, 1)
+        p = np.poly1d(z)
+        fig.add_trace(go.Scatter(
+            y=p(x),
+            mode='lines',
+            name='Trend',
+            line=dict(color='red', dash='dash', width=1)
+        ))
+        
+        fig.update_layout(
+            title=f"📈 Line Chart: {col}",
+            template="plotly_white",
+            xaxis_title="Index",
+            yaxis_title=col
+        )
+        
+        trend_direction = "upward ↗️" if z[0] > 0 else "downward ↘️" if z[0] < 0 else "flat →"
+        
+        content = f"""## {self.emoji} {self.name} - Line Chart: {col}
+
+| Statistic | Value |
+|-----------|-------|
+| Start | {data.iloc[0]:,.4f} |
+| End | {data.iloc[-1]:,.4f} |
+| Min | {data.min():,.4f} |
+| Max | {data.max():,.4f} |
+| Trend | {trend_direction} |"""
+        
+        insights = f"""**💡 Line Chart Insights:**
+
+• Overall trend is **{trend_direction}**
+
+• Range: {data.max() - data.min():,.2f}
+
+• The red dashed line shows the linear trend"""
+        
+        return {
+            'content': content,
+            'figure': fig,
+            'insights': insights,
+            'suggestions': self.get_suggestions()
+        }
+    
+    def violin(self, column: str = None) -> Dict[str, Any]:
+        """Create violin plot for a numeric column."""
+        col = self.find_column(column) or (
+            self.analyzer.usable_numeric[0] if self.analyzer.usable_numeric else None
+        )
+        if not col:
+            return self.format_error("No numeric column for violin plot.")
+        
+        data = self.df[col].dropna()
+        
+        fig = px.violin(
+            self.df, y=col,
+            title=f"🎻 Violin Plot: {col}",
+            template="plotly_white",
+            color_discrete_sequence=[Config.COLORS[0]],
+            box=True,
+            points="outliers"
+        )
+        
+        content = f"""## {self.emoji} {self.name} - Violin Plot: {col}
+
+| Statistic | Value |
+|-----------|-------|
+| Mean | {data.mean():,.4f} |
+| Median | {data.median():,.4f} |
+| Std Dev | {data.std():,.4f} |
+| Skewness | {data.skew():,.4f} |"""
+        
+        skew = data.skew()
+        if abs(skew) < 0.5:
+            skew_desc = "approximately symmetric"
+        elif skew > 0:
+            skew_desc = "right-skewed (positive)"
+        else:
+            skew_desc = "left-skewed (negative)"
+        
+        insights = f"""**💡 Violin Plot Insights:**
+
+• Distribution is **{skew_desc}** (skewness: {skew:.2f})
+
+• Violin plots show density - wider areas have more data points
+
+• The internal box shows quartiles and median"""
+        
+        return {
+            'content': content,
+            'figure': fig,
+            'insights': insights,
+            'suggestions': self.get_suggestions()
+        }
+    
+    def box_by_category(self, numeric_col: str, category_col: str) -> Dict[str, Any]:
+        """Create box plot comparing a numeric column across categories."""
+        num_col = self.find_column(numeric_col)
+        cat_col = self.find_column(category_col)
+        
+        if not num_col or num_col not in self.analyzer.usable_numeric:
+            if self.analyzer.usable_numeric:
+                num_col = self.analyzer.usable_numeric[0]
+            else:
+                return self.format_error("No numeric column available.")
+        
+        if not cat_col or cat_col not in self.analyzer.usable_categorical:
+            if self.analyzer.usable_categorical:
+                cat_col = self.analyzer.usable_categorical[0]
+            else:
+                return self.format_error("No categorical column available.")
+        
+        # Limit categories
+        top_cats = self.df[cat_col].value_counts().head(8).index.tolist()
+        plot_df = self.df[self.df[cat_col].isin(top_cats)]
+        
+        fig = px.box(
+            plot_df, x=cat_col, y=num_col,
+            title=f"📦 {num_col} by {cat_col}",
+            template="plotly_white",
+            color=cat_col
+        )
+        fig.update_layout(showlegend=False)
+        
+        # Calculate stats by category
+        stats = self.df.groupby(cat_col)[num_col].agg(['mean', 'median', 'std']).round(2)
+        
+        content = f"""## {self.emoji} {self.name} - {num_col} by {cat_col}
+
+| {cat_col} | Mean | Median | Std |
+|-----------|------|--------|-----|"""
+        for cat in top_cats[:8]:
+            if cat in stats.index:
+                row = stats.loc[cat]
+                content += f"\n| {cat} | {row['mean']:,.2f} | {row['median']:,.2f} | {row['std']:,.2f} |"
+        
+        insights = f"""**💡 Comparison Insights:**
+
+• Comparing **{num_col}** across **{len(top_cats)} categories** of {cat_col}
+
+• Highest mean: {stats['mean'].idxmax()} ({stats['mean'].max():,.2f})
+
+• Lowest mean: {stats['mean'].idxmin()} ({stats['mean'].min():,.2f})"""
         
         return {
             'content': content,

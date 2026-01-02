@@ -12,6 +12,7 @@ from agents.sql_agent import SQLAgent
 from agents.aggregate_agent import AggregateAgent
 from agents.master_agent import MasterAgent
 from agents.voice_agent import VoiceAgent
+from agents.dynamic_agent import DynamicAgent
 
 __all__ = [
     'BaseAgent',
@@ -21,5 +22,6 @@ __all__ = [
     'SQLAgent',
     'AggregateAgent',
     'MasterAgent',
-    'VoiceAgent'
+    'VoiceAgent',
+    'DynamicAgent'
 ]

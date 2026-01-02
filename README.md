@@ -1,4 +1,4 @@
-# 🤖 OmniAgent: AI-Powered Data Analysis Assistant
+# 🤖 OmniAgent - AI-Powered Data Analysis Assistant
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io)
@@ -6,57 +6,20 @@
 
 **OmniAgent** is an intelligent, multi-agent data analysis assistant that helps you explore, visualize, and understand your data through natural conversation.
 
-
+Created by [Hooman Esteki](https://esteki.ca/)
 
 ---
 
 ## 🌟 Features
 
 - **Natural Language Interface** - Ask questions in plain English
-- **Voice Assistant** - Two-way voice conversation (speak & listen)
+- **🎤 Voice Assistant** - Two-way voice conversation (speak & listen)
 - **Multi-Agent Architecture** - 6 specialized agents working together
 - **Smart Routing** - Automatically finds the right agent for your query
 - **Interactive Visualizations** - Beautiful Plotly charts with zoom/pan
 - **Machine Learning** - Build predictive models with one command
 - **Data Aggregation** - GroupBy, pivot, and summary operations
 - **AI Enhancement** - Optional Groq LLM for smarter responses
-
----
-
-## 🏗️ Architecture
-
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                         USER QUERY                               │
-│                             ↓                                    │
-│  ┌────────────────────────────────────────────────────────────┐  │
-│  │                   🧠 MASTER AGENT                          │  │
-│  │         Natural Language Understanding & Routing           │  │
-│  │                Message Communication Protocol              │  │
-│  └────────────────────────────────────────────────────────────┘  │
-│                             ↓                                    │
-│      ┌────────┬─────────┬─────────┬──────────┬─────────┐         │
-│      ↓        ↓         ↓         ↓         ↓          ↓         │
-│  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐      │
-│  │  📊  │  │  📈   │  │  📦  │  │  🤖  │   │  🔍  │  │  🧠  │      │
-│  │Stats │  │ Viz  │  │ Agg  │  │Pred  │  │ SQL  │  │Master│      │
-│  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │      │
-│  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘      │
-│                             ↓                                    │
-│                       RESPONSE + INSIGHTS                        │
-└──────────────────────────────────────────────────────────────────┘
-```
-
-### Agent Responsibilities
-
-| Agent | Emoji | Responsibilities |
-|-------|-------|------------------|
-| **Master** | 🧠 | Query understanding, routing, orchestration |
-| **Stats** | 📊 | Statistics, summaries, missing values, distributions |
-| **Viz** | 📈 | Charts, plots, heatmaps, visualizations |
-| **Aggregate** | 📦 | GroupBy, pivot tables, aggregations |
-| **Predict** | 🤖 | Machine learning models, predictions |
-| **SQL** | 🔍 | Data preview, schema, sampling |
 
 ---
 
@@ -78,6 +41,65 @@ OmniAgent includes a **two-way voice conversation** feature:
 5. Agent responds in text AND speaks the answer!
 
 *Works best in Chrome or Edge browsers*
+
+---
+
+## 🏗️ Architecture
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                         USER QUERY                                │
+│                             ↓                                     │
+│  ┌────────────────────────────────────────────────────────────┐  │
+│  │                   🧠 MASTER AGENT                           │  │
+│  │         Natural Language Understanding & Routing            │  │
+│  │                Message Communication Protocol               │  │
+│  └────────────────────────────────────────────────────────────┘  │
+│                             ↓                                     │
+│      ┌──────────┬──────────┬──────────┬──────────┬──────────┐   │
+│      ↓          ↓          ↓          ↓          ↓          ↓   │
+│  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐   │
+│  │  📊  │  │  📈  │  │  📦  │  │  🤖  │  │  🔍  │  │  🧠  │   │
+│  │Stats │  │ Viz  │  │ Agg  │  │Pred  │  │ SQL  │  │Master│   │
+│  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │   │
+│  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘   │
+│                             ↓                                     │
+│                       RESPONSE + INSIGHTS                         │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### Agent Responsibilities
+
+| Agent | Emoji | Responsibilities |
+|-------|-------|------------------|
+| **Master** | 🧠 | Query understanding, routing, orchestration |
+| **Stats** | 📊 | Statistics, summaries, missing values, distributions |
+| **Viz** | 📈 | Charts, plots, heatmaps, visualizations |
+| **Aggregate** | 📦 | GroupBy, pivot tables, aggregations |
+| **Predict** | 🤖 | Machine learning models, predictions |
+| **SQL** | 🔍 | Data preview, schema, sampling |
+| **Dynamic** | 🔮 | Custom analysis via AI code generation |
+
+---
+
+## 🔮 Dynamic Agent (AI-Powered)
+
+When you ask something that's not built into the agents, the **Dynamic Agent** can help:
+
+1. **Analyzes** your question
+2. **Generates** Python code using AI (Groq LLM)
+3. **Executes** the code safely
+4. **Returns** results with explanations
+
+### Examples of Dynamic Analysis:
+```
+"Calculate the 7-day rolling average of sales"
+"Find outliers using IQR method"
+"What's the correlation controlling for category?"
+"Show the cumulative sum over time"
+```
+
+*Requires AI Mode enabled (Groq API key)*
 
 ---
 
@@ -104,7 +126,9 @@ omniagent/
 │   ├── viz_agent.py          # Visualizations
 │   ├── aggregate_agent.py    # GroupBy & aggregations
 │   ├── predict_agent.py      # Machine learning
-│   └── sql_agent.py          # Data queries
+│   ├── sql_agent.py          # Data queries
+│   ├── dynamic_agent.py      # AI-powered custom analysis
+│   └── voice_agent.py        # Voice interaction
 │
 ├── mcp/                      # Message Communication Protocol
 │   ├── __init__.py

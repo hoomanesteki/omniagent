@@ -363,16 +363,24 @@ I'm your **intelligent data analysis companion**. Upload a CSV and ask me anythi
 | Agent | What They Do |
 |-------|--------------|
 | 📊 **Stats** | Means, medians, missing values, summaries |
-| 📈 **Viz** | Histograms, scatter plots, heatmaps, charts |
+| 📈 **Viz** | Histograms, scatter plots, heatmaps, line & violin charts |
+| 📦 **Aggregate** | Group by, count, sum, average by category |
 | 🤖 **Predict** | Machine learning models & predictions |
 | 🔍 **SQL** | Data preview, filtering, exploration |
-| 🧠 **Master** | Understands your questions & routes them |
+| 🔮 **Dynamic** | Custom analysis via AI (with AI Mode enabled) |
 
 ### 🚀 Quick Start
 
 1. **📂 Load data** from the sidebar
 2. **💬 Ask naturally** - "What's the average age?", "Show histogram of price"
 3. **📊 Get insights** with beautiful visualizations
+
+### 🔮 Dynamic Analysis (AI Mode)
+
+Enable **AI Mode** in the sidebar to unlock dynamic analysis:
+- Ask **any** question, even if it's not built-in
+- AI generates custom code to answer your question
+- Examples: "Find outliers using IQR", "Calculate rolling average"
 
 ### 🎤 Voice Assistant
 
