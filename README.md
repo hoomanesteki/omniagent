@@ -62,7 +62,7 @@
 │           └───────────────────┼───────────────────┘                          │
 │                               ▼                                              │
 │    ┌─────────────────────────────────────────────────────────────────────┐   │
-│    │                      🧠 MASTER AGENT                                │   │
+│    │                      🧠 MASTER AGENT 🧠                              │   │
 │    │                                                                     │   │
 │    │  ┌─────────────┐   ┌─────────────┐   ┌─────────────────────────┐    │   │
 │    │  │   Intent    │──▶│   Router    │──▶│  MCP Message Bus        │    │   │
@@ -313,7 +313,7 @@ The Dynamic Agent handles requests beyond built-in capabilities by generating an
 │                              ▼                                          │
 │  STEP 3: EXECUTE (Sandboxed execution)                                  │
 │  ┌─────────────────────────────────────────────────────────────────┐    │
-│  │ Agent: "✅ Analysis Complete!                                   │    │
+│  │ Agent: "✅✅ Analysis Complete!                                  │    │
 │  │         [Shows results and visualization]"                      │    │
 │  └─────────────────────────────────────────────────────────────────┘    │
 │                                                                         │
