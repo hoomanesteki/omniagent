@@ -64,7 +64,7 @@ Most people spend too much time cleaning data, figuring out tools, and trying to
 │           └───────────────────┼───────────────────┘                          │
 │                               ▼                                              │
 │    ┌─────────────────────────────────────────────────────────────────────┐   │
-│    │                      🧠 MASTER AGENT 🧠                              │   │
+│    │                      🧠 MASTER AGENT                                │   │
 │    │                                                                     │   │
 │    │  ┌─────────────┐   ┌─────────────┐   ┌─────────────────────────┐    │   │
 │    │  │   Intent    │──▶│   Router    │──▶│  MCP Message Bus        │    │   │
