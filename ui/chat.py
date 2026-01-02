@@ -43,11 +43,11 @@ def render_chat():
             
             # Figure
             if msg.get('figure') is not None:
-                st.plotly_chart(msg['figure'], use_container_width=True, key=f"fig_{i}")
+                st.plotly_chart(msg['figure'], width='stretch', key=f"fig_{i}")
             
             # Dataframe
             if msg.get('dataframe') is not None:
-                st.dataframe(msg['dataframe'], use_container_width=True)
+                st.dataframe(msg['dataframe'], width='stretch')
             
             # Insights
             if msg.get('insights'):
@@ -286,7 +286,7 @@ def _render_button_rows(buttons, prefix, cols_per_row=4):
         for i, s in enumerate(row):
             with cols[i]:
                 clean_s = _clean_suggestion(s)
-                if st.button(s, key=f"{prefix}_{row_idx}_{i}", use_container_width=True):
+                if st.button(s, key=f"{prefix}_{row_idx}_{i}", width='stretch'):
                     _handle_suggestion_click(s, clean_s)
 
 
@@ -358,35 +358,57 @@ def render_welcome():
 
 I'm your **intelligent data analysis companion**. Upload a CSV and ask me anything!
 
+---
+
 ### 🤖 Your Specialized Agents
 
-| Agent | What They Do |
-|-------|--------------|
-| 📊 **Stats** | Means, medians, missing values, summaries |
-| 📈 **Viz** | Histograms, scatter plots, heatmaps, line & violin charts |
-| 📦 **Aggregate** | Group by, count, sum, average by category |
-| 🤖 **Predict** | Machine learning models & predictions |
-| 🔍 **SQL** | Data preview, filtering, exploration |
-| 🔮 **Dynamic** | Custom analysis via AI (with AI Mode enabled) |
+| Agent | What They Do | Example |
+|-------|--------------|---------|
+| 📊 **Stats** | Means, medians, missing values, summaries | "Show statistics" |
+| 📈 **Viz** | Histograms, scatter plots, heatmaps | "Histogram of age" |
+| 📦 **Aggregate** | Group by, count, sum, average by category | "Count by gender" |
+| 🤖 **Predict** | Machine learning models & predictions | "Predict salary" |
+| 🔍 **SQL** | Data preview, filtering, exploration | "Show first 10 rows" |
+| 🔮 **Dynamic** | Custom analysis via AI code generation | "Find outliers using IQR" |
+
+---
 
 ### 🚀 Quick Start
 
-1. **📂 Load data** from the sidebar
+1. **📂 Load data** from the sidebar (or try a sample dataset!)
 2. **💬 Ask naturally** - "What's the average age?", "Show histogram of price"
 3. **📊 Get insights** with beautiful visualizations
 
+---
+
 ### 🔮 Dynamic Analysis (AI Mode)
 
-Enable **AI Mode** in the sidebar to unlock dynamic analysis:
-- Ask **any** question, even if it's not built-in
-- AI generates custom code to answer your question
-- Examples: "Find outliers using IQR", "Calculate rolling average"
+Enable **AI Mode** in the sidebar to unlock powerful custom analysis:
+
+| Step | What Happens |
+|------|--------------|
+| **Step 1** | I offer to create custom analysis (saves resources!) |
+| **Step 2** | Type `yes` → I generate and show the code |
+| **Step 3** | Type `yes` → I execute and show results |
+
+**Examples:** "Calculate rolling average", "Find outliers", "Create age bins"
+
+---
 
 ### 🎤 Voice Assistant
 
 Enable **Voice** in the sidebar for two-way conversation:
-- **Speak** your questions using the microphone
-- **Listen** as the agent speaks responses back to you
+- 🎙️ **Speak** your questions using the microphone
+- 🔊 **Listen** as the agent speaks responses back to you
+- ⚙️ **Customize** voice speed and pitch in settings
+
+---
+
+### 🛡️ Safe & Secure
+
+Your data is processed locally. The Dynamic Agent runs code in a sandboxed environment.
+
+---
 
 **👈 Load some data to begin!**
     """)

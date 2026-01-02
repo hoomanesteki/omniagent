@@ -153,14 +153,14 @@ These columns can be aggregated (sum, mean, etc.):
 ### 💡 Example Commands
 
 **Count by category:**
-- "Count by {cat_cols[0]}" if cat_cols else "Count by category"
+- "{f'Count by {cat_cols[0]}' if cat_cols else 'Count by category'}"
 
 **Sum/Average by group:**
-- "Sum {num_cols[0]} by {cat_cols[0]}" if num_cols and cat_cols else "Sum values by category"
-- "Average {num_cols[0]} by {cat_cols[0]}" if num_cols and cat_cols else "Average by category"
+- "{f'Sum {num_cols[0]} by {cat_cols[0]}' if num_cols and cat_cols else 'Sum values by category'}"
+- "{f'Average {num_cols[0]} by {cat_cols[0]}' if num_cols and cat_cols else 'Average by category'}"
 
 **Group summary:**
-- "Group by {cat_cols[0]}" if cat_cols else "Group by category"
+- "{f'Group by {cat_cols[0]}' if cat_cols else 'Group by category'}"
 
 ---
 

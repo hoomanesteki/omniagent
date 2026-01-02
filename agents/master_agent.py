@@ -219,7 +219,8 @@ class MasterAgent(BaseAgent):
         '3-day', '5-day', '7-day', '14-day', '30-day', '90-day',
         'weekly average', 'monthly average', 'daily average',
         
-        # Statistical methods (specific phrases)
+        # Statistical methods (specific phrases) - EXPANDED
+        'z-score', 'z score', 'zscore', 'z-scores', 'zscores',  # Added standalone z-score patterns
         'using iqr', 'iqr method', 'using the iqr',
         'using z-score', 'z-score method', 'zscore method',
         'outliers using', 'detect outliers using', 'find outliers using',
@@ -243,6 +244,7 @@ class MasterAgent(BaseAgent):
         'split into categories', 'group into categories',
         'based on percentile', 'percentile-based', 'quartile-based',
         'normalize the', 'standardize the', 'scale the',
+        'normalize all', 'standardize all', 'normalize column', 'standardize column',  # Added
         
         # Clustering (specific phrases)
         'cluster the', 'clustering', 'k-means', 'kmeans',
@@ -715,14 +717,19 @@ Just type what you want to know! I understand natural language.
 
 With **AI Mode** enabled, I can create custom analysis for **any question**:
 
+**Three-Step Flow (Resource Efficient):**
+1. **Step 1:** I'll offer to create the analysis (no AI call yet)
+2. **Step 2:** Type `yes` → I generate the plan and code
+3. **Step 3:** Type `yes` → I execute and show results
+
 **Example commands:**
 | Command | What it does |
 |---------|--------------|
 | "Calculate rolling average" | Time-window calculations |
 | "Find outliers using IQR" | Statistical outlier detection |
-| "Correlation controlling for X" | Partial correlations |
-| "Cumulative sum over time" | Running totals |
-| "Cluster the data" | Unsupervised ML |
+| "Create bins for age" | Categorize continuous data |
+| "Scatter with regression line" | Trend visualization |
+| "Top 10 by ratio" | Ranking calculations |
 
 **Enable:** 🧠 AI Assistant in sidebar → Add Groq API key
 """
@@ -760,22 +767,16 @@ OmniAgent is an **AI-powered multi-agent data analysis system** that helps you e
 │  │                                          └──────┬──────┘  │ │
 │  └─────────────────────────────────────────────────┼─────────┘ │
 │                                                    │            │
-│            ┌───────────────────────────────────────┼───────┐   │
-│            │                                       │       │   │
-│            ▼                    ▼                  ▼       ▼   │
-│     ┌──────────┐        ┌──────────┐       ┌──────────┐       │
-│     │ 📊 Stats │        │ 📈 Viz   │       │ 📦 Agg   │       │
-│     │  Agent   │        │  Agent   │       │  Agent   │       │
-│     └──────────┘        └──────────┘       └──────────┘       │
-│            │                    │                  │           │
-│            ▼                    ▼                  ▼           │
-│     ┌──────────┐        ┌──────────┐       ┌──────────┐       │
-│     │ 🤖 Pred  │        │ 🔍 SQL   │       │  Response │       │
-│     │  Agent   │        │  Agent   │       │  Builder  │       │
-│     └──────────┘        └──────────┘       └──────────┘       │
-│                                                    │            │
-│                              ┌─────────────────────┘            │
-│                              ▼                                  │
+│     ┌──────────┬──────────┬──────────┬──────────┬─┴────────┐  │
+│     ▼          ▼          ▼          ▼          ▼          ▼  │
+│  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  │
+│  │  📊  │  │  📈  │  │  📦  │  │  🤖  │  │  🔍  │  │  🔮  │  │
+│  │Stats │  │ Viz  │  │ Agg  │  │Pred  │  │ SQL  │  │Dynamic│  │
+│  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │  │
+│  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘  │
+│                                                    │           │
+│                              ┌─────────────────────┘           │
+│                              ▼                                 │
 │                    ┌─────────────────┐                         │
 │                    │  FORMATTED      │                         │
 │                    │  RESPONSE +     │                         │
@@ -833,6 +834,26 @@ MCPMessage(
 | 📦 Aggregate | GroupBy, count, sum, avg, pivot | 20+ patterns |
 | 🤖 Predict | Classification, regression, feature importance | 20+ patterns |
 | 🔍 SQL | Preview, schema, sampling | 15+ patterns |
+| 🔮 Dynamic | Custom analysis via AI code generation | Any request |
+
+---
+
+### 🔮 Dynamic Agent (AI-Powered)
+
+When you ask something beyond built-in capabilities, the **Dynamic Agent** creates custom analysis:
+
+**Three-Step Flow:**
+1. **Offer** - "I can create this! Want me to?" (saves resources if you cancel)
+2. **Plan** - Shows generated code for review
+3. **Execute** - Runs code safely and shows results
+
+**Example requests:**
+- "Calculate rolling 7-day average"
+- "Find outliers using IQR method"
+- "Create bins for age into categories"
+- "Show scatter plot with regression line"
+
+*Requires AI Mode enabled (Groq API key)*
 
 ---
 

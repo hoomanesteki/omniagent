@@ -1,104 +1,393 @@
-# 🤖 OmniAgent - AI-Powered Data Analysis Assistant
+# 🤖 OmniAgent
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Tests](https://img.shields.io/badge/Tests-195%20passing-brightgreen.svg)]()
+[![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)]()
 
 **OmniAgent** is an intelligent, multi-agent data analysis assistant that helps you explore, visualize, and understand your data through natural conversation.
 
+> 👨‍💻 Created by [Hooman Esteki](https://esteki.ca/)
 
 ---
 
-## 🌟 Features
+## 📑 Table of Contents
 
-- **Natural Language Interface** - Ask questions in plain English
-- **Voice Assistant** - Two-way voice conversation (speak & listen)
-- **Multi-Agent Architecture** - 6 specialized agents working together
-- **Smart Routing** - Automatically finds the right agent for your query
-- **Interactive Visualizations** - Beautiful Plotly charts with zoom/pan
-- **Machine Learning** - Build predictive models with one command
-- **Data Aggregation** - GroupBy, pivot, and summary operations
-- **AI Enhancement** - Optional Groq LLM for smarter responses
+- [Features](#-features)
+- [System Architecture](#-system-architecture)
+- [Installation](#-installation)
+- [Docker Deployment](#-docker-deployment)
+- [Quick Start](#-quick-start)
+- [Agents](#-agents)
+- [Dynamic Agent](#-dynamic-agent-ai-powered)
+- [Voice Assistant](#-voice-assistant)
+- [Project Structure](#-project-structure)
+- [Testing](#-testing)
+- [Security](#-security)
+- [Configuration](#-configuration)
+- [Troubleshooting](#-troubleshooting)
+- [License](#-license)
 
 ---
 
-## 🎤 Voice Assistant
-
-OmniAgent includes a **two-way voice conversation** feature:
+## ✨ Features
 
 | Feature | Description |
 |---------|-------------|
-| **🎤 Speak** | Click "Start Speaking" and ask your question by voice |
-| **🔊 Listen** | Agent speaks responses back to you automatically |
-| **⚙️ Settings** | Adjust voice speed and pitch |
-
-### How to Use Voice:
-1. Enable **Voice** toggle in the sidebar
-2. Click **"Start Speaking"** button
-3. Ask your question (e.g., "Show me statistics")
-4. Your question auto-submits to chat
-5. Agent responds in text AND speaks the answer!
-
-*Works best in Chrome or Edge browsers*
+| 🗣️ **Natural Language** | Ask questions in plain English |
+| 🎤 **Voice Input** | Speak your questions using browser microphone |
+| 🤖 **7 Specialized Agents** | Stats, Viz, Aggregate, Predict, SQL, Dynamic, Voice |
+| 🔮 **AI Code Generation** | Dynamic Agent creates custom analysis on-the-fly |
+| 📊 **Interactive Charts** | Beautiful Plotly visualizations |
+| 🧠 **Smart Routing** | Automatically finds the right agent for your query |
+| 🔒 **Secure Execution** | Sandboxed code execution with 40+ security checks |
+| 🎯 **ML Models** | Build predictive models with one command |
+| 🐳 **Docker Ready** | One-command deployment with Docker |
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ System Architecture
+
+### High-Level Overview
 
 ```
-┌──────────────────────────────────────────────────────────────────┐
-│                         USER QUERY                                │
-│                             ↓                                     │
-│  ┌────────────────────────────────────────────────────────────┐  │
-│  │                   🧠 MASTER AGENT                           │  │
-│  │         Natural Language Understanding & Routing            │  │
-│  │                Message Communication Protocol               │  │
-│  └────────────────────────────────────────────────────────────┘  │
-│                             ↓                                     │
-│      ┌──────────┬──────────┬──────────┬──────────┬──────────┐   │
-│      ↓          ↓          ↓          ↓          ↓          ↓   │
-│  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐   │
-│  │  📊  │  │  📈  │  │  📦  │  │  🤖  │  │  🔍  │  │  🧠  │   │
-│  │Stats │  │ Viz  │  │ Agg  │  │Pred  │  │ SQL  │  │Master│   │
-│  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │  │Agent │   │
-│  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘   │
-│                             ↓                                     │
-│                       RESPONSE + INSIGHTS                         │
-└──────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                              USER INTERFACE                                  │
+│                          (Streamlit Web App)                                 │
+│                                                                              │
+│    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐                │
+│    │  Text Input  │    │ Voice Input  │    │  Suggestions │                │
+│    │   (Chat)     │    │ (Microphone) │    │  (Buttons)   │                │
+│    └──────┬───────┘    └──────┬───────┘    └──────┬───────┘                │
+│           │                   │                   │                         │
+│           └───────────────────┼───────────────────┘                         │
+│                               ▼                                              │
+│    ┌─────────────────────────────────────────────────────────────────────┐  │
+│    │                      🧠 MASTER AGENT                                 │  │
+│    │                                                                      │  │
+│    │  ┌─────────────┐   ┌─────────────┐   ┌─────────────────────────┐   │  │
+│    │  │   Intent    │──▶│   Router    │──▶│  MCP Message Bus        │   │  │
+│    │  │  Detection  │   │   Logic     │   │  (Agent Communication)  │   │  │
+│    │  │ (200+ rules)│   │             │   │                         │   │  │
+│    │  └─────────────┘   └─────────────┘   └───────────┬─────────────┘   │  │
+│    │                                                   │                  │  │
+│    │           Check: Is Dynamic Agent pending? ◄──────┤                  │  │
+│    │                         │                         │                  │  │
+│    │                    YES  │  NO                     │                  │  │
+│    │                         ▼                         ▼                  │  │
+│    │              ┌─────────────────┐      ┌─────────────────┐           │  │
+│    │              │ Route to Dynamic│      │ Route by Intent │           │  │
+│    │              │  (Confirmation) │      │ (stats/viz/etc) │           │  │
+│    │              └─────────────────┘      └─────────────────┘           │  │
+│    └─────────────────────────────────────────────────────────────────────┘  │
+│                                    │                                         │
+│    ┌───────────────────────────────┼───────────────────────────────────┐    │
+│    │                               ▼                                    │    │
+│    │  ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐│    │
+│    │  │   📊   │ │   📈   │ │   📦   │ │   🤖   │ │   🔍   │ │   🔮   ││    │
+│    │  │ Stats  │ │  Viz   │ │  Agg   │ │ Predict│ │  SQL   │ │Dynamic ││    │
+│    │  │ Agent  │ │ Agent  │ │ Agent  │ │ Agent  │ │ Agent  │ │ Agent  ││    │
+│    │  └────────┘ └────────┘ └────────┘ └────────┘ └────────┘ └────────┘│    │
+│    │                                                                    │    │
+│    │                          SPECIALIZED AGENTS                        │    │
+│    └────────────────────────────────────────────────────────────────────┘    │
+│                                    │                                         │
+│                                    ▼                                         │
+│    ┌─────────────────────────────────────────────────────────────────────┐  │
+│    │                        RESPONSE BUILDER                              │  │
+│    │   ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌───────────┐ │  │
+│    │   │   Content   │  │   Insights  │  │ Suggestions │  │  Figures  │ │  │
+│    │   │  (Markdown) │  │   (Tips)    │  │  (Buttons)  │  │  (Plotly) │ │  │
+│    │   └─────────────┘  └─────────────┘  └─────────────┘  └───────────┘ │  │
+│    └─────────────────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Agent Responsibilities
+### Message Communication Protocol (MCP)
 
-| Agent | Emoji | Responsibilities |
-|-------|-------|------------------|
-| **Master** | 🧠 | Query understanding, routing, orchestration |
-| **Stats** | 📊 | Statistics, summaries, missing values, distributions |
-| **Viz** | 📈 | Charts, plots, heatmaps, visualizations |
-| **Aggregate** | 📦 | GroupBy, pivot tables, aggregations |
-| **Predict** | 🤖 | Machine learning models, predictions |
-| **SQL** | 🔍 | Data preview, schema, sampling |
-| **Dynamic** | 🔮 | Custom analysis via AI code generation |
+Agents communicate using standardized MCP messages:
+
+```python
+MCPMessage(
+    id: str,           # Unique message identifier
+    type: MessageType, # QUERY, RESPONSE, ERROR, EVENT
+    source: str,       # Sending agent name
+    target: str,       # Receiving agent name
+    content: str,      # Message content
+    data: dict,        # Additional payload
+    metadata: dict     # Timestamps, context
+)
+```
+
+### Data Flow
+
+```
+User Query → Master Agent → Intent Detection → Route to Agent → Process → Response
+     │                                              │
+     │                                              ▼
+     │                                    ┌─────────────────┐
+     │                                    │ If Dynamic:     │
+     │                                    │ 1. Offer        │
+     │                                    │ 2. Plan (LLM)   │
+     │                                    │ 3. Execute      │
+     │                                    └─────────────────┘
+     │                                              │
+     └────────────────────────────────────────────◄─┘
+```
+
+---
+
+## 📦 Installation
+
+### Prerequisites
+
+- Python 3.8 or higher
+- pip (Python package manager)
+- Modern web browser (Chrome/Edge recommended for voice features)
+
+### Option 1: pip Install
+
+```bash
+# Clone the repository
+git clone https://github.com/hoomanesteki/omniagent.git
+cd omniagent
+
+# Create virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+streamlit run app.py
+```
+
+### Option 2: Conda Install
+
+```bash
+# Clone the repository
+git clone https://github.com/hoomanesteki/omniagent.git
+cd omniagent
+
+# Create conda environment
+conda env create -f environment.yml
+
+# Activate environment
+conda activate omniagent
+
+# Run the application
+streamlit run app.py
+```
+
+### Option 3: Using Make
+
+```bash
+make install      # Install dependencies
+make run          # Run the application
+make test         # Run all tests
+```
+
+---
+
+## 🐳 Docker Deployment
+
+### Quick Start with Docker
+
+```bash
+# Build the image
+docker build -t omniagent .
+
+# Run the container
+docker run -p 8501:8501 omniagent
+
+# With API key for AI features
+docker run -p 8501:8501 -e GROQ_API_KEY=your_key omniagent
+```
+
+### Using Docker Compose (Recommended)
+
+```bash
+# Create .env file with your API key (optional)
+echo "GROQ_API_KEY=your_key_here" > .env
+
+# Start the service
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop the service
+docker-compose down
+```
+
+### Docker Commands Reference
+
+| Command | Description |
+|---------|-------------|
+| `docker-compose up -d` | Start in background |
+| `docker-compose up -d --build` | Rebuild and start |
+| `docker-compose down` | Stop and remove containers |
+| `docker-compose logs -f` | Follow logs |
+| `docker-compose restart` | Restart the service |
+
+### Persistent Data
+
+Mount a volume to persist uploaded data:
+
+```bash
+docker run -p 8501:8501 -v $(pwd)/data:/app/data omniagent
+```
+
+---
+
+## 🚀 Quick Start
+
+1. **Load Data**: Upload a CSV file or select a sample dataset from the sidebar
+2. **Ask Questions**: Type naturally like "What's the average age?" or "Show histogram of price"
+3. **Get Insights**: View visualizations, statistics, and AI-powered analysis
+
+### Example Queries
+
+| Query | Agent | Result |
+|-------|-------|--------|
+| "Show statistics" | 📊 Stats | Descriptive statistics |
+| "Histogram of age" | 📈 Viz | Interactive histogram |
+| "Count by gender" | 📦 Aggregate | Grouped counts |
+| "Predict salary" | 🤖 Predict | ML model |
+| "Show first 10 rows" | 🔍 SQL | Data preview |
+| "Calculate rolling average" | 🔮 Dynamic | Custom analysis |
+| "Calculate z-scores" | 🔮 Dynamic | Z-score normalization |
+
+---
+
+## 🤖 Agents
+
+### Agent Overview
+
+| Agent | Emoji | Purpose | Example Commands |
+|-------|-------|---------|------------------|
+| **Master** | 🧠 | Query routing & orchestration | (Internal) |
+| **Stats** | 📊 | Statistical analysis | "mean of price", "check missing" |
+| **Viz** | 📈 | Visualizations | "histogram", "scatter plot", "heatmap" |
+| **Aggregate** | 📦 | GroupBy operations | "count by", "sum by", "average by" |
+| **Predict** | 🤖 | Machine learning | "predict", "build model" |
+| **SQL** | 🔍 | Data exploration | "show rows", "columns", "sample" |
+| **Dynamic** | 🔮 | AI code generation | "rolling average", "find outliers", "z-scores" |
+| **Voice** | 🎤 | Speech recognition | (Microphone input) |
 
 ---
 
 ## 🔮 Dynamic Agent (AI-Powered)
 
-When you ask something that's not built into the agents, the **Dynamic Agent** can help:
+The Dynamic Agent handles requests beyond built-in capabilities by generating and executing custom Python code.
 
-1. **Analyzes** your question
-2. **Generates** Python code using AI (Groq LLM)
-3. **Executes** the code safely
-4. **Returns** results with explanations
+### Three-Step Confirmation Flow
 
-### Examples of Dynamic Analysis:
 ```
-"Calculate the 7-day rolling average of sales"
-"Find outliers using IQR method"
-"What's the correlation controlling for category?"
-"Show the cumulative sum over time"
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         DYNAMIC AGENT FLOW                               │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  STEP 1: OFFER (No LLM call - saves resources)                          │
+│  ┌─────────────────────────────────────────────────────────────────┐   │
+│  │ User: "Calculate rolling average of sales"                       │   │
+│  │                                                                  │   │
+│  │ Agent: "I can create a Rolling/Moving Average analysis.         │   │
+│  │         This requires AI. Type 'yes' to proceed or 'no'."       │   │
+│  └─────────────────────────────────────────────────────────────────┘   │
+│                              │                                          │
+│                     User types "yes"                                    │
+│                              ▼                                          │
+│  STEP 2: PLAN (LLM generates code)                                     │
+│  ┌─────────────────────────────────────────────────────────────────┐   │
+│  │ Agent: "Here's my plan:                                         │   │
+│  │                                                                  │   │
+│  │ ```python                                                        │   │
+│  │ result = df['sales'].rolling(window=7).mean()                   │   │
+│  │ ```                                                              │   │
+│  │                                                                  │   │
+│  │ Type 'yes' to execute or 'no' to cancel."                       │   │
+│  └─────────────────────────────────────────────────────────────────┘   │
+│                              │                                          │
+│                     User types "yes"                                    │
+│                              ▼                                          │
+│  STEP 3: EXECUTE (Sandboxed execution)                                 │
+│  ┌─────────────────────────────────────────────────────────────────┐   │
+│  │ Agent: "✅ Analysis Complete!                                    │   │
+│  │         [Shows results and visualization]"                       │   │
+│  └─────────────────────────────────────────────────────────────────┘   │
+│                                                                          │
+└─────────────────────────────────────────────────────────────────────────┘
 ```
 
-*Requires AI Mode enabled (Groq API key)*
+### Supported Analysis Types
+
+| Type | Keywords | Example |
+|------|----------|---------|
+| Rolling/Moving Average | "rolling", "moving average", "window" | "7-day rolling average" |
+| Outlier Detection | "outlier", "anomaly", "IQR" | "Find outliers using IQR" |
+| Z-Score/Standardization | "z-score", "normalize", "standardize" | "Calculate z-scores" |
+| Regression Analysis | "regression", "trendline" | "Scatter with regression line" |
+| Data Binning | "bin", "categorize", "bucket" | "Bin age into groups" |
+| Ranking | "top", "bottom", "rank" | "Top 10 by sales" |
+| Custom | Any other request | "Cumulative sum by date" |
+
+### Enabling Dynamic Agent
+
+1. Enable **AI Mode** in the sidebar
+2. Enter your **Groq API Key** (free at [console.groq.com](https://console.groq.com))
+3. Click **Validate & Save**
+4. Ask any complex question!
+
+---
+
+## 🎤 Voice Assistant
+
+OmniAgent supports **voice input** through your browser's built-in speech recognition.
+
+> ⚠️ **Note**: Voice is **speech-to-text only** (you speak, agent responds with text).
+
+### Requirements
+
+| Requirement | Details |
+|-------------|---------|
+| **Browser** | Chrome, Edge, or Safari (Firefox limited) |
+| **Microphone** | Built-in or external |
+| **Permission** | Must allow browser microphone access |
+| **HTTPS** | Required (localhost works for development) |
+
+### How to Enable Voice
+
+1. Toggle **Enable Voice** in the sidebar
+2. Click **"🎤 Start Speaking"** button
+3. **Allow microphone access** when browser prompts
+4. Speak your question clearly
+5. Query is automatically submitted
+
+### Browser Microphone Setup
+
+**Chrome:**
+1. Click 🔒 lock icon in address bar
+2. Find "Microphone" → Select "Allow"
+
+**Edge:**
+1. Click 🔒 lock icon in address bar
+2. Click "Permissions for this site"
+3. Set Microphone to "Allow"
+
+**Safari:**
+1. Safari → Preferences → Websites → Microphone
+2. Allow for the OmniAgent site
+
+### Troubleshooting Voice
+
+| Issue | Solution |
+|-------|----------|
+| Microphone not working | Check browser permissions |
+| No transcription | Speak clearly, reduce background noise |
+| "Permission denied" | Reset site permissions and allow again |
 
 ---
 
@@ -106,272 +395,193 @@ When you ask something that's not built into the agents, the **Dynamic Agent** c
 
 ```
 omniagent/
-├── app.py                    # Main entry point
-├── requirements.txt          # Dependencies
-├── README.md                 # This file
-├── .env.example              # Environment template
 │
-├── core/                     # Core utilities
+├── 📄 app.py                    # Main Streamlit entry point
+├── 📄 requirements.txt          # Python dependencies
+├── 📄 requirements-dev.txt      # Development dependencies
+├── 📄 environment.yml           # Conda environment
+├── 📄 Makefile                  # Build automation (40+ commands)
+├── 📄 Dockerfile                # Docker image
+├── 📄 docker-compose.yml        # Docker Compose config
+├── 📄 pytest.ini                # Test configuration
+├── 📄 README.md                 # This file
+│
+├── 📂 core/                     # Core utilities
 │   ├── __init__.py
-│   ├── config.py             # Configuration & CSS styles
-│   ├── analyzer.py           # DataAnalyzer class
-│   └── llm.py                # LLM client (Groq API)
+│   ├── config.py                # Configuration & settings
+│   ├── analyzer.py              # DataAnalyzer class
+│   └── llm.py                   # LLM client (Groq API)
 │
-├── agents/                   # Specialized agents
+├── 📂 agents/                   # Specialized agents
 │   ├── __init__.py
-│   ├── base.py               # BaseAgent abstract class
-│   ├── master_agent.py       # Orchestrator with MCP
-│   ├── stats_agent.py        # Statistical analysis
-│   ├── viz_agent.py          # Visualizations
-│   ├── aggregate_agent.py    # GroupBy & aggregations
-│   ├── predict_agent.py      # Machine learning
-│   ├── sql_agent.py          # Data queries
-│   ├── dynamic_agent.py      # AI-powered custom analysis
-│   └── voice_agent.py        # Voice interaction
+│   ├── base.py                  # BaseAgent abstract class
+│   ├── master_agent.py          # 🧠 Orchestrator
+│   ├── stats_agent.py           # 📊 Statistics
+│   ├── viz_agent.py             # 📈 Visualization
+│   ├── aggregate_agent.py       # 📦 GroupBy
+│   ├── predict_agent.py         # 🤖 ML prediction
+│   ├── sql_agent.py             # 🔍 Data exploration
+│   ├── dynamic_agent.py         # 🔮 AI code generation
+│   └── voice_agent.py           # 🎤 Voice input
 │
-├── mcp/                      # Message Communication Protocol
+├── 📂 mcp/                      # Message Communication Protocol
 │   ├── __init__.py
-│   └── protocol.py           # MCPMessage, MCPBus, AgentResponse
+│   └── protocol.py              # MCPMessage, MCPBus
 │
-├── ui/                       # User interface
+├── 📂 ui/                       # User interface
 │   ├── __init__.py
-│   ├── components.py         # Session, loading, messages
-│   ├── sidebar.py            # Sidebar UI
-│   └── chat.py               # Chat & suggestions
+│   ├── components.py            # Session, messages
+│   ├── sidebar.py               # Sidebar UI
+│   └── chat.py                  # Chat interface
 │
-└── data/
-    ├── samples/              # Sample datasets
-    │   ├── fitness_tracker.csv
-    │   ├── nyc_airbnb.csv
-    │   └── ecommerce_sales.csv
-    └── uploads/              # User uploads
+├── 📂 tests/                    # Test suite (195 tests)
+│   ├── conftest.py              # Shared fixtures
+│   ├── unit/                    # Unit tests
+│   └── integration/             # Integration tests
+│
+├── 📂 data/                     # Data files
+│   ├── samples/                 # Sample datasets
+│   └── uploads/                 # User uploads
+│
+└── 📂 docs/                     # Documentation
+    ├── A_API_REFERENCE.md
+    ├── B_MCP_PROTOCOL.md
+    ├── C_TESTING.md
+    ├── D_SECURITY.md
+    └── E_DEPLOYMENT.md
 ```
 
 ---
 
-## 🚀 Quick Start
+## 🧪 Testing
 
-### 1. Clone & Install
+### Running Tests
 
 ```bash
-# Clone repository
-git clone https://github.com/yourusername/omniagent.git
-cd omniagent
+# Run all tests
+make test
 
-# Create virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# venv\Scripts\activate   # Windows
+# Run specific test suites
+make test-unit          # Unit tests only
+make test-integration   # Integration tests
+make test-security      # Security tests
 
-# Install dependencies
-pip install -r requirements.txt
+# Run with coverage
+make coverage
+
+# Run specific test file
+pytest tests/unit/test_agents.py -v
 ```
 
-### 2. Configure (Optional - for AI features)
+### Test Coverage
 
-```bash
-# Copy environment template
-cp .env.example .env
-
-# Edit .env and add your Groq API key
-# Get free key at: https://console.groq.com
-GROQ_API_KEY=gsk_your_key_here
-```
-
-### 3. Run
-
-```bash
-streamlit run app.py
-```
-
-The app will open at `http://localhost:8501`
+| Module | Tests | Coverage |
+|--------|-------|----------|
+| Core | 20+ | Config, DataAnalyzer, LLMClient |
+| Agents | 50+ | All 7 agents, routing |
+| MCP Protocol | 25+ | Messages, bus |
+| Security | 40+ | Code safety, patterns |
+| UI | 30+ | Help, about, messages |
+| Integration | 20+ | End-to-end flows |
 
 ---
 
-## 💬 Usage Examples
+## 🔒 Security
 
-### Statistics
-```
-"What's the average age?"
-"Show me statistics"
-"Check for missing values"
-"What's the median price?"
-```
+### Dynamic Agent Security
 
-### Visualization
-```
-"Histogram of age"
-"Scatter plot price vs quantity"
-"Correlation heatmap"
-"Bar chart of categories"
-```
+The Dynamic Agent executes AI-generated code in a sandboxed environment with 40+ blocked patterns:
 
-### Aggregation
-```
-"Count by gender"
-"Sum sales by region"
-"Average price by category"
-"Group by status"
-```
+| Category | Blocked Patterns |
+|----------|-----------------|
+| **System Access** | `import os`, `import sys`, `subprocess` |
+| **Code Injection** | `eval()`, `exec()`, `compile()` |
+| **File Operations** | `open()`, `.read()`, `.write()` |
+| **Network** | `requests.`, `urllib`, `socket` |
+| **Reflection** | `globals()`, `locals()`, `getattr()` |
+| **Dangerous Dunders** | `__builtins__`, `__class__` |
 
-### Machine Learning
-```
-"Predict sales"
-"Build a model"
-"What can I predict?"
-"Feature importance"
-```
+### Security Flow
 
-### Data Exploration
 ```
-"Show first 10 rows"
-"What columns do I have?"
-"Random sample"
-"Data structure"
+Generated Code → Length Check → Pattern Check → Sandboxed Execution
+                     ↓              ↓
+                 Too long?      Dangerous?
+                     ↓              ↓
+                  REJECT         REJECT
 ```
 
 ---
 
-## 🔧 Technology Stack
+## ⚙️ Configuration
 
-| Component | Technology |
-|-----------|------------|
-| **Frontend** | Streamlit |
-| **Visualization** | Plotly |
-| **Data Processing** | Pandas, NumPy |
-| **Machine Learning** | Scikit-learn |
-| **AI/NLU** | Groq (LLaMA 3.3 70B) |
-| **Architecture** | MCP (Message Communication Protocol) |
+### Environment Variables
 
----
+Create a `.env` file:
 
-## 📡 Message Communication Protocol (MCP)
+```env
+# Groq API (for Dynamic Agent)
+GROQ_API_KEY=your_api_key_here
 
-OmniAgent uses a custom MCP for agent communication:
-
-```python
-# Message structure
-MCPMessage(
-    id="unique-id",
-    type=MessageType.QUERY,
-    source="master",
-    target="stats",
-    content="show statistics",
-    data={},
-    metadata={}
-)
-
-# Agent response
-AgentResponse(
-    content="## Statistics...",
-    figure=plotly_fig,
-    dataframe=df,
-    insights="Key findings...",
-    suggestions=["Next action 1", "Next action 2"]
-)
+# LLM Settings (optional)
+LLM_MODEL=llama-3.3-70b-versatile
 ```
 
-### Message Flow
+### Configuration Options
 
-1. **User** sends natural language query
-2. **Master Agent** detects intent via pattern matching
-3. **MCP Bus** routes message to appropriate agent
-4. **Specialized Agent** processes and returns response
-5. **UI** renders response with charts, tables, insights
-
----
-
-## 🎯 Agent Details
-
-### 📊 Stats Agent
-- Descriptive statistics (mean, median, std, etc.)
-- Missing value analysis
-- Distribution analysis
-- Data quality checks
-
-### 📈 Viz Agent
-- Histograms
-- Scatter plots
-- Bar charts (horizontal for better readability)
-- Box plots (outlier detection)
-- Correlation heatmaps
-- Pie charts
-- Multi-panel visualizations
-
-### 📦 Aggregate Agent
-- Count by category
-- Sum/Average/Max/Min by group
-- Group summaries
-- Pivot-style operations
-
-### 🤖 Predict Agent
-- Classification models
-- Regression models
-- Feature importance analysis
-- Model evaluation metrics
-- Interactive model builder
-
-### 🔍 SQL Agent
-- Data preview (head/tail/sample)
-- Schema exploration
-- Column information
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `PAGE_TITLE` | "🤖 OmniAgent" | Browser tab title |
+| `LLM_MODEL` | "llama-3.3-70b-versatile" | Groq model |
+| `LLM_MAX_TOKENS` | 2000 | Max response tokens |
+| `MAX_SUGGESTIONS` | 12 | Suggestion buttons |
 
 ---
 
-## 🔐 Environment Variables
+## 🔧 Troubleshooting
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `GROQ_API_KEY` | Groq API key for AI features | No |
-| `LLM_MODEL` | Model name (default: llama-3.3-70b-versatile) | No |
+### Common Issues
 
----
+| Issue | Solution |
+|-------|----------|
+| "No module named 'streamlit'" | Run `pip install -r requirements.txt` |
+| Port 8501 in use | Use `streamlit run app.py --server.port=8502` |
+| Voice not working | Use Chrome/Edge, allow microphone |
+| Dynamic Agent fails | Check Groq API key is valid |
+| Docker build fails | Ensure Docker daemon is running |
 
-## 📋 Requirements
+### Getting Help
 
-```
-streamlit>=1.28.0
-pandas>=2.0.0
-numpy>=1.24.0
-plotly>=5.15.0
-scikit-learn>=1.3.0
-python-dotenv>=1.0.0
-requests>=2.31.0
-```
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
+- Check the [docs/](docs/) folder for detailed documentation
+- Open an issue on GitHub
+- Type "help" in OmniAgent chat
 
 ---
 
 ## 📄 License
 
-MIT License - see [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## 👨‍💻 Author
 
 **Hooman Esteki**
-- Website: [esteki.ca](https://esteki.ca/)
-- GitHub: [@hoomanesteki](https://github.com/hoomanesteki)
+
+- 🌐 Website: [esteki.ca](https://esteki.ca/)
+- 📧 GitHub: [@hoomanesteki](https://github.com/hoomanesteki)
 
 ---
 
 ## 🙏 Acknowledgments
 
-- [Streamlit](https://streamlit.io) for the amazing web framework
-- [Plotly](https://plotly.com) for interactive visualizations
-- [Groq](https://groq.com) for blazing fast AI inference
-- [Scikit-learn](https://scikit-learn.org) for machine learning
+- [Streamlit](https://streamlit.io/) - Web framework
+- [Plotly](https://plotly.com/) - Interactive charts
+- [Groq](https://groq.com/) - Fast LLM inference
+- [Scikit-learn](https://scikit-learn.org/) - Machine learning
 
 ---
 
-Made with ❤️ by [Hooman Esteki](https://esteki.ca/)
+<p align="center">
+  Made with ❤️ by <a href="https://esteki.ca/">Hooman Esteki</a>
+</p>

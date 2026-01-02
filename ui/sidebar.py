@@ -91,7 +91,7 @@ def _render_ai_settings():
         
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("✅ Validate", key="validate_ai_key", use_container_width=True):
+            if st.button("✅ Validate", key="validate_ai_key", width='stretch'):
                 if new_key:
                     if new_key.startswith("gsk_"):
                         with st.spinner("Validating..."):
@@ -113,7 +113,7 @@ def _render_ai_settings():
                     st.error("Please enter an API key")
         
         with col2:
-            st.link_button("🔗 Get Key", "https://console.groq.com", use_container_width=True)
+            st.link_button("🔗 Get Key", "https://console.groq.com", width='stretch')
         
         st.info("💡 App works without AI, but with basic responses")
     
@@ -176,7 +176,7 @@ def _render_data_loading():
     st.markdown("**Sample Datasets:**")
     for name, filename in Config.SAMPLE_DATASETS.items():
         path = Config.SAMPLES_DIR / filename
-        if st.button(name, use_container_width=True, key=f"s_{name}"):
+        if st.button(name, width='stretch', key=f"s_{name}"):
             if path.exists() and load_data(path):
                 add_message('user', f"📂 {name}")
                 msg = get_loaded_message()
@@ -207,12 +207,12 @@ def _render_data_info():
         st.markdown("**Quick Charts:**")
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("📊 Numeric", use_container_width=True, key="num_btn"):
+            if st.button("📊 Numeric", width='stretch', key="num_btn"):
                 add_message('user', "Show all numeric")
                 process_query("show all numeric")
                 st.rerun()
         with col2:
-            if st.button("📝 Categorical", use_container_width=True, key="cat_btn"):
+            if st.button("📝 Categorical", width='stretch', key="cat_btn"):
                 add_message('user', "Show all categorical")
                 process_query("show all categorical")
                 st.rerun()
@@ -224,17 +224,17 @@ def _render_navigation():
     
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("🆘 Help", use_container_width=True):
+        if st.button("🆘 Help", width='stretch'):
             add_message('user', "Help")
             process_query("help")
             st.rerun()
     with col2:
-        if st.button("🏠 Home", use_container_width=True):
+        if st.button("🏠 Home", width='stretch'):
             add_message('user', "🏠 Home")
             process_query("tell me about this dataset")
             st.rerun()
     
-    if st.button("🗑️ Clear Chat", use_container_width=True):
+    if st.button("🗑️ Clear Chat", width='stretch'):
         st.session_state.messages = []
         st.rerun()
     
