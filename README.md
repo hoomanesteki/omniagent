@@ -8,7 +8,7 @@
 
 OmniAgent is an intelligent, multi-agent data analysis assistant that helps you explore, visualize, and understand your data through natural conversation. Ask questions in plain English and OmniAgent automatically selects the right specialized agent to generate insights, statistics, visualizations, predictions, and more, making data analysis intuitive, interactive, and AI-powered.
 
-Many people struggle with messy datasets, slow manual analysis, and the complexity of statistical tools or coding. OmniAgent removes that friction by letting users interact with their data in plain English—no technical expertise required. Instead of wrestling with scripts, spreadsheets, or BI dashboards, users can quickly ask questions, visualize trends, build models, and uncover insights instantly. It turns data analysis from a painful, time-consuming task into an intuitive, conversational experience.
+Many people struggle with messy datasets, slow manual analysis, and the complexity of statistical tools or coding. OmniAgent removes that friction by letting users interact with their data in plain English, no technical expertise required. Instead of wrestling with scripts, spreadsheets, or BI dashboards, users can quickly ask questions, visualize trends, build models, and uncover insights instantly. It turns data analysis from a painful, time-consuming task into an intuitive, conversational experience.
 
 ---
 
