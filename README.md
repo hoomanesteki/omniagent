@@ -6,14 +6,13 @@
 
 **OmniAgent** is an intelligent, multi-agent data analysis assistant that helps you explore, visualize, and understand your data through natural conversation.
 
-Created by [Hooman Esteki](https://esteki.ca/)
 
 ---
 
 ## 🌟 Features
 
 - **Natural Language Interface** - Ask questions in plain English
-- **🎤 Voice Assistant** - Two-way voice conversation (speak & listen)
+- **Voice Assistant** - Two-way voice conversation (speak & listen)
 - **Multi-Agent Architecture** - 6 specialized agents working together
 - **Smart Routing** - Automatically finds the right agent for your query
 - **Interactive Visualizations** - Beautiful Plotly charts with zoom/pan
