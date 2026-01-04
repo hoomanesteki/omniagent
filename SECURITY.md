@@ -9,7 +9,7 @@ to the most recent release or commit if you encounter a security issue.
 
 If you discover a security vulnerability, please report it privately.
 
-- website: https://esteki.ca
+- Website: https://esteki.ca
 - Please include: a detailed description, steps to reproduce, potential impact,
   and any suggested fixes.
 
